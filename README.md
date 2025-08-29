@@ -10,7 +10,7 @@ svol
 
 # Why
 
-<explain why you made this module>
+Ultra low voltage oscilator for startup of energy harvesting
 
 # How
 
@@ -40,9 +40,9 @@ svol
 
 | Signal       | Direction | Domain  | Description                               |
 | :---         | :---:     | :---:   | :---                                      |
-| VDD_1V8         | Input     | VDD_1V8 | Main supply                              |
+| VTEG         | Input     | V       | Supply from energy harvester              |
 | VSS         | Input     | Ground  |                                           |
-| PWRUP_1V8     | Input    | VDD_1V8 | Power up the circuit                       |
+
 
 
 # Key parameters
@@ -51,5 +51,4 @@ svol
 | Parameter           | Min     | Typ           | Max     | Unit  |
 | :---                | :---:     | :---:           | :---:     | :---: |
 | Technology          |         | Skywater 130 nm |         |       |
-| AVDD                | 1.7    | 1.8           | 1.9    | V     |
 | Temperature         | -40     | 27            | 125     | C     |
