@@ -28,10 +28,10 @@ C {devices/ipin.sym} -150 60 0 0 {name=p1 lab=VSS
 }
 C {devices/ipin.sym} -180 -190 0 0 {name=p2 lab=VDD}
 C {sky130_fd_pr/nfet_01v8.sym} 50 0 0 0 {name=M1
-W=100
-L=0.22
+W=50
+L=0.5
 nf=2 
-mult=10
+mult=500
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -42,10 +42,10 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -120 0 0 1 {name=M2
-W=100
-L=0.22
+W=50
+L=0.5
 nf=2 
-mult=10
+mult=500
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -55,7 +55,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {LELO_SVOD_SKY130A/LQW2BASR39J00.sym} -140 -140 0 0 {name=x2}
 C {devices/lab_pin.sym} -140 -70 0 0 {name=p3 sig_type=std_logic lab=V1}
 C {devices/lab_pin.sym} 70 -70 0 1 {name=p4 sig_type=std_logic lab=V2}
-C {LELO_SVOD_SKY130A/LQW2BASR39J00.sym} 70 -140 0 0 {name=x3}
+C {LELO_SVOD_SKY130A/LQW2BAN3N2J00.sym} -140 -140 0 0 {name=x1}
+C {LELO_SVOD_SKY130A/LQW2BAN3N2J00.sym} 70 -140 0 0 {name=x2}
