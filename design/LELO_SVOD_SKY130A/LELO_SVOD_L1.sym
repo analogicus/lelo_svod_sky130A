@@ -1,0 +1,21 @@
+v {xschem version=3.4.6 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"}
+V {}
+S {type=subcircuit
+spice_sym_def= L2.spice
+format= "@name @pinlist @symname"
+template="name=x1"}
+E {}
+L 4 0 -30 0 -20 {}
+L 4 0 20 0 30 {}
+B 5 -2.5 -32.5 2.5 -27.5 {name=XXX
+dir=inout}
+B 5 -2.5 27.5 2.5 32.5 {name=XXX
+dir=inout}
+A 4 5 5 7.071067811865476 225 270 {}
+A 4 5 -5 7.071067811865476 225 270 {}
+A 4 5 -15 7.071067811865476 225 270 {}
+A 4 5 15 7.071067811865476 225 270 {}
