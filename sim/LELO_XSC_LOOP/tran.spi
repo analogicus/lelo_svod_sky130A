@@ -18,19 +18,20 @@
 *-----------------------------------------------------------------
 .param TRF = 10p
 
-.param AVDD = {vdda}
+.param AVDD = 700m
 
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
-
+VDD  VDD  VSS   dc 700m
+R1   VOUT  VIN  1MEG
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
 .include ../xdut.spi
-
+.include ../../../../cpdk/ngspice/tian_subckt.lib
+X999 VOUT VIN loopgainprobe
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
@@ -46,14 +47,34 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 1n 1u 0
 
 
-tran 1n 10n 1p
+*----------------------------------------------------------------
+* LSTB analysis
+*----------------------------------------------------------------
+* Set voltage AC to 1
+ac dec 50 100 10G
+
+* Set Current to 1
+alter i.X999.Ii acmag=1
+alter v.X999.Vi acmag=0
+ac dec 50 100 10G
+
+let lg_mag = db(tian_loop())
+let lg_phase = 180*cph(tian_loop())/pi
+save lg_mag
+save lg_phase
+set gnuplot_terminal=png/quit
+gnuplot {cicname}_loop_gain lg_mag
+gnuplot {cicname}_loop_phase lg_phase
+
+
 write
+
+#ifdef Debug
+*quit
+#else
+
 quit
-
-
+#endif
 .endc
-
-.end

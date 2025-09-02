@@ -4,7 +4,7 @@ K {}
 V {}
 S {}
 E {}
-N -100 0 -10 -70 {lab=V2}
+N -100 0 -10 -70 {lab=VG1}
 N 70 0 70 30 {lab=VSS}
 N -140 0 -140 30 {lab=VSS}
 N -180 -190 -140 -190 {lab=VDD}
@@ -21,17 +21,15 @@ N -140 30 -140 60 {lab=VSS}
 N -140 60 70 60 {lab=VSS}
 N 70 30 70 60 {lab=VSS}
 N -140 -70 -110 -70 {lab=V1}
-N -50 -70 30 -0 {lab=V1}
-N -110 -70 -50 -70 {lab=V1}
-N -10 -70 50 -70 {lab=V2}
+N -50 -70 30 0 {lab=VG2}
 C {devices/ipin.sym} -150 60 0 0 {name=p1 lab=VSS
 }
 C {devices/ipin.sym} -180 -190 0 0 {name=p2 lab=VDD}
 C {sky130_fd_pr/nfet_01v8.sym} 50 0 0 0 {name=M1
-W=50
+W=100
 L=0.5
 nf=2 
-mult=200
+mult=1440
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -42,10 +40,10 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -120 0 0 1 {name=M2
-W=50
+W=100
 L=0.5
 nf=2 
-mult=200
+mult=1440
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
 pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
 as="'int((nf+2)/2) * W/nf * 0.29'" 
@@ -57,5 +55,19 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} -140 -70 0 0 {name=p3 sig_type=std_logic lab=V1}
 C {devices/lab_pin.sym} 70 -70 0 1 {name=p4 sig_type=std_logic lab=V2}
-C {LELO_SVOD_SKY130A/LQW2BAN3N2J00.sym} -140 -140 0 0 {name=x1}
-C {LELO_SVOD_SKY130A/LQW2BAN3N2J00.sym} 70 -140 0 0 {name=x2}
+C {devices/lab_pin.sym} 30 0 0 0 {name=p5 sig_type=std_logic lab=VG2}
+C {devices/lab_pin.sym} -100 0 0 1 {name=p6 sig_type=std_logic lab=VG1}
+C {LELO_SVOD_SKY130A/MLF2012C101KT000_p.sym} -80 -70 3 0 {name=x1}
+C {LELO_SVOD_SKY130A/MLF2012C101KT000_p.sym} 20 -70 1 1 {name=x2}
+C {LELO_SVOD_SKY130A/MLF2012A1R0JT000_p.sym} -140 -140 0 0 {name=x3}
+C {LELO_SVOD_SKY130A/MLF2012A1R0JT000_p.sym} 70 -140 0 0 {name=x4}
+C {devices/capa.sym} 30 30 0 0 {name=C1
+m=1
+value=1p
+footprint=1206
+device="ceramic capacitor"}
+C {devices/capa.sym} -100 30 0 0 {name=C2
+m=1
+value=1p
+footprint=1206
+device="ceramic capacitor"}

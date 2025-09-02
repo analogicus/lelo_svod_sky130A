@@ -14,15 +14,12 @@ N 70 -190 70 -170 {lab=VDD}
 N 70 -110 70 -30 {lab=V2}
 N 70 -70 70 -30 {lab=V2}
 N 50 -70 70 -70 {lab=V2}
-N -140 -110 -140 -70 {lab=V1}
-N -140 -110 -140 -30 {lab=V1}
+N -140 -110 -140 -70 {lab=VOUT}
+N -140 -110 -140 -30 {lab=VOUT}
 N -150 60 -140 60 {lab=VSS}
 N -140 30 -140 60 {lab=VSS}
 N -140 60 70 60 {lab=VSS}
 N 70 30 70 60 {lab=VSS}
-N -140 -70 -110 -70 {lab=V1}
-N -50 -70 30 -0 {lab=V1}
-N -110 -70 -50 -70 {lab=V1}
 N -10 -70 50 -70 {lab=V2}
 C {devices/ipin.sym} -150 60 0 0 {name=p1 lab=VSS
 }
@@ -55,7 +52,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/lab_pin.sym} -140 -70 0 0 {name=p3 sig_type=std_logic lab=V1}
 C {devices/lab_pin.sym} 70 -70 0 1 {name=p4 sig_type=std_logic lab=V2}
 C {LELO_SVOD_SKY130A/LQW2BAN3N2J00.sym} -140 -140 0 0 {name=x1}
 C {LELO_SVOD_SKY130A/LQW2BAN3N2J00.sym} 70 -140 0 0 {name=x2}
+C {devices/iopin.sym} 30 0 0 1 {name=p5 lab=VIN}
+C {devices/iopin.sym} -140 -70 0 0 {name=p6 lab=VOUT
+}

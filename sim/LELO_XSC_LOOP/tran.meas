@@ -4,6 +4,7 @@
 load {cicname}.raw
 
 echo "MEAS_START"
-
+meas ac phase WHEN lg_phase=180
+meas ac gain  FIND lg_mag WHEN lg_phase=180
 echo "MEAS_END"
 .endc
