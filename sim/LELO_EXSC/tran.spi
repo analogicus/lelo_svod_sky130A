@@ -8,7 +8,6 @@
 .include ../../../work/xsch/LELO_EXSC.spice
 #endif
 .include ../../../design/1812PS.lib
-.include ../../../design/2014VS.lib
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
@@ -17,7 +16,7 @@
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
-VDD  VDD  VSS dc 10m
+VDD  VDD  VSS dc 20m
 VSS  VSS  0   dc 0
 *-----------------------------------------------------------------
 * DUT
@@ -40,16 +39,7 @@ unset askquit
 
 
 tran 500n 500u
-let VDS3 = V(VDD)-V(xdut.VP1)
-let VDS4 = V(xdut.VP1)-V(xdut.VP2)
-let VDS5 = V(xdut.VP2)-V(xdut.VP3)
-let VDS6 = V(xdut.VP3)-V(xdut.VP4)
-let VDS7 = V(xdut.VP4)-V(xdut.vddcs)
-save VDS3
-save VDS4
-save VDS5
-save VDS6
-save VDS7
+
 
 write
 quit

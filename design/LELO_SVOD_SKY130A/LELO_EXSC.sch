@@ -101,34 +101,6 @@ sa=0 sb=0 sd=0
 model=nfet_03v3_nvt
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet_03v3_nvt.sym} 50 0 0 0 {name=M1
-W=1
-L=0.5
-nf=1
-mult = 40000
-ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
-pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
-as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
-ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
-nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
-sa=0 sb=0 sd=0
-model=nfet_03v3_nvt
-spiceprefix=X
-}
-C {sky130_fd_pr/nfet_03v3_nvt.sym} -120 0 0 1 {name=M2
-W=1
-L=0.5
-nf=1
-mult=40000
-ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
-pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
-as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
-ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
-nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
-sa=0 sb=0 sd=0
-model=nfet_03v3_nvt
-spiceprefix=X
-}
 C {sky130_fd_pr/nfet_03v3_nvt.sym} 300 -210 3 1 {name=M4
 W=0.42
 L=0.5
@@ -209,3 +181,17 @@ C {LELO_SVOD_SKY130A/1812PS-334_imp.sym} -80 -70 3 0 {name=x1}
 C {LELO_SVOD_SKY130A/1812PS-334_imp.sym} 20 -70 3 0 {name=x2}
 C {LELO_SVOD_SKY130A/1812PS-102_imp.sym} 70 -140 0 0 {name=x3}
 C {LELO_SVOD_SKY130A/1812PS-102_imp.sym} -140 -140 0 0 {name=x4}
+C {sky130_fd_pr/nfet_20v0_zvt.sym} 50 0 0 0 {name=M1
+W=60
+L=0.5
+mult=1000
+model=nfet_20v0_zvt
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_20v0_zvt.sym} -120 0 0 1 {name=M2
+W=60
+L=0.5
+mult=1000
+model=nfet_20v0_zvt
+spiceprefix=X
+}
