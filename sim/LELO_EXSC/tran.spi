@@ -39,6 +39,13 @@ unset askquit
 
 
 tran 500n 500u
+let VDS3 = V(VDD)-V(xdut.VP1)
+let VDS4 = V(xdut.VP1)-V(xdut.VP2)
+let VDS5 = V(xdut.VP2)-V(xdut.VDDCS)
+
+save VDS3
+save VDS4
+save VDS5
 
 
 write

@@ -57,12 +57,12 @@ C {devices/lab_pin.sym} 30 0 0 0 {name=p5 sig_type=std_logic lab=VG2}
 C {devices/lab_pin.sym} -100 0 0 1 {name=p6 sig_type=std_logic lab=VG1}
 C {devices/capa.sym} 240 -130 0 0 {name=C1
 m=1
-value=20p
+value=30p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/capa.sym} 360 -130 0 0 {name=C2
 m=1
-value=20p
+value=30p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 240 -40 0 1 {name=p7 sig_type=std_logic lab=VG1}
@@ -101,8 +101,6 @@ mult=600
 model=nfet_20v0_zvt
 spiceprefix=X
 }
-C {LELO_SVOD_SKY130A/1812PS-104_imp.sym} -80 -70 3 0 {name=x1}
-C {LELO_SVOD_SKY130A/1812PS-104_imp.sym} 20 -70 3 0 {name=x2}
 C {sky130_fd_pr/nfet_03v3_nvt.sym} 300 -210 3 1 {name=M4
 W=0.42
 L=0.5
@@ -136,3 +134,5 @@ m=1
 value=1000p
 footprint=1206
 device="ceramic capacitor"}
+C {LELO_SVOD_SKY130A/1812PS-473_imp.sym} -80 -70 3 0 {name=x1}
+C {LELO_SVOD_SKY130A/1812PS-473_imp.sym} 20 -70 3 0 {name=x2}
