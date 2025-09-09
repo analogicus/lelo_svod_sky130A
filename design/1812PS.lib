@@ -1241,14 +1241,14 @@ X1 port1 port2 Model1B PARAMS:
 *   Inductor Impedance Model
 *   Use model for Time Domain simulations
 *======================================================================
-.subckt 1812PS-154_imp port1 port2 PARAMS: Cpar=1.81pF Ind=150uH
-X1 port1 port2 Model1D PARAMS:
+.subckt 1812PS-154_imp port1 port2
+X1 port1 port2 Model1D
 + R1=70
 + R2=2.2
-+ C= {Cpar}
++ C= 1.81p
 + K1=0.000001
 + K2=18.4
-+ K3= {Ind}
++ K3= 150u
 + K4=0.000001
 + K5=0.000001
 + L=0
@@ -1301,14 +1301,14 @@ X1 port1 port2 Model1B PARAMS:
 *   Inductor Impedance Model
 *   Use model for Time Domain simulations
 *======================================================================
-.subckt 1812PS-224_imp port1 port2 PARAMS: Cpar=2.43pF Ind=220uH
-X1 port1 port2 Model1D PARAMS:
+.subckt 1812PS-224_imp port1 port2
+X1 port1 port2 Model1D
 + R1=45
 + R2=2.7
-+ C= {Cpar}
++ C= 2.43p
 + K1=1E-06
 + K2=29.89
-+ K3= {Ind}
++ K3= 220u
 + K4=0.000001
 + K5=0.000001
 + L=0
