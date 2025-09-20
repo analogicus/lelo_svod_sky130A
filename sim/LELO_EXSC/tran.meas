@@ -5,6 +5,8 @@ load {cicname}.raw
 
 echo "MEAS_START"
 Meas tran ypp PP v(xdut.VG1)
+Meas tran VDDCS MAX v(xdut.VDDCS)
+meas tran IO AVG i(@c.xdut.c1[i]) from = 200u
 
 echo "MEAS_END"
 .endc

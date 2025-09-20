@@ -1,0 +1,41 @@
+v {xschem version=3.4.8RC file_version=1.2}
+G {}
+K {type=subcircuit
+spice_sym_def="
+.subckt MSS1048T-563_imp port1 port2
+X1 port1 port2 Model1D
++ R1=45
++ R2=0.149
++ C= 5.249
++ K1=0.00028
++ K2=14
++ K3= 56u
++ K4=0.64
++ K5=0.00000699
++ L=0
++ Is=0
++ a=0
++ L_Z0=0
++ L_EL=0
++ L_F0=0E6
++ PkZ=35487.2606
+.ends MSS1048T-563_imp
+"
+format="@name @pinlist @symname"
+template="name=x1"}
+V {}
+S {type=subcircuit
+spice_sym_def= L2.spice
+format= "@name @pinlist @symname"
+template="name=x1"}
+E {}
+L 4 0 -30 0 -20 {}
+L 4 0 20 0 30 {}
+B 5 -2.5 -32.5 2.5 -27.5 {name=port1
+dir=inout}
+B 5 -2.5 27.5 2.5 32.5 {name=port2
+dir=inout}
+A 4 5 5 7.071067811865476 225 270 {}
+A 4 5 -5 7.071067811865476 225 270 {}
+A 4 5 -15 7.071067811865476 225 270 {}
+A 4 5 15 7.071067811865476 225 270 {}
