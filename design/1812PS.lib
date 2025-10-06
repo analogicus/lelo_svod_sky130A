@@ -1635,10 +1635,10 @@ X1 port1 port2 Model1D PARAMS:
 X1 port1 port2 Model1B PARAMS:
 + R1=50
 + R2=10
-+ C= {Cpar}
++ C= 9.65p
 + K1=0.000001
 + K2=96.8
-+ K3= {Ind}
++ K3= 1000u
 + K4=0.000001
 + K5=0.000001
 + L=0
@@ -1665,10 +1665,10 @@ X1 port1 port2 Model1B PARAMS:
 X1 port1 port2 Model1D
 + R1=50
 + R2=10
-+ C= {Cpar}
++ C= 9.65
 + K1=0.000001
 + K2=96.8
-+ K3= {Ind}
++ K3= 1000u
 + K4=0.000001
 + K5=0.000001
 + L=0

@@ -38,7 +38,7 @@ set color1=black
 unset askquit
 
 IC V(Vxdut.VG1)=0.5
-tran 100n 700u
+tran 100n 1500u
 
 
 

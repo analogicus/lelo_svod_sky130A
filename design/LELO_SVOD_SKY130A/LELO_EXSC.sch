@@ -67,11 +67,13 @@ N -320 -90 -320 -30 {lab=V1}
 N 280 0 280 30 {lab=0}
 N -320 -0 -320 30 {lab=0}
 N -450 -190 -450 -140 {lab=V1}
-N -450 -80 -450 0 {lab=#net3}
+N -450 -80 -450 0 {lab=v3}
 N 460 -190 460 -140 {lab=V2}
-N 460 -80 460 0 {lab=#net4}
-N -300 160 -300 190 {lab=VDDCS}
-N 320 170 320 200 {lab=VDDCS}
+N 460 -80 460 0 {lab=v4}
+N 650 -190 770 -190 {lab=VDDCS}
+N 770 -190 770 -80 {lab=VDDCS}
+N 770 -20 770 60 {lab=0}
+N 650 60 770 60 {lab=0}
 C {devices/ipin.sym} -140 110 0 0 {name=p1 lab=0
 }
 C {devices/ipin.sym} -140 -260 0 0 {name=p2 lab=VDD}
@@ -84,14 +86,14 @@ C {LELO_SVOD_SKY130A/1812PS-102_imp.sym} -140 -140 0 0 {name=x4}
 C {sky130_fd_pr/nfet_20v0_zvt.sym} 50 0 0 0 {name=M1
 W=60
 L=0.5
-mult=600
+mult=1000
 model=nfet_20v0_zvt
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_20v0_zvt.sym} -120 0 0 1 {name=M2
 W=60
 L=0.5
-mult=600
+mult=1000
 model=nfet_20v0_zvt
 spiceprefix=X
 }
@@ -100,7 +102,7 @@ C {LELO_SVOD_SKY130A/1812PS-104_imp.sym} 20 -70 1 0 {name=x2}
 C {devices/lab_pin.sym} 180 0 0 0 {name=p7 sig_type=std_logic lab=VG2}
 C {devices/capa.sym} 650 -130 0 0 {name=C1
 m=1
-value=1p
+value=1000p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} 650 -190 0 1 {name=p8 sig_type=std_logic lab=VDDCS}
@@ -122,7 +124,7 @@ C {sky130_fd_pr/pfet_01v8_lvt.sym} -540 -170 3 0 {name=M4
 W=1
 L=0.35
 nf=1
-mult=1
+mult=20
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
 pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
 as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
@@ -130,48 +132,6 @@ ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
 nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
 sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
-spiceprefix=X
-}
-C {sky130_fd_pr/pfet_01v8_lvt.sym} 520 -170 1 1 {name=M8
-W=1
-L=0.35
-nf=1
-mult=1
-ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
-pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
-as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
-ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
-nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
-sa=0 sb=0 sd=0
-model=pfet_01v8_lvt
-spiceprefix=X
-}
-C {sky130_fd_pr/nfet_01v8_lvt.sym} 300 320 0 0 {name=M6
-W=1
-L=0.15
-nf=1
-mult=25
-ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
-pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
-as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
-ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
-nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
-sa=0 sb=0 sd=0
-model=nfet_01v8_lvt
-spiceprefix=X
-}
-C {sky130_fd_pr/nfet_01v8_lvt.sym} -280 310 0 1 {name=M9
-W=1
-L=0.15
-nf=1
-mult=25
-ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
-pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
-as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
-ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
-nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
-sa=0 sb=0 sd=0
-model=nfet_01v8_lvt
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_03v3_nvt.sym} 260 0 0 0 {name=M3
@@ -202,47 +162,94 @@ sa=0 sb=0 sd=0
 model=nfet_03v3_nvt
 spiceprefix=X
 }
-C {LELO_SVOD_SKY130A/1812PS-684_imp.sym} 100 -190 3 0 {name=x6}
-C {LELO_SVOD_SKY130A/1812PS-684_imp.sym} -170 -190 3 0 {name=x5}
 C {devices/capa.sym} -450 30 0 0 {name=C3
 m=1
-value=155p
+value=150p
 footprint=1206
 device="ceramic capacitor"}
-C {LELO_SVOD_SKY130A/1812PS-334_imp.sym} -450 -110 0 0 {name=x8}
+C {devices/lab_pin.sym} 320 130 0 1 {name=p20 sig_type=std_logic lab=VDDCS}
+C {LELO_SVOD_SKY130A/1812PS-564_imp.sym} -450 -110 0 0 {name=x7}
+C {devices/isource.sym} 770 -50 0 0 {name=I0 value=1000n}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} 520 -170 1 1 {name=M8
+W=1
+L=0.35
+nf=1
+mult=20
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} 300 200 0 0 {name=M6
+W=8
+L=0.35
+nf=1
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8_lvt.sym} 300 320 0 0 {name=M7
+W=1
+L=0.15
+nf=1
+mult=4
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8_lvt
+spiceprefix=X
+}
+C {devices/lab_pin.sym} 320 200 2 0 {name=p15 sig_type=std_logic lab=0}
+C {devices/lab_pin.sym} -300 190 2 1 {name=p25 sig_type=std_logic lab=0}
+C {devices/lab_pin.sym} -450 -40 0 0 {name=p27 sig_type=std_logic lab=v3}
+C {devices/lab_pin.sym} 460 -50 0 1 {name=p28 sig_type=std_logic lab=v4}
+C {devices/lab_pin.sym} -300 120 0 1 {name=p10 sig_type=std_logic lab=VDDCS}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} -280 190 0 1 {name=M9
+W=8
+L=0.35
+nf=1
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8_lvt.sym} -280 310 0 1 {name=M10
+W=1
+L=0.15
+nf=1
+mult=4
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8_lvt
+spiceprefix=X
+}
+C {LELO_SVOD_SKY130A/1812PS-564_imp.sym} -170 -190 1 0 {name=x5}
+C {LELO_SVOD_SKY130A/1812PS-564_imp.sym} 460 -110 0 0 {name=x6}
 C {devices/capa.sym} 460 30 0 0 {name=C2
 m=1
 value=155p
 footprint=1206
 device="ceramic capacitor"}
-C {LELO_SVOD_SKY130A/1812PS-334_imp.sym} 460 -110 0 0 {name=x7}
-C {sky130_fd_pr/pfet_01v8_lvt.sym} 300 200 0 0 {name=M7
-W=1
-L=0.35
-nf=1
-mult=1
-ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
-pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
-as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
-ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
-nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
-sa=0 sb=0 sd=0
-model=pfet_01v8_lvt
-spiceprefix=X
-}
-C {sky130_fd_pr/pfet_01v8_lvt.sym} -280 190 0 1 {name=M10
-W=1
-L=0.35
-nf=1
-mult=1
-ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
-pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
-as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
-ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
-nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
-sa=0 sb=0 sd=0
-model=pfet_01v8_lvt
-spiceprefix=X
-}
-C {devices/lab_pin.sym} -300 120 0 1 {name=p10 sig_type=std_logic lab=VDDCS}
-C {devices/lab_pin.sym} 320 130 0 1 {name=p20 sig_type=std_logic lab=VDDCS}
+C {LELO_SVOD_SKY130A/1812PS-564_imp.sym} 100 -190 1 0 {name=x8}
