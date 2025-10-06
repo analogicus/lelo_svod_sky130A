@@ -1712,22 +1712,7 @@ L1 N001 Lout {K3}
 *   DC Bias Current = 0 A
 *   Frequency Dependent Inductor Model
 *======================================================================
-.subckt Model1B Lin Lout
-+ R1=1
-+ R2=1
-+ C=1
-+ K1=1
-+ K2=1
-+ K3=1
-R2 N001 Lin {R2}
-R1 Lout N002 {R1}
-C1 N002 N001 {C}
-G_Rvar2 N001 Lout LAPLACE { V(N001, Lout) } {1/K2/(-S*S/4/PI^2)^0.25}
-G_Rvar1 N001 N003 LAPLACE { V(N001, N003) } {1/K1/(-S*S/4/PI^2)^0.25}
-L1 N003 Lout = {K3}
-*This large resistance to ground has been added to prevent a floating node error
-R3 N003 0 100Meg
-.ends Model1B
+
 
 
 
