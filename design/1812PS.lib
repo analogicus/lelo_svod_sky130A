@@ -611,14 +611,14 @@ X1 port1 port2 Model1D PARAMS:
 *   Inductor Frequency Model
 *   Use model for Frequency Domain simulations
 *======================================================================
-.subckt 1812PS-103_freq port1 port2 PARAMS: Cpar=0.28pF Ind=10uH
+.subckt 1812PS-103_freq port1 port2
 X1 port1 port2 Model1B PARAMS:
 + R1=29
 + R2=0.17
-+ C= {Cpar}
++ C= 0.28p
 + K1=0.000001
 + K2=0.741
-+ K3= {Ind}
++ K3= 10u
 + K4=0.0014
 + K5=0.0000509
 + L=0
@@ -641,14 +641,14 @@ X1 port1 port2 Model1B PARAMS:
 *   Inductor Impedance Model
 *   Use model for Time Domain simulations
 *======================================================================
-.subckt 1812PS-103_imp port1 port2 PARAMS: Cpar=0.28pF Ind=10uH
+.subckt 1812PS-103_imp port1 port2
 X1 port1 port2 Model1D PARAMS:
 + R1=29
 + R2=0.17
-+ C= {Cpar}
++ C= 0.28p
 + K1=0.000001
 + K2=0.741
-+ K3= {Ind}
++ K3= 10u
 + K4=0.0014
 + K5=0.0000509
 + L=0
@@ -1001,14 +1001,14 @@ X1 port1 port2 Model1B PARAMS:
 *   Inductor Impedance Model
 *   Use model for Time Domain simulations
 *======================================================================
-.subckt 1812PS-683_imp port1 port2 PARAMS: Cpar=1.13pF Ind=68uH
-X1 port1 port2 Model1D PARAMS:
+.subckt 1812PS-683_imp port1 port2
+X1 port1 port2 Model1D
 + R1=35
 + R2=1.1
-+ C= {Cpar}
++ C= 1.13p
 + K1=0.000001
 + K2=7.52
-+ K3= {Ind}
++ K3= 68u
 + K4=0.000001
 + K5=0.000001
 + L=0
@@ -1061,14 +1061,14 @@ X1 port1 port2 Model1B PARAMS:
 *   Inductor Impedance Model
 *   Use model for Time Domain simulations
 *======================================================================
-.subckt 1812PS-823_imp port1 port2 PARAMS: Cpar=0.84pF Ind=82uH
-X1 port1 port2 Model1D PARAMS:
+.subckt 1812PS-823_imp port1 port2
+X1 port1 port2 Model1D
 + R1=55
 + R2=1.3
-+ C= {Cpar}
++ C= 0.84p
 + K1=0.000001
 + K2=7.51
-+ K3= {Ind}
++ K3= 82u
 + K4=0.000001
 + K5=0.000001
 + L=0
