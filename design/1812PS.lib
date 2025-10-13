@@ -642,7 +642,7 @@ X1 port1 port2 Model1B PARAMS:
 *   Use model for Time Domain simulations
 *======================================================================
 .subckt 1812PS-103_imp port1 port2
-X1 port1 port2 Model1D PARAMS:
+X1 port1 port2 Model1D
 + R1=29
 + R2=0.17
 + C= 0.28p
