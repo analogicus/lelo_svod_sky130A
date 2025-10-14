@@ -37,7 +37,7 @@ set color1=black
 unset askquit
 
 
-tran 10n 600u
+tran 10n 300u
 
 
 

@@ -60,23 +60,46 @@ N -840 220 -700 220 {lab=0}
 N -1000 220 -840 220 {lab=0}
 N -1160 220 -1000 220 {lab=0}
 N -1310 220 -1160 220 {lab=0}
-N -1270 500 -1270 560 {lab=VC}
-N -1180 490 -1100 490 {lab=#net6}
-N -1180 470 -1180 490 {lab=#net6}
-N -1230 470 -1180 470 {lab=#net6}
-N -1100 510 -1100 590 {lab=#net7}
-N -1230 590 -1100 590 {lab=#net7}
-N -1430 520 -1270 520 {lab=VC}
-N -1430 580 -1430 620 {lab=0}
-N -1430 620 -1270 620 {lab=0}
-N -800 170 -770 170 {lab=#net8}
-N -1270 440 -1270 470 {lab=VDDCS}
-N -1270 590 -1270 620 {lab=0}
+N -800 170 -770 170 {lab=#net6}
 N -1410 120 -1310 120 {lab=VDDCS}
-N -1410 220 -1310 220 {lab=0}
 N -1440 120 -1410 120 {lab=VDDCS}
-N -1400 170 -1370 170 {lab=PULSE}
-N -1440 220 -1410 220 {lab=0}
+N -820 480 -820 540 {lab=#net7}
+N -990 480 -990 540 {lab=TRI}
+N -820 570 -820 600 {lab=0}
+N -820 420 -820 450 {lab=VDDCS}
+N -990 420 -990 450 {lab=VDDCS}
+N -990 570 -990 600 {lab=0}
+N -950 450 -950 570 {lab=#net7}
+N -950 450 -950 510 {lab=#net7}
+N -950 510 -820 510 {lab=#net7}
+N -780 450 -780 570 {lab=PULSE_INV}
+N -1120 510 -990 510 {lab=TRI}
+N -1250 580 -1220 580 {lab=VC}
+N -1250 460 -1250 580 {lab=VC}
+N -1250 460 -1220 460 {lab=VC}
+N -1190 460 -1190 580 {lab=TRI}
+N -1190 500 -1120 510 {lab=TRI}
+N -1320 510 -1250 500 {lab=VC}
+N -1070 800 -1010 800 {lab=#net8}
+N -950 750 -810 750 {lab=VDDCS}
+N -1110 750 -950 750 {lab=VDDCS}
+N -1270 750 -1110 750 {lab=VDDCS}
+N -950 850 -810 850 {lab=0}
+N -1110 850 -950 850 {lab=0}
+N -1270 850 -1110 850 {lab=0}
+N -910 800 -880 800 {lab=#net9}
+N -1070 800 -1070 820 {lab=#net8}
+N -910 800 -910 820 {lab=#net9}
+N -880 800 -870 800 {lab=#net9}
+N -770 800 -770 820 {lab=V1}
+N -1190 800 -1170 800 {lab=#net10}
+N -1340 800 -1300 800 {lab=SAMPL}
+N -1380 750 -1270 750 {lab=VDDCS}
+N -1380 850 -1270 850 {lab=0}
+N -1440 220 -1310 220 {lab=0}
+N -1410 170 -1380 170 {lab=PULSE_INV}
+N -1570 120 -1440 120 {lab=VDDCS}
+N -1570 220 -1440 220 {lab=0}
 C {devices/ipin.sym} -30 70 1 1 {name=p1 lab=0
 }
 C {devices/ipin.sym} -140 -320 0 0 {name=p2 lab=VDD}
@@ -274,16 +297,17 @@ C {devices/lab_pin.sym} -240 660 0 1 {name=p32 sig_type=std_logic lab=VHSS3}
 C {devices/lab_pin.sym} -540 680 2 1 {name=p37 sig_type=std_logic lab=V1}
 C {devices/lab_pin.sym} -540 700 0 0 {name=p38 sig_type=std_logic lab=VDDCS}
 C {devices/lab_pin.sym} -540 720 2 1 {name=p39 sig_type=std_logic lab=0}
-C {LELO_SVOD_SKY130A/LELO_RING_DEL.sym} -860 170 0 1 {name=x10}
-C {LELO_SVOD_SKY130A/LELO_RING_DEL.sym} -1020 170 0 1 {name=x11}
-C {LELO_SVOD_SKY130A/LELO_RING_DEL.sym} -1180 170 0 1 {name=x12}
 C {devices/lab_pin.sym} -660 170 0 1 {name=p23 sig_type=std_logic lab=VG1}
-C {LELO_SVOD_SKY130A/LELO_pFD.sym} -950 520 0 1 {name=x14}
-C {devices/lab_pin.sym} -800 510 0 1 {name=p24 sig_type=std_logic lab=VDDCS}
-C {devices/lab_pin.sym} -800 530 2 0 {name=p25 sig_type=std_logic lab=0}
-C {devices/lab_pin.sym} -800 490 2 0 {name=p33 sig_type=std_logic lab=V1}
-C {sky130_fd_pr/nfet_01v8_lvt.sym} -1250 590 0 1 {name=M4
-W=0.42
+C {devices/lab_pin.sym} -1120 190 2 0 {name=p41 sig_type=std_logic lab=VC}
+C {devices/lab_pin.sym} -960 190 2 0 {name=p42 sig_type=std_logic lab=VC}
+C {devices/lab_pin.sym} -800 190 2 0 {name=p43 sig_type=std_logic lab=VC}
+C {devices/lab_pin.sym} -1520 170 2 1 {name=p44 sig_type=std_logic lab=PULSE}
+C {devices/lab_pin.sym} -540 660 2 1 {name=p45 sig_type=std_logic lab=PULSE}
+C {LELO_SVOD_SKY130A/LELO_INV.sym} -720 170 0 1 {name=x9}
+C {devices/lab_pin.sym} -700 120 0 1 {name=p46 sig_type=std_logic lab=VDDCS}
+C {devices/lab_pin.sym} -700 220 0 1 {name=p47 sig_type=std_logic lab=0}
+C {sky130_fd_pr/nfet_01v8_lvt.sym} -800 570 0 1 {name=M4
+W=1
 L=0.35
 nf=1
 mult=1
@@ -296,8 +320,38 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet_01v8_lvt.sym} -1250 470 0 1 {name=M6
-W=0.42
+C {sky130_fd_pr/pfet_01v8_lvt.sym} -800 450 0 1 {name=M6
+W=1
+L=0.35
+nf=1
+mult=2
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {devices/lab_pin.sym} -820 600 1 1 {name=p26 sig_type=std_logic lab=0}
+C {devices/lab_pin.sym} -820 420 0 0 {name=p33 sig_type=std_logic lab=VDDCS}
+C {sky130_fd_pr/nfet_01v8_lvt.sym} -970 570 0 1 {name=M13
+W=1
+L=0.15
+nf=1
+mult=10
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} -970 450 0 1 {name=M14
+W=1
 L=0.35
 nf=1
 mult=1
@@ -310,17 +364,66 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {devices/lab_pin.sym} -1270 620 1 1 {name=p36 sig_type=std_logic lab=0}
-C {devices/lab_pin.sym} -1270 440 0 0 {name=p40 sig_type=std_logic lab=VDDCS}
-C {sky130_fd_pr/cap_mim_m3_1.sym} -1430 550 0 0 {name=C6 model=cap_mim_m3_1 W=1 L=1 MF=100 spiceprefix=X}
-C {devices/lab_pin.sym} -1430 520 2 1 {name=p34 sig_type=std_logic lab=VC}
-C {devices/lab_pin.sym} -1120 190 2 0 {name=p41 sig_type=std_logic lab=VC}
-C {devices/lab_pin.sym} -960 190 2 0 {name=p42 sig_type=std_logic lab=VC}
-C {devices/lab_pin.sym} -800 190 2 0 {name=p43 sig_type=std_logic lab=VC}
-C {devices/lab_pin.sym} -1400 170 2 1 {name=p44 sig_type=std_logic lab=PULSE}
-C {devices/lab_pin.sym} -540 660 2 1 {name=p45 sig_type=std_logic lab=PULSE}
-C {LELO_SVOD_SKY130A/LELO_INV.sym} -720 170 0 1 {name=x9}
-C {devices/lab_pin.sym} -700 120 0 1 {name=p46 sig_type=std_logic lab=VDDCS}
-C {devices/lab_pin.sym} -700 220 0 1 {name=p47 sig_type=std_logic lab=0}
-C {LELO_SVOD_SKY130A/LELO_INV.sym} -1320 170 0 1 {name=x15}
-C {devices/lab_pin.sym} -800 550 0 1 {name=p26 sig_type=std_logic lab=VHSS3}
+C {devices/lab_pin.sym} -990 600 1 1 {name=p40 sig_type=std_logic lab=0}
+C {devices/lab_pin.sym} -990 420 0 0 {name=p48 sig_type=std_logic lab=VDDCS}
+C {devices/lab_pin.sym} -990 490 2 1 {name=p49 sig_type=std_logic lab=TRI}
+C {devices/lab_pin.sym} -780 510 2 0 {name=p24 sig_type=std_logic lab=PULSE_INV}
+C {devices/capa.sym} -1120 540 0 0 {name=C6
+m=1
+value=100f
+footprint=1206
+device="ceramic capacitor"}
+C {devices/capa.sym} -1320 540 0 0 {name=C7
+m=1
+value=100f
+footprint=1206
+device="ceramic capacitor"}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} -1220 440 3 1 {name=M15
+W=1
+L=0.35
+nf=1
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8_lvt.sym} -1220 600 1 1 {name=M16
+W=1
+L=0.15
+nf=1
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8_lvt
+spiceprefix=X
+}
+C {devices/lab_pin.sym} -1120 570 1 1 {name=p25 sig_type=std_logic lab=0}
+C {devices/lab_pin.sym} -1320 570 1 1 {name=p34 sig_type=std_logic lab=0}
+C {LELO_SVOD_SKY130A/LELO_RING_DEL.sym} -970 800 0 1 {name=x13}
+C {LELO_SVOD_SKY130A/LELO_RING_DEL.sym} -1130 800 0 1 {name=x14}
+C {devices/lab_pin.sym} -810 750 0 1 {name=p51 sig_type=std_logic lab=VDDCS}
+C {devices/lab_pin.sym} -810 850 0 1 {name=p52 sig_type=std_logic lab=0}
+C {LELO_SVOD_SKY130A/LELO_INV.sym} -1250 800 0 1 {name=x17}
+C {devices/lab_pin.sym} -1310 800 1 0 {name=p36 sig_type=std_logic lab=SAMPL}
+C {devices/lab_pin.sym} -1220 620 0 0 {name=p50 sig_type=std_logic lab=SAMPL}
+C {devices/lab_pin.sym} -1450 800 1 0 {name=p53 sig_type=std_logic lab=SAMPL_INV}
+C {devices/lab_pin.sym} -1220 420 0 0 {name=p54 sig_type=std_logic lab=SAMPL_INV}
+C {devices/lab_pin.sym} -1320 510 0 0 {name=p55 sig_type=std_logic lab=VC}
+C {LELO_SVOD_SKY130A/LELO_INV.sym} -830 800 0 1 {name=x16}
+C {LELO_SVOD_SKY130A/LELO_INV.sym} -1400 800 0 1 {name=x18}
+C {devices/lab_pin.sym} -1410 170 1 0 {name=p58 sig_type=std_logic lab=PULSE_INV}
+C {LELO_SVOD_SKY130A/LELO_INV.sym} -1470 170 0 1 {name=x21}
+C {LELO_SVOD_SKY130A/LELO_RING_DEL_VC.sym} -860 170 0 1 {name=x10}
+C {LELO_SVOD_SKY130A/LELO_RING_DEL_VC.sym} -1020 170 0 1 {name=x11}
+C {LELO_SVOD_SKY130A/LELO_RING_DEL_VC.sym} -1180 170 0 1 {name=x12}
+C {LELO_SVOD_SKY130A/LELO_INV.sym} -1330 170 0 1 {name=x15}
+C {devices/lab_pin.sym} -770 800 2 0 {name=p35 sig_type=std_logic lab=V1}
