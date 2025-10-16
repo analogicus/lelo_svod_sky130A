@@ -36,7 +36,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8_lvt.sym} -20 -80 0 0 {name=M2
 W=0.42
-L=3
+L=1
 nf=1
 mult=1
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
@@ -54,7 +54,7 @@ C {devices/ipin.sym} -120 180 0 0 {name=p3 lab=GND}
 C {devices/opin.sym} 30 -30 0 0 {name=p4 lab=VOUT}
 C {sky130_fd_pr/nfet_01v8_lvt.sym} -140 150 0 0 {name=M3
 W=0.42
-L=4
+L=2
 nf=1
 mult=1
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
@@ -68,7 +68,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8_lvt.sym} -20 150 0 0 {name=M4
 W=0.42
-L=4
+L=1
 nf=1
 mult=1
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
