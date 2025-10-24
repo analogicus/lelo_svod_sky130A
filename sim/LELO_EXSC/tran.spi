@@ -8,6 +8,7 @@
 .include ../../../work/xsch/LELO_EXSC.spice
 #endif
 .include ../../../design/1812PS.lib
+.include ../../../design/XGL6030.lib
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
@@ -30,7 +31,7 @@ VDD  VDD  0 dc 40m
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
-.nodeset v(xdut.vddcs) = 0.5
+.nodeset v(xdut.vddcs) = 0.6
 .control
 set num_threads=8
 set color0=white
@@ -38,7 +39,7 @@ set color1=black
 unset askquit
 
 
-tran 100n 600u
+tran 100n 1000u
 
 
 

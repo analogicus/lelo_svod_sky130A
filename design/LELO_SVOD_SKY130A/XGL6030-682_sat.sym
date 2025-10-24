@@ -1,0 +1,41 @@
+v {xschem version=3.4.8RC file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+spice_sym_def="
+.subckt XGL6030-682_sat port1 port2
+X1 port1 port2 Model1C
++ R1=5
++ R2=0.0295
++ C= 14.6p
++ K1=0.000001
++ K2=1.57
++ K3= 6.8u
++ K4=0.000001
++ K5=0.000001
++ L=6.4639E-06
++ Is=15.5757
++ a=0.7145
++ L_Z0=0
++ L_EL=0
++ L_F0=0E6
++ PkZ=5878.47522
+.ends XGL6030-682_sat
+"
+template="name=x1"}
+V {}
+S {type=subcircuit
+spice_sym_def= L2.spice
+format= "@name @pinlist @symname"
+template="name=x1"}
+E {}
+L 4 0 -30 0 -20 {}
+L 4 0 20 0 30 {}
+B 5 -2.5 -32.5 2.5 -27.5 {name=port1
+dir=inout}
+B 5 -2.5 27.5 2.5 32.5 {name=port2
+dir=inout}
+A 4 5 5 7.071067811865476 225 270 {}
+A 4 5 -5 7.071067811865476 225 270 {}
+A 4 5 -15 7.071067811865476 225 270 {}
+A 4 5 15 7.071067811865476 225 270 {}
