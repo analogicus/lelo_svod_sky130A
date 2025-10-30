@@ -1,0 +1,10 @@
+* Measure LELO_BOOST_STEADY_STATE
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+Meas tran Iout AVG i(v.xdut.V1) from = 50u
+Meas tran Iin AVG i(@m.xdut.xm12.msky130_fd_pr__pfet_01v8[id]) from = 50u
+echo "MEAS_END"
+.endc
