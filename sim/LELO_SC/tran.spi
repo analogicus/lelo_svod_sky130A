@@ -3,12 +3,11 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/LELO_EXSC_lpe.spi
+.include ../../../work/lpe/LELO_SC_lpe.spi
 #else
-.include ../../../work/xsch/LELO_EXSC.spice
+.include ../../../work/xsch/LELO_SC.spice
 #endif
-.include ../../../design/1812PS.lib
-.include ../../../design/XGL6030.lib
+
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
@@ -26,13 +25,11 @@ VDD  VDD  0 dc 40m
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
-
+.OPTIONS SAVECURRENTS
 .save all
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
-
-.nodeset v(xdut.teg) = 0.04
 
 .control
 set num_threads=8
@@ -41,7 +38,7 @@ set color1=black
 unset askquit
 
 
-tran 100n 1000u
+tran 100n 5000u
 
 
 

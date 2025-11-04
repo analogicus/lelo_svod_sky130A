@@ -16,7 +16,6 @@ N -350 -50 -320 -50 {lab=#net2}
 N -260 -50 -180 20 {lab=VG2}
 N -350 20 -350 80 {lab=GND}
 N -140 20 -140 80 {lab=GND}
-N 440 -170 440 -140 {lab=VDDCS}
 N -140 -90 -140 -50 {lab=#net1}
 N 250 -170 440 -170 {lab=VDDCS}
 N 190 -170 220 -170 {lab=#net3}
@@ -71,8 +70,8 @@ model=nfet_20v0_zvt
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -140 80 1 1 {name=p4 sig_type=std_logic lab=GND}
-C {sky130_fd_pr/nfet_01v8_lvt.sym} -50 -190 1 0 {name=M3
-W=1
+C {sky130_fd_pr/nfet_01v8_lvt.sym} -50 -190 3 1 {name=M3
+W=10
 L=0.15
 nf=1
 mult=1
@@ -85,8 +84,8 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet_01v8_lvt.sym} 100 -190 1 0 {name=M7
-W=1
+C {sky130_fd_pr/nfet_01v8_lvt.sym} 100 -190 3 1 {name=M7
+W=10
 L=0.15
 nf=1
 mult=1
@@ -99,8 +98,8 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet_01v8_lvt.sym} 220 -190 1 0 {name=M8
-W=1
+C {sky130_fd_pr/nfet_01v8_lvt.sym} 220 -190 3 1 {name=M8
+W=10
 L=0.15
 nf=1
 mult=1
@@ -115,13 +114,6 @@ spiceprefix=X
 }
 C {LELO_SVOD_SKY130A/XGL6030-472_sat.sym} -350 -120 0 0 {name=x3}
 C {LELO_SVOD_SKY130A/XGL6030-472_sat.sym} -140 -120 0 0 {name=x4}
-C {devices/capa.sym} 440 -110 0 0 {name=C1
-m=1
-value=1n
-footprint=1206
-device="ceramic capacitor"}
-C {devices/lab_pin.sym} 440 -80 1 1 {name=p7 sig_type=std_logic lab=0
-value=1n}
 C {devices/ipin.sym} -350 -170 3 1 {name=p2 lab=TEG
 }
 C {devices/opin.sym} 440 -170 0 0 {name=p3 lab=VDDCS}
