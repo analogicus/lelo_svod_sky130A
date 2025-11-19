@@ -4,8 +4,8 @@ K {}
 V {}
 S {}
 E {}
-N -160 -0 -120 -0 {lab=CLK2}
-N -10 -0 30 0 {lab=#net1}
+N -160 -0 -120 -0 {lab=#net1}
+N -10 -0 30 0 {lab=CLK2}
 N 140 0 170 -0 {lab=#net2}
 N 280 -0 310 -0 {lab=#net3}
 N -220 -120 -220 -50 {lab=VDD}
@@ -50,7 +50,7 @@ N -560 -130 -560 -100 {lab=VDD}
 C {LELO_SVOD_SKY130A/LELO_RING_DEL_VC.sym} -220 0 0 0 {name=x1}
 C {devices/opin.sym} 950 0 0 0 {name=p3 lab=CLK}
 C {devices/ipin.sym} 20 100 3 0 {name=p2 lab=VSS}
-C {devices/opin.sym} 10 0 3 0 {name=p4 lab=CLK2}
+C {devices/opin.sym} 300 0 3 0 {name=p4 lab=CLK2}
 C {devices/ipin.sym} -970 30 2 1 {name=p1 lab=VDD}
 C {devices/ipin.sym} -970 60 0 0 {name=p5 lab=VC}
 C {devices/lab_pin.sym} -970 60 0 1 {name=p6 sig_type=std_logic lab=VC}

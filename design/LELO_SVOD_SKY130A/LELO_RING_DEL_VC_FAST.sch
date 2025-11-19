@@ -56,7 +56,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -20 30 0 0 {name=M1
 W=3
-L=1
+L=0.15
 nf=1 
 mult=1
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"

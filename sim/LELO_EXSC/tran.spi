@@ -27,7 +27,13 @@ VDD  VDD  0 dc 40m
 * PROBE
 *----------------------------------------------------------------
 
-.save all
+.save v(xdut.TEG)
+.save v(xdut.VDDCS)
+.save v(xdut.V1)
+.save v(xdut.VHSS1)
+.save v(xdut.VLSS)
+
+
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
@@ -41,7 +47,7 @@ set color1=black
 unset askquit
 
 
-tran 100n 1000u
+tran 100n 10000u
 
 
 

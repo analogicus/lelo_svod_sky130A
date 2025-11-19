@@ -10,7 +10,8 @@ Meas tran I_LSS AVG i(v.xdut.V3) from = 50u
 Meas tran I_HSS AVG i(v.xdut.V6) from = 50u
 Meas tran I_DEL AVG i(v.xdut.V5) from = 50u
 Meas tran I_CMP AVG i(v.xdut.V7) from = 50u
-let I_CNTRL = I_CMP +I_DEL + I_HSS + I_LOGIC + I_LSS + I_RO
+Meas tran I_CP AVG i(v.xdut.V8) from = 50u
+let I_CNTRL = I_CMP +I_DEL + I_HSS + I_LOGIC + I_LSS + I_RO +I_CP
 
 Meas tran VOUT AVG v(xdut.vddc) from = 50u
 Meas tran IOUT AVG i(@r.xdut.r2[i]) from = 50u
