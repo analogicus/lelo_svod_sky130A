@@ -33,7 +33,7 @@ VDD  VDD  0 dc 40m
 *----------------------------------------------------------------
 .nodeset v(xdut.teg) = 0.02
 .nodeset v(xdut.vddc) = 1.8
-.nodeset v(xdut.vc) = 0.65
+.nodeset v(xdut.vc) = 0.85
 .nodeset v(xdut.vc2) = 0.9
 
 .control

@@ -213,7 +213,9 @@ N -1810 1650 -1330 1650 {lab=Charge_pump}
 N -1630 1650 -1630 1670 {lab=Charge_pump}
 N -1020 990 -1010 990 {lab=0}
 N -1010 990 -1010 1110 {lab=0}
-N 280 930 370 930 {lab=VHSS1N}
+N -250 960 -210 960 {lab=#net33}
+N -210 930 -210 960 {lab=#net33}
+N -210 960 -150 960 {lab=#net33}
 C {devices/ipin.sym} -200 -430 0 0 {name=p2 lab=VDD}
 C {devices/lab_pin.sym} -300 -300 1 0 {name=p3 sig_type=std_logic lab=V1}
 C {devices/res.sym} -200 -400 0 0 {name=R1
@@ -605,7 +607,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_hvt
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 370 900 2 1 {name=p97 sig_type=std_logic lab=VHSS1N}
+C {devices/lab_pin.sym} 370 920 2 1 {name=p97 sig_type=std_logic lab=VHSS1N}
 C {devices/vsource.sym} -360 210 0 0 {name=V4 value=1.8 savecurrent=false}
 C {devices/lab_pin.sym} -360 240 1 1 {name=p87 sig_type=std_logic lab=0}
 C {devices/vsource.sym} 1220 70 0 0 {name=V3 value=1.8 savecurrent=false}
@@ -929,5 +931,19 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
+C {devices/lab_pin.sym} -290 990 0 0 {name=p95 sig_type=std_logic lab=V1}
+C {devices/switch_ngspice.sym} -150 990 0 0 {name=S2 model=SW2
+device_model=".MODEL SW2 SW 
++ VT=0 VH=0.0
++ RON=1 ROFF=10G "}
+C {devices/lab_pin.sym} -190 1010 0 0 {name=p96 sig_type=std_logic lab=V1}
+C {devices/lab_pin.sym} -290 1010 2 1 {name=p99 sig_type=std_logic lab=VDDC}
+C {devices/lab_pin.sym} -150 1020 1 1 {name=p100 sig_type=std_logic lab=0}
+C {devices/lab_pin.sym} -250 1020 1 1 {name=p9 sig_type=std_logic lab=VDDCS}
+C {devices/lab_pin.sym} -190 990 2 1 {name=p98 sig_type=std_logic lab=VDDC}
 C {devices/lab_pin.sym} -520 -260 1 1 {name=p101 sig_type=std_logic lab=VHSS1}
-C {devices/lab_pin.sym} -110 930 0 0 {name=p9 sig_type=std_logic lab=HSS_STOP}
+C {devices/lab_pin.sym} -210 930 2 1 {name=p11 sig_type=std_logic lab=VHSS1N}
+C {devices/switch_ngspice.sym} -250 990 0 0 {name=S1 model=SW1
+device_model=".MODEL SW1 SW 
++ VT=0.2 VH=0.0
++ RON=1 ROFF=10G "}
