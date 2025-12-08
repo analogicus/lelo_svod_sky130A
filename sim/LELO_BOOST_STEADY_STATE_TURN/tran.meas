@@ -1,0 +1,9 @@
+* Measure LELO_BOOST_STEADY_STATE_TURN
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+echo "MEAS_END"
+.endc
