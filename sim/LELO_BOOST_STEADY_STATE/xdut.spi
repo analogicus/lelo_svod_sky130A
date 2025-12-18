@@ -1,2 +1,2 @@
 *Automatic generated instance fron ../../tech/scripts/genxdut LELO_BOOST_STEADY_STATE
-XDUT VDD  LELO_BOOST_STEADY_STATE
+XDUT VDD VC_CLK  LELO_BOOST_STEADY_STATE

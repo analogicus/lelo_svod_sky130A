@@ -7,25 +7,22 @@
 #else
 .include ../../../work/xsch/LELO_BOOST_STEADY_STATE_TURN.spice
 #endif
+.include ../../../design/1812PS.lib
+.include ../../../design/XGL6030.lib
 
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
-.option TNOM=27 GMIN=1e-15 reltol=1e-3
-
-*-----------------------------------------------------------------
-* PARAMETERS
-*-----------------------------------------------------------------
-.param TRF = 10p
-
-.param AVDD = {vdda}
+.option TNOM=27 GMIN=1e-15 reltol=1e-4
 
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
-VSS  VSS  0     dc 0
-VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
-
+VDD      VDD  0 dc 20m
+VC_CLK   VC_CLK 0 dc 568m
+R1       OUT    0 100k
+* typical - 568m slow Th 534m slow Tl 642m
+* fast Th 480m
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
@@ -34,22 +31,35 @@ VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
-.save all
+.save i(v.xdut.v1) i(v.xdut.v4) i(v.xdut.v3) i(v.xdut.v5) i(v.xdut.v6) i(v.xdut.v7) i(v.xdut.v8) i(v.xdut.v9) i(v.xdut.v10)
+.PROBE p(R1)
 
-
+.save v(xdut.TEG)
+.save v(xdut.VDDC)
+.save v(xdut.V1)
+.save v(xdut.VHSS1)
+.save v(xdut.VLSS)
+.save v(xdut.vc)
+.save v(xdut.x6.net3)
+.save v(xdut.OFF)
+.save v(xdut.net23)      
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
+.nodeset v(xdut.teg) = 0.01
+.nodeset v(xdut.vddc) = 1.8
+.nodeset v(xdut.vc) = 0.3
+
 .control
 set num_threads=8
 set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 1n 1u 0
+
+tran 100n 2000u
 
 
-tran 1n 10n 1p
 write
 quit
 

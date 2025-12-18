@@ -31,7 +31,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet_01v8.sym} -20 -80 0 0 {name=M1
+C {sky130_fd_pr/pfet_01v8_hvt.sym} -20 -80 0 0 {name=M1
 W=0.42
 L=0.15
 nf=1
@@ -42,6 +42,6 @@ as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
 ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
 nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
 sa=0 sb=0 sd=0
-model=pfet_01v8
+model=pfet_01v8_hvt
 spiceprefix=X
 }

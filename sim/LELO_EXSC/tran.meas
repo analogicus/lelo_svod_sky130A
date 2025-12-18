@@ -1,10 +1,10 @@
 * Measure LELO_EXSC
 .control
 
-load {cicname}.raw
+load 30mV_fail.raw
 
 echo "MEAS_START"
-
+  wrdata output.txt (l.xdut.x7.x1.l1[i]);
 
 
 

@@ -3,11 +3,12 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/LELO_COLD_START_lpe.spi
+.include ../../../work/lpe/LELO_COLD_START_TB_lpe.spi
 #else
-.include ../../../work/xsch/LELO_COLD_START.spice
+.include ../../../work/xsch/LELO_COLD_START_TB.spice
 #endif
-
+.include ../../../design/1812PS.lib
+.include ../../../design/XGL6030.lib
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
@@ -18,14 +19,11 @@
 *-----------------------------------------------------------------
 .param TRF = 10p
 
-.param AVDD = {vdda}
-
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
-VSS  VSS  0     dc 0
-VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
 
+VDD  VDD  0      dc 40m
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
@@ -35,7 +33,7 @@ VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
 * PROBE
 *----------------------------------------------------------------
 .save all
-
+.nodeset v(xdut.teg) = 0.02
 
 *----------------------------------------------------------------
 * NGSPICE control
@@ -46,10 +44,7 @@ set color0=white
 set color1=black
 unset askquit
 
-optran 0 0 0 1n 1u 0
-
-
-tran 1n 10n 1p
+tran 100n 1000u
 write
 quit
 
