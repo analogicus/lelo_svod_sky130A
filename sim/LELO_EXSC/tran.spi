@@ -7,7 +7,8 @@
 #else
 .include ../../../work/xsch/LELO_EXSC.spice
 #endif
-
+.include ../../../design/1812PS.lib
+.include ../../../design/XGL6030.lib
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
@@ -16,8 +17,7 @@
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
-VDD  VDD  VSS dc 4.8m
-VSS  VSS  0   dc 0
+VDD  VDD  0 dc 30m
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
@@ -26,10 +26,24 @@ VSS  VSS  0   dc 0
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
+.save @l.xdut.x7.x1.l1[i]
+.save v(xdut.TEG)
+.save v(xdut.VDDCS)
+.save v(xdut.V1)
+.save v(xdut.VHSS1)
+.save v(xdut.VLSS)
+.save v(xdut.vc)
+.save v(xdut.x3.vg1)
+.save v(xdut.x3.net3)
+.save v(xdut.vdd_neg)
 
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
+
+.nodeset v(xdut.teg) = 0.02
+.nodeset v(xdut.VDDCS) = 0
+
 .control
 set num_threads=8
 set color0=white
@@ -37,11 +51,9 @@ set color1=black
 unset askquit
 
 
-tran 500n 1500u
-let VG1_1 = V(xdut.VG1)
-let VG2_1 = V(xdut.VG1)
-save VG1
-save VG2
+tran 100n 20000u
+
+
 
 write
 quit

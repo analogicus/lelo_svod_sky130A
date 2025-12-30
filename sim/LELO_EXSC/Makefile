@@ -15,9 +15,10 @@ include ../../tech/make/sim.make
 
 test:
 	${MAKE} typical OPT="Debug"
-
+all: netlist
+	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Att Tt Vt
 typical: netlist
-	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Ktt Tt Vt
+	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Att Ktt Tt Vt
 
 slow: netlist
 	cicsim run --name ${VIEW}_slow ${TB} ${OPT} ${VIEW} Gt Kss "Th,Tl" Vl

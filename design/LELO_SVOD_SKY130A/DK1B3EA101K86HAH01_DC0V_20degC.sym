@@ -1,0 +1,40 @@
+v {xschem version=3.4.8RC file_version=1.2}
+G {}
+K {type=subcircuit
+spice_sym_def="
+.SUBCKT DK1B3EA101K86HAH01_DC0V_20degC port1 port2
+C1 port1 11 9.94e-11
+L2 11 12 1.66e-9
+R3 12 13 1.45
+C4 13 14 1.14e-9
+R4 13 14 1.43e+3
+C5 14 15 3.13e-9
+R5 14 15 7.92
+C6 15 16 8.82e-10
+R6 15 16 1.93
+C7 16 17 5.46e-11
+L7 16 17 8.42e-11
+R7 16 17 3.34
+C8 17 port2 9.84e-13
+L8 17 port2 1.79e-9
+R8 17 port2 706
+R100 port1 11 6.00e+9
+.ENDS DK1B3EA101K86HAH01_DC0V_20degC
+"
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 0 2.5 0 30 {}
+L 4 0 -30 0 -5 {}
+L 4 -10 -5 10 -5 {}
+B 5 -2.5 -32.5 2.5 -27.5 {name=port1 dir=inout}
+B 5 -2.5 27.5 2.5 32.5 {name=port2 dir=inout}
+A 4 -0 23.75 21.25 61.92751306414704 56.14497387170592 {}
+T {c0} 5 -27.5 0 0 0.15 0.15 {layer=7}
+T {c1} 5 18.75 0 0 0.15 0.15 {layer=7}
+T {@name} 15 -28.75 0 0 0.2 0.2 {}
+T {@model} 15 -11.25 0 0 0.2 0.2 {}
+T {100p} 20 10 0 0 0.2 0.2 {}

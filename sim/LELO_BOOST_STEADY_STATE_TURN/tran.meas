@@ -1,0 +1,30 @@
+* Measure LELO_BOOST_STEADY_STATE_TURN
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+Meas tran I_LOGIC AVG i(v.xdut.V1) from = 1900u
+Meas tran I_RO AVG i(v.xdut.V4) from = 1900u
+Meas tran I_LSS AVG i(v.xdut.V3) from = 1900u
+Meas tran I_HSS AVG i(v.xdut.V6) from = 1900u
+Meas tran I_DEL AVG i(v.xdut.V5) from = 1900u
+Meas tran I_CMP AVG i(v.xdut.V7) from = 1900u
+Meas tran I_CP AVG i(v.xdut.V8) from = 1900u
+let I_CNTRL = I_CMP +I_DEL + I_HSS + I_LOGIC + I_LSS + I_RO +I_CP
+print I_CNTRL
+
+Meas tran P_AVG AVG r1:power from =1900u
+let P = P_AVG + I_CNTRL*1.8
+print P
+
+let eff = P/Pin
+print eff
+
+MEAS TRAN t_c TRIG v(xdut.VLSS) VAL=1 FALL=1 TARG v(xdut.VLSS) VAL=1 RISE=1
+MEAS TRAN T TRIG v(xdut.VLSS) VAL=1 RISE=1 TARG v(xdut.VLSS) VAL=1 RISE=2
+
+wrdata comparator_data.txt (xdut.vddc), (xdut.v1) (xdut.vddc_sampl), (xdut.v1_sampl);
+
+echo "MEAS_END"
+.endc
