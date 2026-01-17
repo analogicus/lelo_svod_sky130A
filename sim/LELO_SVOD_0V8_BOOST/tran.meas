@@ -1,0 +1,19 @@
+* Measure LELO_BOOST_STEADY_STATE
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+Meas tran I_0V8 AVG i(v.xdut.V1) from = 100u
+Meas tran I_1V8 AVG i(v.xdut.V2) from = 100u
+
+Meas tran P_AVG AVG r1:power from =100u
+
+let P = P_AVG + I_0V8*0.8 + I_1V8*1.8
+print P
+
+
+wrdata ffTh_data.txt (xdut.vddc) (xdut.vhss1) (xdut.v1); Save V(out) and I(V1) to output.txt
+
+echo "MEAS_END"
+.endc

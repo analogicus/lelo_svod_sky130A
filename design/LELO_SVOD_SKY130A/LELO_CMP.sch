@@ -77,8 +77,6 @@ N -40 140 -40 230 {lab=CLK}
 N -40 60 -40 140 {lab=CLK}
 N 0 20 0 30 {lab=#net1}
 C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -40 310 0 0 {name=x1 }
-C {JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sym} -50 -230 0 1 {name=x5 }
-C {JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sym} 60 -230 0 0 {name=x6 }
 C {devices/ipin.sym} -410 70 0 0 {name=p1 lab=VIP}
 C {devices/ipin.sym} -410 110 2 1 {name=p2 lab=VIN}
 C {devices/ipin.sym} -410 140 0 0 {name=p3 lab=CLK}
@@ -90,8 +88,6 @@ C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} 310 130 0 0 {name=x7 }
 C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} 440 130 0 1 {name=x8 }
 C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} 530 130 0 0 {name=x9 }
 C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} 690 130 0 1 {name=x10 }
-C {JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sym} 560 -250 0 0 {name=x13 }
-C {JNW_ATR_SKY130A/JNWATR_PCH_2C5F0.sym} 420 -250 0 1 {name=x14 }
 C {devices/lab_pin.sym} -410 40 2 0 {name=p8 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 10 -310 1 0 {name=p9 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 500 -310 1 0 {name=p10 sig_type=std_logic lab=VDD}
@@ -111,9 +107,9 @@ C {devices/opin.sym} 600 20 0 0 {name=p23 lab=SP}
 C {devices/lab_pin.sym} 10 -230 3 0 {name=p24 sig_type=std_logic lab=CLK}
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 360 -60 0 0 {name=M2
 W=1.92
-L=0.94
+L=0.44
 nf=2
-mult=6
+mult=3
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
 pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
 as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
@@ -123,22 +119,26 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet_01v8_lvt.sym} 620 -60 0 1 {name=M3
-W=1.92
-L=0.94
-nf=2
-mult=6
-ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
-pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
-as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
-ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
-nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
-sa=0 sb=0 sd=0
-model=pfet_01v8_lvt
-spiceprefix=X
-}
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C1F2.sym} -130 -40 0 0 {name=x2 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C1F2.sym} 140 -40 0 1 {name=x3 }
 C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -40 230 0 0 {name=x4 }
 C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -40 140 0 0 {name=x11 }
 C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -40 60 0 0 {name=x12 }
+C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} -130 -40 0 0 {name=x2 }
+C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} 140 -40 0 1 {name=x3 }
+C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} 60 -230 0 0 {name=x5 }
+C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} -50 -230 0 1 {name=x6 }
+C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} 420 -250 0 1 {name=x13 }
+C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} 560 -250 0 0 {name=x14 }
+C {sky130_fd_pr/pfet_01v8_lvt.sym} 620 -60 0 1 {name=M1
+W=1.92
+L=0.44
+nf=2
+mult=3
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}

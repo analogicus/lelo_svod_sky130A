@@ -3,9 +3,9 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/LELO_BOOST_STEADY_STATE_lpe.spi
+.include ../../../work/lpe/LELO_SVOD_0V8_BOOST_lpe.spi
 #else
-.include ../../../work/xsch/LELO_BOOST_STEADY_STATE.spice
+.include ../../../work/xsch/LELO_SVOD_0V8_BOOST.spice
 #endif
 .include ../../../design/1812PS.lib
 .include ../../../design/XGL6030.lib
@@ -13,13 +13,18 @@
 * OPTIONS
 *-----------------------------------------------------------------
 .option TNOM=27 GMIN=1e-15 reltol=1e-5
-.OPTIONS savecurrents
+.OPTIONS SAVECURRENTS
+*-----------------------------------------------------------------
+* PARAMETERS
+*-----------------------------------------------------------------
+.param TRF = 10p
+
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
 VDD      VDD  0 dc 40m
-VC_CLK   VC_CLK 0 dc 0m
-R1       OUT    0 10k
+VC_CLK   VC_CLK 0 dc 420m
+R1       OUT    0 8k
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
@@ -28,26 +33,26 @@ R1       OUT    0 10k
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
-.save i(v.xdut.v1) i(v.xdut.v4) i(v.xdut.v3) i(v.xdut.v5) i(v.xdut.v6) i(v.xdut.v7) i(v.xdut.v8)
-.save @r.xdut.r2[i] @r.xdut.r1[i]
-.save @m.xdut.xm12.msky130_fd_pr__pfet_01v8[id]
+.PROBE p(R1)
+.save i(v.xdut.v1) i(v.xdut.v2)
+.save @m.xdut.xm3.msky130_fd_pr__nfet_01v8_lvt[id]
 .save @m.xdut.xm5.msky130_fd_pr__nfet_01v8_lvt[id]
 .save v(xdut.TEG)
-.save v(xdut.VDDC)
-.save v(xdut.V1)
-.save v(xdut.VHSS1)
-.save v(xdut.VLSS)
+.save v(xdut.VOUT_0V8)
+.save v(xdut.VX)
+.save v(xdut.HSS1_1V8)
+.save v(xdut.L)
 .save v(xdut.vc)
 .save v(xdut.x3.vg1)
 .save v(xdut.x3.net3)
 .save v(xdut.OFF)      
-
+.save all
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
-.nodeset v(xdut.teg) = 0.02
-.nodeset v(xdut.vddc) = 0.8
-.nodeset v(xdut.vc) = 0.1
+.nodeset v(xdut.TEG) = 0.02
+.nodeset v(xdut.VOUT_0V8) = 0.8
+.nodeset v(xdut.x1.vc) = 0.1
 
 .control
 set num_threads=8
@@ -57,8 +62,6 @@ unset askquit
 
 
 tran 1u 200u
-
-
 write
 quit
 
