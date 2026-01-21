@@ -1,0 +1,12 @@
+* Measure TRANSISTOR_TEST
+.control
+
+load tran_SchGtKttTtVt.raw
+
+echo "MEAS_START"
+meas tran iint INTEG i(vd)
+meas tran is AVG i(vs) from = 10n
+let rout = 0.01/is
+print rout
+echo "MEAS_END"
+.endc

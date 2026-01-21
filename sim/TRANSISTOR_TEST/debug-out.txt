@@ -1,0 +1,36 @@
+
+
+**************** uncommented deck without source file info **************
+
+     1  * measure transistor_test
+     2  .global gnd
+     3  .control
+     4  load tran_SchGtKttTtVt.raw
+     5  echo "MEAS_START"
+     6  meas tran iint integ i(vg)
+     7  echo "MEAS_END"
+     8  .endc
+
+
+**************** uncommented deck **************
+
+tran.meas       1       1  * measure transistor_test
+internal       0       2  .global gnd
+tran.meas       2       3  .control
+tran.meas       4       4  load tran_SchGtKttTtVt.raw
+tran.meas       6       5  echo "MEAS_START"
+tran.meas       7       6  meas tran iint integ i(vg)
+tran.meas       8       7  echo "MEAS_END"
+tran.meas       9       8  .endc
+
+
+****************** complete deck ***************
+
+tran.meas       1       1  * measure transistor_test
+internal       0       2  .global gnd
+tran.meas       2       3  .control
+tran.meas       4       4  load tran_SchGtKttTtVt.raw
+tran.meas       6       5  echo "MEAS_START"
+tran.meas       7       6  meas tran iint integ i(vg)
+tran.meas       8       7  echo "MEAS_END"
+tran.meas       9       8  .endc

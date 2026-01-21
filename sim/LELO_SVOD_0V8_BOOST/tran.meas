@@ -4,10 +4,10 @@
 load {cicname}.raw
 
 echo "MEAS_START"
-Meas tran I_0V8 AVG i(v.xdut.V1) from = 100u
-Meas tran I_1V8 AVG i(v.xdut.V2) from = 100u
+Meas tran I_0V8 AVG i(v.xdut.V1) from = 200u
+Meas tran I_1V8 AVG i(v.xdut.V2) from = 200u
 
-Meas tran P_AVG AVG r1:power from =100u
+Meas tran P_AVG AVG r1:power from =200u
 
 let P = P_AVG + I_0V8*0.8 + I_1V8*1.8
 print P
