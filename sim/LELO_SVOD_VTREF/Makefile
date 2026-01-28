@@ -7,7 +7,7 @@ all: typical etc mc summary
 TB=tran
 VIEW=Sch
 #VIEW=Lay
-CELL=LELO_SVOD_0V8_BOOST
+CELL=LELO_SVOD_VTREF
 LIB =LELO_SVOD_SKY130A
 OPT=
 
@@ -38,7 +38,7 @@ etc: netlist
 	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vl,Vh"
 
 mc: netlist
-	cicsim run --name ${VIEW}_mc --count 200 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"
+	cicsim run --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"
 
 ntc: netlist
 	cicsim run --name ${VIEW}_ntc ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt" Vt

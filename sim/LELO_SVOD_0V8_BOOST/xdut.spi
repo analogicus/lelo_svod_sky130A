@@ -1,2 +1,2 @@
 *Automatic generated instance fron ../../tech/scripts/genxdut LELO_SVOD_0V8_BOOST
-XDUT VDD 0 OUT EN  LELO_SVOD_0V8_BOOST
+XDUT VDD 0 OUT2 OUT1  LELO_SVOD_0V8_BOOST
