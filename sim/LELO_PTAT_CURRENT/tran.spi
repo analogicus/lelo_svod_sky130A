@@ -3,9 +3,9 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/LELO_SVOD_VTREF_lpe.spi
+.include ../../../work/lpe/LELO_PTAT_CURRENT_lpe.spi
 #else
-.include ../../../work/xsch/LELO_SVOD_VTREF.spice
+.include ../../../work/xsch/LELO_PTAT_CURRENT.spice
 #endif
 
 *-----------------------------------------------------------------
@@ -18,15 +18,14 @@
 *-----------------------------------------------------------------
 .param TRF = 10p
 
-.param AVDD=0.8
-
+.param AVDD = {vdda}
 
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD  VSS   pwl 0 0 1u {vdd}
-
+VDD1  VDD1  VSS  pwl 0 0 10n 0.8
+VDD2  VDD2  VSS  pwl 0 0 10n 0.8
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
@@ -47,9 +46,10 @@ set color0=white
 set color1=black
 unset askquit
 
+optran 0 0 0 1n 1u 0
 
 
-tran 100n 500u
+tran 1000n 10000000n
 write
 quit
 

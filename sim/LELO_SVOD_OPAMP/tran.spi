@@ -3,29 +3,29 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/LELO_SVOD_VTREF_lpe.spi
+.include ../../../work/lpe/LELO_SVOD_OPAMP_lpe.spi
 #else
-.include ../../../work/xsch/LELO_SVOD_VTREF.spice
+.include ../../../work/xsch/LELO_SVOD_OPAMP.spice
 #endif
 
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
-.option TNOM=27 GMIN=1e-15 reltol=1e-5
+.option TNOM=27 GMIN=1e-15 reltol=1e-3
 
 *-----------------------------------------------------------------
 * PARAMETERS
 *-----------------------------------------------------------------
 .param TRF = 10p
 
-.param AVDD=0.8
-
+.param AVDD = {vdda}
 
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD  VSS   pwl 0 0 1u {vdd}
+VDD  VDD  VSS   dc 1.8
+
 
 *-----------------------------------------------------------------
 * DUT
@@ -47,9 +47,10 @@ set color0=white
 set color1=black
 unset askquit
 
+optran 0 0 0 1n 1u 0
 
 
-tran 100n 500u
+tran 10u 1m 1p
 write
 quit
 
