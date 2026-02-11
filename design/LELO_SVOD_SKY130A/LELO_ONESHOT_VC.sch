@@ -23,9 +23,6 @@ N 220 -300 220 -270 {lab=VDD}
 N 220 -230 220 -170 {lab=#net1}
 N 220 -170 330 -170 {lab=#net1}
 N -210 -140 100 -140 {lab=VDD}
-N 100 -300 100 -270 {lab=VDD}
-N 100 -240 100 -170 {lab=#net1}
-N 100 -170 220 -170 {lab=#net1}
 N -20 -300 100 -300 {lab=VDD}
 N -20 -300 -20 -140 {lab=VDD}
 C {devices/lab_pin.sym} -710 110 0 1 {name=p23 sig_type=std_logic lab=VDD}
@@ -80,20 +77,3 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet_01v8.sym} 80 -270 0 0 {name=M2
-W=1
-L=0.15
-nf=1
-mult=10
-ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
-pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
-as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
-ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
-nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
-sa=0 sb=0 sd=0
-model=pfet_01v8
-spiceprefix=X
-}
-C {devices/ipin.sym} -710 170 0 0 {name=p6 lab=EN}
-C {devices/lab_pin.sym} -710 170 0 1 {name=p10 sig_type=std_logic lab=EN}
-C {devices/lab_pin.sym} 60 -270 0 0 {name=p17 sig_type=std_logic lab=EN}

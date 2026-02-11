@@ -18,13 +18,15 @@
 * PARAMETERS
 *-----------------------------------------------------------------
 .param TRF = 10p
++ sky130_fd_pr__pfet_01v8__ajunction_mult = 9.9626e-1
++ sky130_fd_pr__pfet_01v8__pjunction_mult = 1.0009e+0
 
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
 VDD      VDD  0 dc 40m
-R1       OUT1    0 12k
-R2       OUT2   0 500k
+R1       OUT1    0 100k
+R2       OUT2   0 100k
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
@@ -36,28 +38,69 @@ R2       OUT2   0 500k
 .PROBE p(R1)
 .PROBE p(R2)
 .save i(v.xdut.v1) i(v.xdut.v2)
-.save @m.xdut.xm3.msky130_fd_pr__nfet_01v8_lvt[id]
-.save @m.xdut.xm5.msky130_fd_pr__nfet_01v8_lvt[id]
+.save @m.xdut.x1.xm3.msky130_fd_pr__nfet_01v8_lvt[id]
+.save @m.xdut.x1.xm5.msky130_fd_pr__nfet_01v8_lvt[id]
 .save v(xdut.TEG)
 .save v(xdut.VOUT_0V8)
 .save v(xdut.VOUT_1V8)
-.save v(xdut.VX)
-.save v(xdut.HSS1_1V8)
-.save v(xdut.L)
-.save v(xdut.vc)
-.save v(xdut.x3.vg1)
-.save v(xdut.x3.net3)
-.save v(xdut.OFF)      
+.save v(xdut.x1.VX)
+.save v(xdut.x1.HSS1_1V8)
+.save v(xdut.x1.HSS2_1V8)
+.save v(xdut.x1.LSS_1V8)
+.save v(xdut.x1.EN_0V8)
+.save v(xdut.x1.EN_1V8)
+.save v(xdut.x1.EN_LSS)
+.save v(xdut.x1.CLK)
+.save v(xdut.x1.x8.VREF)
+.save v(xdut.x1.x8.VMEAS_0V8)
+.save v(xdut.x1.x8.VMEAS_1V8)
+.save v(xdut.x1.x1.VC)
+.save v(xdut.x1.x1.SN)
+.save v(xdut.x1.x1.SP)
+.save v(xdut.x1.x1.VX_SAMPL)
+.save v(xdut.x1.x1.VOUT_SAMPL)
+
+
+ 
 
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
-.nodeset v(xdut.TEG) = 0.02
-.nodeset v(xdut.VOUT_0V8) = 0.8
-.nodeset v(xdut.VOUT_1V8) = 1.8
-.nodeset v(xdut.x1.vc) = 0.1
-.nodeset v(xdut.x6.vc) = 0.13
-.nodeset v(xdut.x1.x1.net2) = 0.8
+.ic v(xdut.TEG) = 0.02
+.ic v(xdut.VOUT_0V8) = 0.8
+.ic v(xdut.VOUT_1V8) = 1.7
+.ic v(xdut.x1.x1.vc) = 0.15
+.ic v(xdut.x1.x6.vc) = 0.13
+.ic v(xdut.x1.x1.x1.net2) = 0.8
+.ic v(xdut.x1.HSS1U_1V8) = 0
+.ic v(xdut.x1.HSS1U_0V8) = 0
+.ic v(xdut.x1.HSS1_1V8) = 0
+.ic v(xdut.x1.x1.x1.net1) = 1.8
+.ic v(xdut.x1.x1.x1.net2) = 0.8
+.ic v(xdut.x1.x8.vref) = 0.6
+.ic v(xdut.x1.x8.x8.v2) = 0.5
+.ic v(xdut.x1.x8.x8.net21) = 0.55
+.ic v(xdut.x1.x8.x8.net1) = 0.8
+.ic v(xdut.x1.x8.x8.net2) = 0.8
+.ic v(xdut.x1.x8.x8.net3) = 0.8
+.ic v(xdut.x1.x8.x8.net4) = 0.8
+.ic v(xdut.x1.x8.x8.net5) = 0.8
+.ic v(xdut.x1.x8.x8.net6) = 0.8
+.ic v(xdut.x1.x8.x8.net7) = 0.8
+.ic v(xdut.x1.x8.x8.net8) = 0.8
+.ic v(xdut.x1.x8.x8.net9) = 0.8
+.ic v(xdut.x1.x8.x8.net10) = 0.8
+.ic v(xdut.x1.x8.x8.net11) = 0.8
+.ic v(xdut.x1.x8.x8.net12) = 0.8
+.ic v(xdut.x1.x8.x8.net13) = 0.8
+.ic v(xdut.x1.x8.x8.net14) = 0.8
+.ic v(xdut.x1.x8.x8.net15) = 0.8
+.ic v(xdut.x1.x8.x8.net16) = 0.8
+.ic v(xdut.x1.x8.x8.net17) = 0.8
+.ic v(xdut.x1.x8.x8.net18) = 0.8
+.ic v(xdut.x1.x8.x8.net19) = 0.8
+.ic v(xdut.x1.x8.x8.net20) = 0.8
+
 
 .control
 set num_threads=8

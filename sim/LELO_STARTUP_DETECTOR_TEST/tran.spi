@@ -2,11 +2,10 @@
 *----------------------------------------------------------------
 * Include
 *----------------------------------------------------------------
-
 #ifdef Lay
-.include ../../../work/lpe/LELO_SVOD_VTREF_lpe.spi
+.include ../../../work/lpe/LELO_STARTUP_DETECTOR_TEST_lpe.spi
 #else
-.include ../../../work/xsch/LELO_SVOD_VTREF.spice
+.include ../../../work/xsch/LELO_STARTUP_DETECTOR_TEST.spice
 #endif
 
 *-----------------------------------------------------------------
@@ -19,14 +18,15 @@
 *-----------------------------------------------------------------
 .param TRF = 10p
 
-.param AVDD=0.8
-
+.param AVDD = {vdda}
++ sky130_fd_pr__pfet_01v8__ajunction_mult = 9.9626e-1
++ sky130_fd_pr__pfet_01v8__pjunction_mult = 1.0009e+0
 
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD  VSS   pwl 0 0 1u {vdd}
+VDD  VDD  VSS  pwl 0 0 100m 0.8
 
 *-----------------------------------------------------------------
 * DUT
@@ -48,9 +48,10 @@ set color0=white
 set color1=black
 unset askquit
 
+optran 0 0 0 1n 1u 0
 
 
-tran 100m 2000m
+tran 1u 100m
 write
 quit
 

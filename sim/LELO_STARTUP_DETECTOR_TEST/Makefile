@@ -7,7 +7,7 @@ all: typical etc mc summary
 TB=tran
 VIEW=Sch
 #VIEW=Lay
-CELL=LELO_SVOD_VTREF
+CELL=LELO_STARTUP_DETECTOR_TEST
 LIB =LELO_SVOD_SKY130A
 OPT=
 
@@ -18,12 +18,6 @@ test:
 
 typical: netlist
 	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Ktt Tt Vt
-
-ff: netlist
-	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Kff Th Vt
-
-ss: netlist
-	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Kss Th Vt	
 
 slow: netlist
 	cicsim run --name ${VIEW}_slow ${TB} ${OPT} ${VIEW} Gt Kss "Th,Tl" Vl
@@ -41,16 +35,10 @@ mc: netlist
 	cicsim run --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"
 
 ntc: netlist
-	cicsim run --name ${VIEW}_ntc ${TB} ${OPT} ${VIEW} Gt "Kss,Ktt,Kff" "Tt" Vt
+	cicsim run --name ${VIEW}_ntc ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt" Vt
 
 temp: netlist
 	cicsim run --name ${VIEW}_temp ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tt,Th,Tl" Vt
-
-skew: netlist
-	cicsim run --name ${VIEW}_skew ${TB} ${OPT} ${VIEW} Gt "Ktt,Kff,Kss,Kfs,Ksf" Tt "Vt"
-
-voltage: netlist
-	cicsim run --name ${VIEW}_voltage ${TB} ${OPT} ${VIEW} Gt Ktt Tt "Vt,Vl,Vh"
 
 summary:
 	cicsim summary --output "README.md"

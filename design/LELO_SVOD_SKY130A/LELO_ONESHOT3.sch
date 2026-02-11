@@ -44,7 +44,7 @@ C {devices/lab_pin.sym} -500 250 2 1 {name=p16 sig_type=std_logic lab=PULSE}
 C {devices/lab_pin.sym} 230 130 2 0 {name=p17 sig_type=std_logic lab=PULSE}
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 20 -200 0 0 {name=M1
 W=0.42
-L=1
+L=2
 nf=1
 mult=1
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
