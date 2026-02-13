@@ -7,13 +7,12 @@ E {}
 N 0 -300 0 -260 {lab=VOUT_0V8}
 N 0 -300 30 -300 {lab=VOUT_0V8}
 N 60 -260 90 -260 {lab=OUT1}
-N -10 -120 -10 -80 {lab=VSS}
-N -10 -120 20 -120 {lab=VSS}
+N -10 -120 -10 -80 {lab=#net1}
+N -10 -120 20 -120 {lab=#net1}
 N 50 -80 80 -80 {lab=OUT2}
 N -100 -260 -100 -200 {lab=VOUT_0V8}
 N -100 -260 0 -260 {lab=VOUT_0V8}
-N -100 -180 -100 -80 {lab=VSS}
-N -100 -80 -10 -80 {lab=VSS}
+N -100 -80 -10 -80 {lab=#net1}
 C {devices/ipin.sym} -510 -390 0 1 {name=p2 lab=VDD}
 C {devices/res.sym} -510 -360 0 1 {name=R1
 value=5
@@ -48,3 +47,4 @@ C {devices/lab_pin.sym} 50 -300 1 0 {name=p8 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 40 -120 1 0 {name=p9 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -100 -200 2 0 {name=p10 sig_type=std_logic lab=VOUT_0V8}
 C {devices/lab_pin.sym} -100 -180 2 0 {name=p11 sig_type=std_logic lab=VOUT_1V8}
+C {devices/lab_pin.sym} -100 -80 2 1 {name=p12 sig_type=std_logic lab=VOUT_1V8}

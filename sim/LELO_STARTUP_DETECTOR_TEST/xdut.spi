@@ -1,2 +1,2 @@
 *Automatic generated instance fron ../../tech/scripts/genxdut LELO_STARTUP_DETECTOR_TEST
-XDUT VDD VSS  LELO_STARTUP_DETECTOR_TEST
+XDUT VDD_0V8 VSS  LELO_STARTUP_DETECTOR_TEST

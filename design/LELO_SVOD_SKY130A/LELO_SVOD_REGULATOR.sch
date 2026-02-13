@@ -29,6 +29,8 @@ N -360 -510 -360 -490 {lab=#net3}
 N -240 -260 -240 -150 {lab=VOUT_1V8}
 N -360 -260 -240 -260 {lab=VOUT_1V8}
 N -580 -570 -530 -570 {lab=VREF}
+N -130 210 -130 250 {lab=#net4}
+N -130 240 -30 240 {lab=#net4}
 C {devices/ipin.sym} -650 -270 0 0 {name=p1 lab=VOUT_0V8}
 C {devices/lab_pin.sym} -650 -270 0 1 {name=p2 sig_type=std_logic lab=VOUT_0V8}
 C {devices/ipin.sym} -650 -170 0 0 {name=p5 lab=VSS}
@@ -220,3 +222,22 @@ value=500f
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -530 -630 0 0 {name=p67 sig_type=std_logic lab=VDD_0V8}
+C {LELO_SVOD_SKY130A/LELO_CMP_HYST.sym} 120 250 0 0 {name=x9}
+C {devices/lab_pin.sym} -30 280 0 0 {name=p68 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 270 220 0 1 {name=p69 sig_type=std_logic lab=EN_START}
+C {devices/lab_pin.sym} -30 260 0 0 {name=p70 sig_type=std_logic lab=VREF}
+C {devices/res.sym} -130 180 0 0 {name=R5
+value=800k
+footprint=1206
+device=resistor
+m=1}
+C {devices/res.sym} -130 280 0 0 {name=R6
+value=1.4Meg
+footprint=1206
+device=resistor
+m=1}
+C {devices/lab_pin.sym} -130 310 0 0 {name=p71 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -30 220 0 0 {name=p72 sig_type=std_logic lab=VDD_0V8}
+C {devices/lab_pin.sym} -130 150 0 0 {name=p73 sig_type=std_logic lab=VDD_0V8}
+C {devices/lab_pin.sym} 810 -310 0 0 {name=p74 sig_type=std_logic lab=EN_START}
+C {devices/opin.sym} 810 -310 0 0 {name=p75 lab=EN_START}

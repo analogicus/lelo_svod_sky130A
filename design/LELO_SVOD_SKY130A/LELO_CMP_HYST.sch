@@ -86,6 +86,12 @@ N -250 -310 -80 -310 {lab=VDD}
 N -250 -310 -250 -150 {lab=VDD}
 N -250 -90 -250 0 {lab=BIAS}
 N -250 0 -40 -0 {lab=BIAS}
+N 790 -190 910 -190 {lab=#net8}
+N 790 -310 950 -310 {lab=VDD}
+N 950 -310 950 -240 {lab=VDD}
+N 700 60 950 60 {lab=VSS}
+N 950 -140 950 60 {lab=VSS}
+N 1020 -190 1080 -190 {lab=OUT}
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} -40 0 0 0 {name=x1 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C1F2.sym} -120 -130 0 0 {name=x2 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C1F2.sym} 120 -130 0 1 {name=x3 }
@@ -94,8 +100,8 @@ C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} 120 -250 0 1 {name=x5 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} 240 -190 0 0 {name=x6 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} 390 -190 0 0 {name=x7 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} 180 0 0 0 {name=x8 }
-C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} 330 0 0 1 {name=x9 }
-C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} 370 0 0 0 {name=x10 }
+C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} 330 0 0 1 {name=x9[0:4]}
+C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} 370 0 0 0 {name=x10[0:4]}
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} 520 0 0 1 {name=x11 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C1F2.sym} 570 -130 0 0 {name=x12 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C1F2.sym} 830 -130 0 1 {name=x13 }
@@ -115,4 +121,5 @@ C {devices/lab_pin.sym} 80 -130 0 0 {name=p9 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -80 -130 0 1 {name=p10 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 610 -130 0 1 {name=p11 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 790 -130 0 0 {name=p12 sig_type=std_logic lab=VSS}
-C {devices/opin.sym} 790 -190 0 0 {name=p13 lab=OUT}
+C {devices/opin.sym} 1080 -190 0 0 {name=p13 lab=EN_START}
+C {LELO_SVOD_SKY130A/LELO_INV.sym} 970 -190 0 0 {name=x9}
