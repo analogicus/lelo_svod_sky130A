@@ -88,10 +88,16 @@ N -250 -90 -250 0 {lab=BIAS}
 N -250 0 -40 -0 {lab=BIAS}
 N 790 -190 910 -190 {lab=#net8}
 N 790 -310 950 -310 {lab=VDD}
-N 950 -310 950 -240 {lab=VDD}
 N 700 60 950 60 {lab=VSS}
-N 950 -140 950 60 {lab=VSS}
-N 1020 -190 1080 -190 {lab=OUT}
+N 950 -220 950 -170 {lab=EN_START}
+N 950 -140 950 -110 {lab=VSS}
+N 950 -280 950 -250 {lab=VDD}
+N 950 -110 950 -80 {lab=VSS}
+N 950 -310 950 -280 {lab=VDD}
+N 910 -250 910 -190 {lab=#net8}
+N 910 -190 910 -140 {lab=#net8}
+N 950 -190 1020 -190 {lab=EN_START}
+N 950 -80 950 60 {lab=VSS}
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} -40 0 0 0 {name=x1 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C1F2.sym} -120 -130 0 0 {name=x2 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C1F2.sym} 120 -130 0 1 {name=x3 }
@@ -100,8 +106,8 @@ C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} 120 -250 0 1 {name=x5 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} 240 -190 0 0 {name=x6 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} 390 -190 0 0 {name=x7 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} 180 0 0 0 {name=x8 }
-C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} 330 0 0 1 {name=x9[0:4]}
-C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} 370 0 0 0 {name=x10[0:4]}
+C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} 330 0 0 1 {name=x9[0:1]}
+C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} 370 0 0 0 {name=x10[0:1]}
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} 520 0 0 1 {name=x11 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C1F2.sym} 570 -130 0 0 {name=x12 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C1F2.sym} 830 -130 0 1 {name=x13 }
@@ -121,5 +127,32 @@ C {devices/lab_pin.sym} 80 -130 0 0 {name=p9 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -80 -130 0 1 {name=p10 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 610 -130 0 1 {name=p11 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 790 -130 0 0 {name=p12 sig_type=std_logic lab=VSS}
-C {devices/opin.sym} 1080 -190 0 0 {name=p13 lab=EN_START}
-C {LELO_SVOD_SKY130A/LELO_INV.sym} 970 -190 0 0 {name=x9}
+C {devices/opin.sym} 1020 -190 0 0 {name=p13 lab=EN_START}
+C {sky130_fd_pr/nfet_01v8_lvt.sym} 930 -140 0 0 {name=M1
+W=1
+L=0.35
+nf=1
+mult=4
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} 930 -250 0 0 {name=M2
+W=1
+L=0.35
+nf=1
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}
