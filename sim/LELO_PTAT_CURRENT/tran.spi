@@ -49,7 +49,7 @@ unset askquit
 optran 0 0 0 1n 1u 0
 
 
-tran 1000n 10000000n
+tran 10u 100m
 write
 quit
 
