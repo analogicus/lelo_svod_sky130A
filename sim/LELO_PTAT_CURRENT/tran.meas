@@ -4,6 +4,6 @@
 load {cicname}.raw
 
 echo "MEAS_START"
-
+Meas tran I_0V8 AVG i(VDD2) from = 9m
 echo "MEAS_END"
 .endc
