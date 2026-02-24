@@ -84,8 +84,6 @@ N 700 30 700 60 {lab=VSS}
 N 700 -60 700 -30 {lab=#net6}
 N -250 -310 -80 -310 {lab=VDD}
 N -250 -310 -250 -150 {lab=VDD}
-N -250 -90 -250 0 {lab=BIAS}
-N -250 0 -40 -0 {lab=BIAS}
 N 790 -190 910 -190 {lab=#net8}
 N 790 -310 950 -310 {lab=VDD}
 N 700 60 950 60 {lab=VSS}
@@ -98,6 +96,13 @@ N 910 -250 910 -190 {lab=#net8}
 N 910 -190 910 -140 {lab=#net8}
 N 950 -190 1020 -190 {lab=EN_START}
 N 950 -80 950 60 {lab=VSS}
+N -250 -0 -250 30 {lab=VSS}
+N -250 30 -250 60 {lab=VSS}
+N -250 60 0 60 {lab=VSS}
+N -250 -90 -250 -30 {lab=BIAS}
+N -250 -30 -210 -30 {lab=BIAS}
+N -210 -30 -210 -0 {lab=BIAS}
+N -210 -0 -40 0 {lab=BIAS}
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} -40 0 0 0 {name=x1 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C1F2.sym} -120 -130 0 0 {name=x2 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C1F2.sym} 120 -130 0 1 {name=x3 }
@@ -114,15 +119,15 @@ C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C1F2.sym} 830 -130 0 1 {name=x13 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} 650 -250 0 1 {name=x15 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} 750 -250 0 0 {name=x16 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} 660 0 0 0 {name=x14 }
-C {devices/isource.sym} -250 -120 0 0 {name=I0 value=1n}
+C {devices/isource.sym} -250 -120 0 0 {name=I0 value=10n}
 C {devices/ipin.sym} -120 -130 0 0 {name=p1 lab=VINA}
-C {devices/lab_pin.sym} -250 0 0 0 {name=p2 sig_type=std_logic lab=BIAS}
+C {devices/lab_pin.sym} -140 0 1 0 {name=p2 sig_type=std_logic lab=BIAS}
 C {devices/lab_pin.sym} 660 0 0 0 {name=p3 sig_type=std_logic lab=BIAS}
 C {devices/ipin.sym} 120 -130 0 1 {name=p4 lab=VIN}
-C {devices/ipin.sym} -280 60 0 0 {name=p5 lab=VSS}
+C {devices/ipin.sym} -290 120 0 0 {name=p5 lab=VSS}
 C {devices/ipin.sym} -250 -310 0 0 {name=p6 lab=VDD}
-C {devices/lab_pin.sym} -280 60 0 1 {name=p7 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 0 60 0 0 {name=p8 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -290 120 0 1 {name=p7 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -250 60 0 0 {name=p8 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 80 -130 0 0 {name=p9 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -80 -130 0 1 {name=p10 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 610 -130 0 1 {name=p11 sig_type=std_logic lab=VSS}
@@ -156,3 +161,4 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
+C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} -210 0 0 1 {name=x9 }
