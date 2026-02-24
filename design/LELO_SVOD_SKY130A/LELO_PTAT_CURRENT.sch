@@ -43,6 +43,7 @@ N 90 -60 130 -60 {lab=#net1}
 N 110 -60 130 -60 {lab=#net1}
 N 110 -90 110 -60 {lab=#net1}
 N 130 -30 130 -0 {lab=#net2}
+N 160 240 160 290 {lab=VSS}
 C {devices/ipin.sym} 0 -200 1 0 {name=p1 lab=VDD1}
 C {devices/ipin.sym} 0 290 3 0 {name=p2 lab=VSS}
 C {devices/ipin.sym} 180 -200 1 0 {name=p3 lab=VDD2}
@@ -144,9 +145,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/res_xhigh_po_0p35.sym} 180 240 0 1 {name=R2
-L=20
-model=res_xhigh_po_0p35
+C {sky130_fd_pr/res_iso_pw.sym} 180 240 0 0 {name=R3
+W=0.15
+L=320
+model=res_iso_pw
 spiceprefix=X
 mult=1}
-C {devices/lab_pin.sym} 200 240 1 0 {name=p33 sig_type=std_logic lab=VDD}
