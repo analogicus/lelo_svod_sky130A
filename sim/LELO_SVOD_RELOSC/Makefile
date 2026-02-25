@@ -43,6 +43,9 @@ temp: netlist
 tl: netlist
 	cicsim run --name ${VIEW}_temp ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tl" Vt
 
+voltage: netlist
+	cicsim run --name ${VIEW}_voltage ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tt" "Vl,Vt,Vh"
+
 summary:
 	cicsim summary --output "README.md"
 
