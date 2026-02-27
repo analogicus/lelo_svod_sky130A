@@ -24,7 +24,7 @@
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD VSS    dc {vdd}
+VDD  VDD VSS    pwl 0 0 1m {vdd}
 
 *-----------------------------------------------------------------
 * DUT
@@ -41,18 +41,18 @@ VDD  VDD VSS    dc {vdd}
 * NGSPICE control
 *----------------------------------------------------------------
 
-.ic v(xdut.bias_ref)=0.39 
-.ic v(xdut.vgm2)=0.77
-.ic v(xdut.vgm3)=0.35
+.ic v(xdut.bias_ref)=0.46 
+.ic v(xdut.vgm2)=0.33
 
-.measure tran t5 WHEN V(xdut.phase1)=0.5 RISE=10    
+
+.measure tran t5 WHEN V(xdut.phase1)=0.1 RISE=20    
 .control
 set num_threads=8
 set color0=white
 set color1=black
 unset askquit
 
-tran 1u 100m
+tran 10u 1000m
 
 
 
