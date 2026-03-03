@@ -34,7 +34,7 @@ N -260 -740 50 -740 {lab=bias_ref}
 N 50 -750 50 -740 {lab=bias_ref}
 N -220 -110 -160 -110 {lab=BIAS}
 N -160 -110 -160 -50 {lab=BIAS}
-N -650 -780 -470 -780 {lab=VDD}
+N -760 -780 -580 -780 {lab=VDD}
 N 610 -260 610 -110 {lab=#net3}
 N 320 -320 610 -260 {lab=#net3}
 N 320 -400 320 -320 {lab=#net3}
@@ -43,43 +43,41 @@ N 610 -420 610 -320 {lab=#net4}
 N 320 -260 610 -320 {lab=#net4}
 N 320 -260 320 -130 {lab=#net4}
 N 320 -130 360 -130 {lab=#net4}
-N -650 -750 -650 -720 {lab=VDD}
-N -470 -750 -470 -720 {lab=VDD}
-N -470 -780 -470 -750 {lab=VDD}
-N -650 -780 -650 -750 {lab=VDD}
-N -610 -720 -510 -720 {lab=bias_ref}
-N -470 -690 -470 -610 {lab=bias_ref}
-N -650 -480 -650 -360 {lab=VSS}
-N -650 -360 -470 -360 {lab=VSS}
-N -470 -360 -440 -360 {lab=VSS}
-N -650 -690 -650 -610 {lab=vgm2}
-N -610 -580 -510 -580 {lab=vgm2}
-N -650 -640 -580 -640 {lab=vgm2}
-N -580 -640 -580 -580 {lab=vgm2}
-N -470 -580 -450 -580 {lab=VSS}
-N -670 -580 -650 -580 {lab=VSS}
-N -450 -580 -440 -580 {lab=VSS}
-N -670 -580 -670 -540 {lab=VSS}
-N -670 -540 -650 -540 {lab=VSS}
-N -440 -510 -440 -360 {lab=VSS}
-N -560 -680 -560 -650 {lab=bias_ref}
-N -240 120 -220 120 {lab=VSS}
-N -490 -390 -490 -360 {lab=VSS}
+N -760 -750 -760 -720 {lab=VDD}
+N -580 -750 -580 -720 {lab=VDD}
+N -580 -780 -580 -750 {lab=VDD}
+N -760 -780 -760 -750 {lab=VDD}
+N -720 -720 -620 -720 {lab=bias_ref}
+N -580 -690 -580 -610 {lab=bias_ref}
+N -760 -480 -760 -360 {lab=VSS}
+N -760 -360 -580 -360 {lab=VSS}
+N -580 -360 -550 -360 {lab=VSS}
+N -760 -690 -760 -610 {lab=vgm2}
+N -720 -580 -620 -580 {lab=vgm2}
+N -760 -640 -690 -640 {lab=vgm2}
+N -690 -640 -690 -580 {lab=vgm2}
+N -580 -580 -560 -580 {lab=VSS}
+N -780 -580 -760 -580 {lab=VSS}
+N -560 -580 -550 -580 {lab=VSS}
+N -780 -580 -780 -540 {lab=VSS}
+N -780 -540 -760 -540 {lab=VSS}
+N -550 -510 -550 -360 {lab=VSS}
+N -670 -680 -670 -650 {lab=bias_ref}
 N -220 -720 -220 -80 {lab=BIAS}
-N -520 -650 -520 -620 {lab=vgm2}
-N -520 -620 -520 -580 {lab=vgm2}
-N -540 -680 -470 -680 {lab=bias_ref}
-N -540 -720 -540 -680 {lab=bias_ref}
-N -560 -680 -540 -680 {lab=bias_ref}
-N -440 -580 -440 -510 {lab=VSS}
-N -470 -550 -470 -520 {lab=#net8}
-N -470 -460 -470 -420 {lab=#net8}
-N -650 -550 -650 -480 {lab=VSS}
+N -630 -650 -630 -620 {lab=vgm2}
+N -630 -620 -630 -580 {lab=vgm2}
+N -650 -680 -580 -680 {lab=bias_ref}
+N -650 -720 -650 -680 {lab=bias_ref}
+N -670 -680 -650 -680 {lab=bias_ref}
+N -550 -580 -550 -510 {lab=VSS}
+N -580 -550 -580 -520 {lab=#net8}
+N -580 -460 -580 -420 {lab=#net8}
+N -760 -550 -760 -480 {lab=VSS}
 N -220 50 -220 60 {lab=#net9}
 N -220 -20 -220 -10 {lab=#net10}
 N 470 -550 470 -520 {lab=VDD}
 N 470 -240 470 -210 {lab=VDD}
-N -470 -520 -470 -460 {lab=#net8}
+N -580 -520 -580 -460 {lab=#net8}
 N 700 -450 700 -400 {lab=PHASE1}
 N 700 -370 700 -340 {lab=VSS}
 N 700 -510 700 -480 {lab=#net11}
@@ -96,11 +94,16 @@ N 700 -270 700 -240 {lab=VDD}
 N 700 -600 700 -570 {lab=VDD}
 N 700 -540 700 -510 {lab=#net11}
 N 700 -210 700 -190 {lab=#net12}
-N 990 -440 990 -390 {lab=OUT}
+N 990 -440 990 -390 {lab=OSC}
 N 990 -360 990 -330 {lab=VSS}
 N 990 -500 990 -470 {lab=VDD}
 N 950 -470 950 -360 {lab=PHASE1}
-N 990 -420 1020 -420 {lab=OUT}
+N 990 -420 1020 -420 {lab=OSC}
+N -580 -780 -440 -780 {lab=VDD}
+N -440 -780 -440 -750 {lab=VDD}
+N -440 -750 -440 -720 {lab=VDD}
+N -440 -690 -440 -580 {lab=IBP_3n}
+N -240 120 -220 120 {lab=VSS}
 C {LELO_SVOD_SKY130A/LELO_NOR.sym} 490 -420 0 0 {name=x1}
 C {LELO_SVOD_SKY130A/LELO_NOR.sym} 490 -110 0 0 {name=x2}
 C {sky130_fd_pr/pfet_01v8_lvt.sym} -20 -590 0 0 {name=M6
@@ -146,8 +149,8 @@ C {devices/ipin.sym} -360 -990 0 0 {name=p19 lab=VDD}
 C {devices/ipin.sym} -360 -950 0 0 {name=p20 lab=VSS}
 C {devices/lab_pin.sym} -360 -990 2 0 {name=p21 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -360 -950 2 0 {name=p22 sig_type=std_logic lab=VSS}
-C {devices/opin.sym} 1020 -420 0 0 {name=p24 lab=OUT}
-C {sky130_fd_pr/pfet_01v8_lvt.sym} -490 -720 0 0 {name=M11
+C {devices/opin.sym} 1020 -420 0 0 {name=p24 lab=OSC}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} -600 -720 0 0 {name=M11
 W=4
 L=20
 nf=1
@@ -161,7 +164,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet_01v8_lvt.sym} -540 -650 0 0 {name=M16
+C {sky130_fd_pr/nfet_01v8_lvt.sym} -650 -650 0 0 {name=M16
 W=1.92
 L=5
 nf=2
@@ -175,12 +178,12 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
-C {devices/lab_pin.sym} -540 -720 1 0 {name=p27 sig_type=std_logic lab=bias_ref}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 0 90 0 0 {name=C3 model=cap_mim_m3_1 W=10 L=18 MF=1 spiceprefix=X}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 180 90 0 0 {name=C1 model=cap_mim_m3_1 W=10 L=18 MF=1 spiceprefix=X}
-C {devices/lab_pin.sym} -550 -360 3 0 {name=p23 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} -650 -780 1 0 {name=p26 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} -580 -640 1 0 {name=p35 sig_type=std_logic lab=vgm2}
+C {devices/lab_pin.sym} -650 -720 1 0 {name=p27 sig_type=std_logic lab=bias_ref}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 0 90 0 0 {name=C3 model=cap_mim_m3_1 W=6 L=15 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 180 90 0 0 {name=C1 model=cap_mim_m3_1 W=6 L=20.2 MF=1 spiceprefix=X}
+C {devices/lab_pin.sym} -660 -360 3 0 {name=p23 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -760 -780 1 0 {name=p26 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} -690 -640 1 0 {name=p35 sig_type=std_logic lab=vgm2}
 C {devices/lab_pin.sym} -260 -750 0 0 {name=p28 sig_type=std_logic lab=bias_ref}
 C {devices/lab_pin.sym} -220 -50 0 0 {name=p31 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 0 0 0 0 {name=p32 sig_type=std_logic lab=VSS}
@@ -229,7 +232,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet_01v8_lvt.sym} -630 -720 0 1 {name=M8
+C {sky130_fd_pr/pfet_01v8_lvt.sym} -740 -720 0 1 {name=M8
 W=4
 L=20
 nf=1
@@ -243,7 +246,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet_01v8_lvt.sym} -490 -580 0 0 {name=M12
+C {sky130_fd_pr/nfet_01v8_lvt.sym} -600 -580 0 0 {name=M12
 W=6
 L=20
 nf=2
@@ -257,7 +260,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/nfet_01v8_lvt.sym} -630 -580 0 1 {name=M13
+C {sky130_fd_pr/nfet_01v8_lvt.sym} -740 -580 0 1 {name=M13
 W=4
 L=20
 nf=2
@@ -272,7 +275,7 @@ model=nfet_01v8_lvt
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8_lvt.sym} -240 -750 0 0 {name=M9
-W=4
+W=6
 L=20
 nf=1
 mult=1
@@ -286,7 +289,7 @@ model=pfet_01v8_lvt
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 70 -750 0 0 {name=M10
-W=4
+W=6
 L=20
 nf=1
 mult=1
@@ -359,7 +362,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/res_iso_pw.sym} -470 -390 0 0 {name=R3
+C {sky130_fd_pr/res_iso_pw.sym} -580 -390 0 0 {name=R3
 W=0.15
 L=70
 model=res_iso_pw
@@ -367,20 +370,16 @@ spiceprefix=X
 mult=1}
 C {sky130_fd_pr/res_xhigh_po.sym} -220 90 0 0 {name=R1
 W=0.15
-L=400
+L=300
 model=res_xhigh_po
 spiceprefix=X
 mult=1}
-C {devices/lab_pin.sym} -240 90 0 0 {name=p40 sig_type=std_logic lab=VDD
-L=700}
 C {sky130_fd_pr/res_iso_pw.sym} -220 20 0 0 {name=R2
 W=0.15
-L=200
+L=265
 model=res_iso_pw
 spiceprefix=X
 mult=1}
-C {devices/lab_pin.sym} -240 20 0 0 {name=p29 sig_type=std_logic lab=VDD
-L=700}
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 680 -480 0 0 {name=M19
 W=1
 L=0.35
@@ -503,3 +502,25 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} 990 -500 1 0 {name=p8 sig_type=std_logic lab=VDD}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} -460 -720 0 0 {name=M25
+W=4
+L=20
+nf=1
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {devices/lab_pin.sym} -480 -720 0 0 {name=p43 sig_type=std_logic lab=bias_ref}
+C {devices/opin.sym} -440 -580 1 0 {name=p44 lab=IBP_3n}
+C {devices/lab_pin.sym} -600 -390 0 0 {name=p45 sig_type=std_logic lab=VDD
+L=700}
+C {devices/lab_pin.sym} -240 20 0 0 {name=p29 sig_type=std_logic lab=VDD
+L=700}
+C {devices/lab_pin.sym} -240 90 0 0 {name=p40 sig_type=std_logic lab=VDD
+L=700}
