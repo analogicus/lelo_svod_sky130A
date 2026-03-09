@@ -4,8 +4,8 @@
 load {cicname}.raw
 
 echo "MEAS_START"
-MEAS TRAN T TRIG v(OSC) VAL=0.4 FALL=45 TARG v(OSC) VAL=0.4 FALL=46
-MEAS TRAN td TRIG v(OSC) VAL=0.4 RISE=45 TARG v(OSC) VAL=0.4 FALL=45
+MEAS TRAN T TRIG v(OSC) VAL=0.4 FALL=48 TARG v(OSC) VAL=0.4 FALL=49
+MEAS TRAN td TRIG v(OSC) VAL=0.4 RISE=48 TARG v(OSC) VAL=0.4 FALL=48
 MEAS TRAN I AVG i(VDD) from =-1u
 MEAS TRAN Iref AVG i(@b.xdut.xr3.brpwres[i])
 
@@ -15,5 +15,7 @@ print f
 
 let D = td/T
 print D
+let R = f/(D^2)
+print R
 echo "MEAS_END"
 .endc

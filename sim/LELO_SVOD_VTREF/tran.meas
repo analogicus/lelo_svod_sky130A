@@ -4,6 +4,7 @@
 load {cicname}.raw
 
 echo "MEAS_START"
+
 meas tran v2 find v(xdut.v2) at = 1000m
 meas tran vref find v(vref) at = 1000m
 let v1 = vref - v2

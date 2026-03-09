@@ -1,4 +1,4 @@
-,f,d,name,type,time,OK
-0,41332.22,0.5307317,tran_SchGtKttTlVt,Sch,Tue Mar  3 14:07:20 2026,True
-1,41272.87,0.5342034,tran_SchGtKttThVt,Sch,Tue Mar  3 14:06:55 2026,True
-2,41463.84,0.5322837,tran_SchGtKttTtVt,Sch,Tue Mar  3 14:06:30 2026,True
+,f,d,iref,name,type,time,OK
+0,45501.91,0.5534033,-2.1672040000000004,tran_SchGtKttTlVt,Sch,Mon Mar  9 11:05:09 2026,False
+1,45190.75,0.5455559,-3.286222,tran_SchGtKttThVt,Sch,Mon Mar  9 11:04:34 2026,False
+2,45940.03,0.553943,-2.814575,tran_SchGtKttTtVt,Sch,Mon Mar  9 11:04:08 2026,False
