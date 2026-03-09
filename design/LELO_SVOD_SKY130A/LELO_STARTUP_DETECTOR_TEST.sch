@@ -4,33 +4,33 @@ K {}
 V {}
 S {}
 E {}
-N -240 -50 -240 -10 {lab=#net1}
-N -240 -20 -140 -20 {lab=#net1}
+N -240 -60 -240 -20 {lab=#net1}
+N -240 -30 -140 -30 {lab=#net1}
 C {LELO_SVOD_SKY130A/LELO_CMP_HYST.sym} 10 -10 0 0 {name=x1}
 C {devices/ipin.sym} -310 -240 0 0 {name=p1 lab=VDD_0V8}
 C {devices/lab_pin.sym} -310 -240 0 1 {name=p2 sig_type=std_logic lab=VDD_0V8}
 C {devices/ipin.sym} -310 -210 0 0 {name=p3 lab=VSS}
 C {devices/lab_pin.sym} -310 -210 0 1 {name=p4 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} -140 20 0 0 {name=p5 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 160 -40 0 1 {name=p7 sig_type=std_logic lab=OUT}
+C {devices/lab_pin.sym} -140 30 0 0 {name=p5 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 160 -50 0 1 {name=p7 sig_type=std_logic lab=OUT}
 C {LELO_SVOD_SKY130A/LELO_SVOD_VTREF.sym} -490 -30 0 0 {name=x2}
 C {devices/lab_pin.sym} -340 -40 0 1 {name=p8 sig_type=std_logic lab=VREF}
-C {devices/lab_pin.sym} -140 0 0 0 {name=p9 sig_type=std_logic lab=VREF}
+C {devices/lab_pin.sym} -140 -10 0 0 {name=p9 sig_type=std_logic lab=VREF}
 C {devices/lab_pin.sym} -640 -20 0 0 {name=p11 sig_type=std_logic lab=VSS}
-C {devices/res.sym} -240 -80 0 0 {name=R1
+C {devices/res.sym} -240 -90 0 0 {name=R1
 value=400k
 footprint=1206
 device=resistor
 m=1}
-C {devices/res.sym} -240 20 0 0 {name=R2
+C {devices/res.sym} -240 10 0 0 {name=R2
 value=1.4Meg
 footprint=1206
 device=resistor
 m=1}
-C {devices/lab_pin.sym} -240 50 0 0 {name=p12 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} -140 -40 0 0 {name=p6 sig_type=std_logic lab=VDD_0V8}
+C {devices/lab_pin.sym} -240 40 0 0 {name=p12 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -140 -50 0 0 {name=p6 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} -640 -40 0 0 {name=p10 sig_type=std_logic lab=VDD_0V8}
-C {devices/lab_pin.sym} -240 -110 0 0 {name=p13 sig_type=std_logic lab=VDD_0V8}
+C {devices/lab_pin.sym} -240 -120 0 0 {name=p13 sig_type=std_logic lab=VDD_0V8}
 C {sky130_fd_pr/nfet_03v3_nvt.sym} -60 -260 1 0 {name=M3
 W=1
 L=0.5
@@ -49,3 +49,8 @@ C {devices/lab_pin.sym} -90 -240 0 0 {name=p75 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} -30 -240 0 1 {name=p77 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_pin.sym} -60 -240 1 1 {name=p79 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -60 -280 1 0 {name=p80 sig_type=std_logic lab=VDD_0V8}
+C {devices/lab_pin.sym} -140 10 0 0 {name=p14 sig_type=std_logic lab=IBP_3n}
+C {LELO_SVOD_SKY130A/LELO_SVOD_RELOSC.sym} -530 -120 0 0 {name=x3}
+C {devices/lab_pin.sym} -680 -110 0 0 {name=p15 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -680 -130 0 0 {name=p16 sig_type=std_logic lab=VDD_0V8}
+C {devices/lab_pin.sym} -380 -130 0 1 {name=p17 sig_type=std_logic lab=IBP_3n}

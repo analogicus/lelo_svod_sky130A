@@ -40,7 +40,7 @@ N -240 150 -240 180 {lab=GND}
 N -80 -170 -50 -170 {lab=TEG}
 N 70 -170 100 -170 {lab=#net4}
 N 190 -170 220 -170 {lab=#net5}
-C {devices/ipin.sym} -240 180 1 1 {name=p1 lab=GND
+C {devices/ipin.sym} -240 180 1 1 {name=p1 lab=VSS
 }
 C {devices/lab_pin.sym} -180 20 0 0 {name=p5 sig_type=std_logic lab=VG2}
 C {devices/lab_pin.sym} -310 20 0 1 {name=p6 sig_type=std_logic lab=VG1}

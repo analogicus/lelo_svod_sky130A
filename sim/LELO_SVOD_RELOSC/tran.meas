@@ -4,8 +4,10 @@
 load {cicname}.raw
 
 echo "MEAS_START"
-MEAS TRAN T TRIG v(xdut.phase1) VAL=0.5 FALL=6 TARG v(xdut.phase1) VAL=0.5 FALL=7
-MEAS TRAN td TRIG v(xdut.phase1) VAL=0.5 FALL=6 TARG v(xdut.phase1) VAL=0.5 RISE=7
+MEAS TRAN T TRIG v(OSC) VAL=0.4 FALL=45 TARG v(OSC) VAL=0.4 FALL=46
+MEAS TRAN td TRIG v(OSC) VAL=0.4 RISE=45 TARG v(OSC) VAL=0.4 FALL=45
+MEAS TRAN I AVG i(VDD) from =-1u
+MEAS TRAN Iref AVG i(@b.xdut.xr3.brpwres[i])
 
 
 let f = 1/T

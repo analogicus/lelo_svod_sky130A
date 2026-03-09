@@ -29,7 +29,10 @@ tfs: netlist
 	cicsim run --name ${VIEW}_tfs ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt,Th,Tl" "Vt,Vl,Vh"
 
 etc: netlist
-	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vl,Vh"
+	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff" "Th,Tl" "Vl,Vh"
+
+skew: netlist
+	cicsim run --name ${VIEW}_skew ${TB} ${OPT} ${VIEW} Gt "Ksf,Kfs" "Tt" "Vt"
 
 mc: netlist
 	cicsim run --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"
@@ -42,6 +45,12 @@ temp: netlist
 
 tl: netlist
 	cicsim run --name ${VIEW}_temp ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tl" Vt
+
+voltage: netlist
+	cicsim run --name ${VIEW}_voltage ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tt" "Vl,Vt,Vh"
+
+lr: netlist
+	cicsim run --name ${VIEW}_lr ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tt" "Vt,Vl,Vel,Vsl"
 
 summary:
 	cicsim summary --output "README.md"

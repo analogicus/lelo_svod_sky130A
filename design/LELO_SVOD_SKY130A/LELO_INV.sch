@@ -15,7 +15,7 @@ N 0 90 0 130 {lab=GND}
 N -10 130 0 130 {lab=GND}
 C {devices/ipin.sym} -40 -30 0 0 {name=p1 lab=VIN}
 C {devices/ipin.sym} 0 -140 0 0 {name=p2 lab=VDD}
-C {devices/ipin.sym} -10 130 0 0 {name=p3 lab=GND}
+C {devices/ipin.sym} -10 130 0 0 {name=p3 lab=VSS}
 C {devices/opin.sym} 30 -30 0 0 {name=p4 lab=VOUT}
 C {sky130_fd_pr/nfet_01v8_lvt.sym} -20 30 0 0 {name=M1
 W=1
