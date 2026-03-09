@@ -1,7 +1,7 @@
 vref:
   src:
     - vref
-  typ: 0.46473
+  typ: 0.53102
   name: vref
   min: -5%
   max: 5%
