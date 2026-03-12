@@ -1,4 +1,4 @@
 ,vref,v1,v2,name,type,time,OK
-0,0.5431413,0.2968472,0.2462941,tran_SchGtKttTlVt,Sch,Mon Mar  9 13:56:29 2026,False
-1,0.5425853,0.3477675,0.1948178,tran_SchGtKttThVt,Sch,Mon Mar  9 13:56:26 2026,False
-2,0.5473144,0.31919,0.2281244,tran_SchGtKttTtVt,Sch,Mon Mar  9 13:56:21 2026,False
+0,0.5546145,0.3084276,0.2461869,tran_SchGtKttTlVt,Sch,Tue Mar 10 10:58:13 2026,True
+1,0.5545824,0.3602141,0.1943683,tran_SchGtKttThVt,Sch,Tue Mar 10 10:58:10 2026,False
+2,0.5588621,0.3307905,0.2280716,tran_SchGtKttTtVt,Sch,Tue Mar 10 10:58:07 2026,False
