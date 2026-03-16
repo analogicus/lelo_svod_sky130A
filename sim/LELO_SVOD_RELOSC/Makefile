@@ -43,8 +43,11 @@ ntc: netlist
 temp: netlist
 	cicsim run --name ${VIEW}_temp ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tt,Th,Tl" Vt
 
-tempc: netlist
-	cicsim run --name ${VIEW}_tempc ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt,Th,Tl" Vt
+tempss: netlist
+	cicsim run --name ${VIEW}_tempss ${TB} ${OPT} ${VIEW} Gt "Kss" "Tt,Th,Tl" Vt
+
+tempff: netlist
+	cicsim run --name ${VIEW}_tempff ${TB} ${OPT} ${VIEW} Gt "Kff" "Tt,Th,Tl" Vt
 
 tl: netlist
 	cicsim run --name ${VIEW}_tl ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tl" Vt
