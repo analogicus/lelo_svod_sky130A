@@ -4,10 +4,10 @@
 load {cicname}.raw
 
 echo "MEAS_START"
-MEAS TRAN T TRIG v(OSC) VAL=0.4 FALL=146 TARG v(OSC) VAL=0.4 FALL=147
+MEAS TRAN T TRIG v(OSC) VAL=0.4 FALL=196 TARG v(OSC) VAL=0.4 FALL=197
 MEAS TRAN td TRIG v(OSC) VAL=0.4 RISE=LAST TARG v(OSC) VAL=0.4 FALL=LAST
 MEAS TRAN I AVG i(VDD) from =-100u
-MEAS TRAN Iref AVG i(@b.xdut.xr3.brpwres[i])
+MEAS TRAN Iref AVG i(@b.xdut.xr1.brpwres[i])
 
 
 meas tran tc WHEN v(xdut.net1)=v(xdut.net10) RISE=LAST

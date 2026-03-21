@@ -36,7 +36,7 @@ N -350 80 -350 120 {lab=#net3}
 N -350 120 -240 120 {lab=#net3}
 N -240 120 -140 120 {lab=#net3}
 N -140 80 -140 120 {lab=#net3}
-N -240 150 -240 180 {lab=GND}
+N -240 150 -240 180 {lab=VSS}
 N -80 -170 -50 -170 {lab=TEG}
 N 70 -170 100 -170 {lab=#net4}
 N 190 -170 220 -170 {lab=#net5}
@@ -126,5 +126,5 @@ spiceprefix=X
 }
 C {devices/ipin.sym} -280 150 2 1 {name=p8 lab=OFF
 }
-C {LELO_SVOD_SKY130A/XGL6030-103_sat.sym} -350 -120 0 0 {name=x3}
-C {LELO_SVOD_SKY130A/XGL6030-103_sat.sym} -140 -120 0 0 {name=x4}
+C {LELO_SVOD_SKY130A/1812PS-332_imp.sym} -140 -120 0 0 {name=x3}
+C {LELO_SVOD_SKY130A/1812PS-332_imp.sym} -350 -120 0 0 {name=x4}

@@ -49,6 +49,12 @@ tempss: netlist
 tempff: netlist
 	cicsim run --name ${VIEW}_tempff ${TB} ${OPT} ${VIEW} Gt "Kff" "Tt,Th,Tl" Vt
 
+tempsf: netlist
+	cicsim run --name ${VIEW}_tempsf ${TB} ${OPT} ${VIEW} Gt "Ksf" "Tt,Th,Tl" Vt
+
+tempfs: netlist
+	cicsim run --name ${VIEW}_tempfs ${TB} ${OPT} ${VIEW} Gt "Kfs" "Tt,Th,Tl" Vt
+
 tl: netlist
 	cicsim run --name ${VIEW}_tl ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tl" Vt
 
