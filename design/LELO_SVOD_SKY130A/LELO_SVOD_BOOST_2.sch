@@ -655,8 +655,6 @@ C {devices/lab_pin.sym} -1270 170 0 0 {name=p74 sig_type=std_logic lab=NCLK}
 C {devices/lab_pin.sym} -690 -160 0 1 {name=p84 sig_type=std_logic lab=CLK}
 C {devices/lab_pin.sym} -580 -110 0 0 {name=p78 sig_type=std_logic lab=CLK}
 C {devices/lab_pin.sym} -370 -90 1 1 {name=p86 sig_type=std_logic lab=NLSSU_0V8}
-C {devices/lab_pin.sym} -730 460 2 1 {name=p88 sig_type=std_logic lab=NLSSU_0V8}
-C {devices/lab_pin.sym} -740 200 0 0 {name=p87 sig_type=std_logic lab=CLK}
 C {devices/lab_pin.sym} -480 -580 3 0 {name=p1 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -150 -630 3 0 {name=p4 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -140 -880 3 0 {name=p11 sig_type=std_logic lab=VSS}

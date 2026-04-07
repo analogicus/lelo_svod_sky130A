@@ -229,8 +229,6 @@ spiceprefix=X
 C {LELO_SVOD_SKY130A/LELO_CMP2.sym} 100 -110 0 0 {name=x4}
 C {devices/lab_pin.sym} -50 -160 0 0 {name=p6 sig_type=std_logic lab=VREF}
 C {devices/lab_pin.sym} -50 -100 2 1 {name=p10 sig_type=std_logic lab=HSS1_1V8}
-C {devices/ipin.sym} -850 -200 0 0 {name=p16 lab=NLSSU}
-C {devices/lab_pin.sym} -850 -200 0 1 {name=p20 sig_type=std_logic lab=NLSSU}
 C {devices/lab_pin.sym} 1480 -360 2 1 {name=p23 sig_type=std_logic lab=LSSU}
 C {devices/lab_pin.sym} 1480 -400 0 0 {name=p55 sig_type=std_logic lab=EN_HSS}
 C {devices/lab_pin.sym} 1650 -380 2 0 {name=p52 sig_type=std_logic lab=HSS_START}

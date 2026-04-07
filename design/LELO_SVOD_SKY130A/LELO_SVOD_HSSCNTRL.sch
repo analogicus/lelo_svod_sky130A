@@ -232,8 +232,6 @@ C {devices/lab_pin.sym} -640 -200 3 1 {name=p71 sig_type=std_logic lab=HSS1_1V8}
 C {devices/lab_pin.sym} -650 40 3 1 {name=p76 sig_type=std_logic lab=HSS1_1V8}
 C {devices/lab_pin.sym} 1660 -320 2 0 {name=p52 sig_type=std_logic lab=HSS_START}
 C {devices/lab_pin.sym} 1470 -170 2 1 {name=p77 sig_type=std_logic lab=HSS_START}
-C {devices/ipin.sym} -850 -210 0 0 {name=p78 lab=CLK}
-C {devices/lab_pin.sym} -850 -210 0 1 {name=p80 sig_type=std_logic lab=CLK}
 C {LELO_SVOD_SKY130A/LELO_NAND.sym} 1570 -320 0 0 {name=x6}
 C {devices/lab_pin.sym} 1550 -240 0 0 {name=p83 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 1550 -400 0 0 {name=p84 sig_type=std_logic lab=VDD_0V8}
