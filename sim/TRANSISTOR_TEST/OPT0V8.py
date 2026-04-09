@@ -20,7 +20,7 @@ RL = 0.08
 X0 = np.array([8.2e-6, 82e3, 6000, 400, 200])  # L, f_sw, W_LSS, W_HSS, W_HSS1V8
 
 # Define bounds for each variable
-bounds = [(1e-6, 18e-6), (100, 35000), (1, 200000), (1, 200000), (1, 200000)]
+bounds = [(1e-6, 18e-6), (100, 100000), (1, 200000), (1, 200000), (1, 200000)]
 
 def LOSS(x):
     L, f_sw, W_LSS, W_HSS, W_HSS1V8 = x

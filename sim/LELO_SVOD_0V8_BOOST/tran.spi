@@ -51,6 +51,8 @@ R2       OUT2   0 100k
 .save v(xdut.x1.EN_1V8)
 .save v(xdut.x1.EN_LSS)
 .save v(xdut.x1.CLK)
+.save v(xdut.osc)
+.save v(xdut.EN_START)
 .save v(xdut.x1.x8.VREF)
 .save v(xdut.x1.x8.VMEAS_0V8)
 .save v(xdut.x1.x8.VMEAS_1V8)
@@ -109,7 +111,7 @@ set color1=black
 unset askquit
 
 
-tran 1u 1000u
+tran 1u 100u
 write
 quit
 

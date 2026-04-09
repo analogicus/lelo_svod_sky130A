@@ -1,9 +1,9 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1773916806
-use sky130_fd_pr__res_iso_pw_Y9MDZ8  sky130_fd_pr__res_iso_pw_Y9MDZ8_0 ~/pro/aicex/ip/lelo_svod_sky130A/work
-timestamp 1773916806
-transform 1 0 813 0 1 2951
-box -956 -3094 956 3094
+timestamp 1775637720
+use sky130_fd_pr__res_iso_pw_AYUMTY  sky130_fd_pr__res_iso_pw_AYUMTY_0 ~/pro/aicex/ip/lelo_svod_sky130A/work
+timestamp 1775636932
+transform 1 0 1319 0 1 5645
+box -2286 -6444 190 6444
 << end >>

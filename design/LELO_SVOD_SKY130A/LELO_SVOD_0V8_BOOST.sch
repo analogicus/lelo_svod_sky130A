@@ -52,3 +52,5 @@ C {devices/vsource.sym} -750 -140 0 0 {name=V3 value=0.8 savecurrent=false}
 C {devices/lab_pin.sym} -750 -170 1 0 {name=p14 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -750 -110 3 0 {name=p17 sig_type=std_logic lab=NVT_CONTROL}
 C {devices/lab_pin.sym} -400 -150 0 0 {name=p18 sig_type=std_logic lab=NVT_CONTROL}
+C {devices/lab_pin.sym} -100 -170 2 0 {name=p19 sig_type=std_logic lab=EN_START}
+C {devices/lab_pin.sym} -100 -150 2 0 {name=p20 sig_type=std_logic lab=OSC}
