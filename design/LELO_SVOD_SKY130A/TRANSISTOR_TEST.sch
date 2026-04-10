@@ -21,4 +21,4 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
-C {devices/ipin.sym} 0 0 2 0 {name=p4 lab=0}
+C {devices/ipin.sym} 0 0 2 0 {name=p4 lab=VB}

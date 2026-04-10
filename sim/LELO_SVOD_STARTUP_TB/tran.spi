@@ -65,6 +65,8 @@ VDD  VDD  VSS   dc 30m
 .save v(xdut.x1.x1.SP)
 .save v(xdut.x1.x1.VX_SAMPL)
 .save v(xdut.x1.x1.VOUT_SAMPL)
+.save v(xdut.vdd_0v8)
+.save v(xdut.vdd_1v8)
 
 .save v(xdut.x2.VG1)
 .save v(xdut.x2.VG2)

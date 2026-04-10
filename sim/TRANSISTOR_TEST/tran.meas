@@ -4,9 +4,13 @@
 load tran_SchGtKttTtVt.raw
 
 echo "MEAS_START"
-meas tran iint INTEG i(vd)
+meas tran iint INTEG i(vg)
 meas tran is AVG i(vs) from = 10n
 let rout = 0.01/is
 print rout
+let eswitch = iint*1.8
+print eswitch
+let fom = 1/(eswitch*rout)
+print fom
 echo "MEAS_END"
 .endc

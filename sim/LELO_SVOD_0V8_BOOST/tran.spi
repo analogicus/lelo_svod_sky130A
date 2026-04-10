@@ -25,8 +25,8 @@
 * FORCE
 *-----------------------------------------------------------------
 VDD      VDD  0 dc 40m
-R1       OUT1    0 100k
-R2       OUT2   0 100k
+R1       OUT1    0 10k
+R2       OUT2   0 450k
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
@@ -61,6 +61,12 @@ R2       OUT2   0 100k
 .save v(xdut.x1.x1.SP)
 .save v(xdut.x1.x1.VX_SAMPL)
 .save v(xdut.x1.x1.VOUT_SAMPL)
+.save v(xdut.x1.x5.bias_ref)
+.save v(xdut.x1.x5.vgm2)
+.save v(vss)
+.save v(vdd)
+.save v(xdut.vdd_1v8)
+.save v(xdut.vdd_0v8)
 
 
  
@@ -68,6 +74,9 @@ R2       OUT2   0 100k
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
+.ic v(xdut.x1.x5.bias_ref)=0.32
+.ic v(xdut.x1.x5.vgm2)=0.24
+.ic v(xdut.x1.x5.net12)=0.11
 .ic v(xdut.TEG) = 0.02
 .ic v(xdut.VOUT_0V8) = 0.8
 .ic v(xdut.VOUT_1V8) = 1.7
@@ -111,7 +120,7 @@ set color1=black
 unset askquit
 
 
-tran 1u 100u
+tran 1u 2000u
 write
 quit
 

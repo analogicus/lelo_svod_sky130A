@@ -159,7 +159,7 @@ spiceprefix=X
 C {devices/lab_pin.sym} -630 -940 2 1 {name=p93 sig_type=std_logic lab=TEG}
 C {devices/capa.sym} -140 -910 0 1 {name=C2
 m=1
-value=10n
+value=100n
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -140 -940 1 0 {name=p35 sig_type=std_logic lab=VOUT_0V8}
@@ -304,7 +304,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -260 -980 1 0 {name=p101 sig_type=std_logic lab=HSS1_1V8}
-C {sky130_fd_pr/nfet_01v8_lvt.sym} -260 -960 1 0 {name=M3
+C {sky130_fd_pr/nfet_01v8_lvt.sym} -260 -960 3 1 {name=M3
 W=1
 L=0.15
 nf=1
@@ -504,7 +504,7 @@ spiceprefix=X
 }
 C {devices/capa.sym} -150 -660 0 1 {name=C3
 m=1
-value=10n
+value=100n
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -150 -690 1 0 {name=p45 sig_type=std_logic lab=VOUT_1V8}
@@ -686,7 +686,6 @@ C {LELO_SVOD_SKY130A/LELO_NAND.sym} -910 -160 0 0 {name=x13}
 C {devices/lab_pin.sym} -930 -240 0 0 {name=p80 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} -930 -80 3 0 {name=p89 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -1150 -180 0 1 {name=p90 sig_type=std_logic lab=OSC}
-C {devices/lab_pin.sym} -990 -140 0 0 {name=p91 sig_type=std_logic lab=EN_START}
 C {devices/lab_pin.sym} -970 170 0 1 {name=p92 sig_type=std_logic lab=EN_START}
 C {devices/opin.sym} -990 50 0 0 {name=p94 lab=EN_START}
 C {devices/lab_pin.sym} -990 50 0 0 {name=p95 sig_type=std_logic lab=EN_START}
@@ -696,11 +695,6 @@ C {devices/lab_pin.sym} 300 -50 0 0 {name=p98 sig_type=std_logic lab=VSS}
 C {devices/ipin.sym} -790 -770 0 0 {name=p99 lab=NVT_CONTROL}
 C {devices/lab_pin.sym} -790 -770 2 0 {name=p100 sig_type=std_logic lab=NVT_CONTROL}
 C {devices/lab_pin.sym} 40 280 0 0 {name=p104 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} -620 -380 1 0 {name=p102 sig_type=std_logic lab=VDD_0V8}
-C {devices/lab_pin.sym} -620 -280 3 0 {name=p103 sig_type=std_logic lab=VSS}
-C {LELO_SVOD_SKY130A/LELO_INV.sym} -600 -330 0 0 {name=x12}
-C {devices/lab_pin.sym} -660 -330 0 0 {name=p105 sig_type=std_logic lab=EN_START}
-C {devices/lab_pin.sym} -550 -330 0 1 {name=p106 sig_type=std_logic lab=NEN_START}
 C {sky130_fd_pr/nfet_01v8_lvt.sym} 320 -80 0 1 {name=M14
 W=1
 L=0.15
@@ -715,7 +709,6 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 340 -80 0 1 {name=p107 sig_type=std_logic lab=NEN_START}
 C {sky130_fd_pr/nfet_01v8_lvt.sym} 60 250 0 1 {name=M21
 W=1
 L=0.15
@@ -730,7 +723,9 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 80 250 0 1 {name=p108 sig_type=std_logic lab=NEN_START}
 C {devices/lab_pin.sym} -1150 -200 0 1 {name=p109 sig_type=std_logic lab=IBP_3n}
 C {devices/lab_pin.sym} -990 -180 0 0 {name=p110 sig_type=std_logic lab=OSC}
 C {devices/lab_pin.sym} -1270 190 0 0 {name=p111 sig_type=std_logic lab=IBP_3n}
+C {devices/lab_pin.sym} -990 -140 0 0 {name=p87 sig_type=std_logic lab=VDD_0V8}
+C {devices/lab_pin.sym} 340 -80 2 0 {name=p88 sig_type=std_logic lab=NVT_CONTROL}
+C {devices/lab_pin.sym} 80 250 2 0 {name=p91 sig_type=std_logic lab=NVT_CONTROL}
