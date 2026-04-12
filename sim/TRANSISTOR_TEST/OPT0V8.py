@@ -8,9 +8,17 @@ R_LSS = 930
 R_HSS = 2594
 R_HH1V8 = 4148
 
-C_LSS = 2.1854e-15
-C_HSS = 1.54488e-15
-C_HSS1V8 = 1.9836e-15
+Q_LSS = 2.1854e-15
+Q_HSS = 1.54488e-15
+Q_HSS1V8 = 1.9836e-15
+
+Q_D_0V8_nmos = 5.72e-16
+Q_D_1V8_nmos = 1.17e-15
+
+Q_D_1V8_pmos = 9.32e-16
+Q_D_0V8_pmos = 3.61e-16
+
+
 C_L = 14.5e-12
 
 I_rLSS = I_rHSS = 9.11e-13
@@ -24,8 +32,8 @@ bounds = [(1e-6, 18e-6), (100, 100000), (1, 200000), (1, 200000), (1, 200000)]
 
 def LOSS(x):
     L, f_sw, W_LSS, W_HSS, W_HSS1V8 = x
-    LEAK = I_rHSS*W_HSS + I_rHSS1V8*W_HSS1V8 + I_rLSS*W_LSS*np.sqrt(2*L*f_sw/RS)*VIN/VOUT
-    DYN = (C_HSS*W_HSS*0.95 + C_HSS1V8*W_HSS1V8*0.05 + C_LSS*W_LSS)*(1.8)*f_sw/2 + (C_L*f_sw/2)*0.8**2
+    LEAK = I_rHSS*W_HSS*0.8 + I_rHSS1V8*W_HSS1V8*1.8 + I_rLSS*W_LSS*np.sqrt(2*L*f_sw/RS)*VIN/VOUT
+    DYN = (Q_HSS*W_HSS*0.95 + Q_HSS1V8*W_HSS1V8*0.05 + Q_LSS*W_LSS)*(1.8)*f_sw + (C_L*f_sw/2)*0.8**2 + (Q_D_0V8_nmos*(W_LSS+W_HSS)+Q_D_0V8_pmos*W_HSS1V8)*f_sw*0.8*0.95 + (Q_D_1V8_nmos*(W_LSS+W_HSS)+Q_D_1V8_pmos*W_HSS1V8)*f_sw*1.8*0.05
 
     COND = (2*np.sqrt(2)/3)*((VIN**2)/np.sqrt(RS**3*L*f_sw))*(RL + R_LSS/W_LSS + R_HSS/W_HSS*VIN/VOUT*0.95 + R_HH1V8/W_HSS1V8*(VIN/1.8)*0.05)
 
@@ -34,12 +42,13 @@ def LOSS(x):
 
 def LOSS_PRINT(x):
     L, f_sw, W_LSS, W_HSS, W_HSS1V8 = x
-    LEAK = I_rHSS*W_HSS + I_rHSS1V8*W_HSS1V8 + I_rLSS*W_LSS*np.sqrt(2*L*f_sw/RS)*VIN/VOUT
-    DYN = (C_HSS*W_HSS*0.95 + C_HSS1V8*W_HSS1V8*0.05 + C_LSS*W_LSS)*(1.8)*f_sw/2 + (C_L*f_sw/2)*0.8**2
+    LEAK = I_rHSS*W_HSS*0.8 + I_rHSS1V8*W_HSS1V8*1.8 + I_rLSS*W_LSS*np.sqrt(2*L*f_sw/RS)*VIN/VOUT
+    DYN = (Q_HSS*W_HSS*0.95 + Q_HSS1V8*W_HSS1V8*0.05 + Q_LSS*W_LSS)*(1.8)*f_sw + (C_L*f_sw/2)*0.8**2 + (Q_D_0V8_nmos*(W_LSS+W_HSS)+Q_D_0V8_pmos*W_HSS1V8)*f_sw*0.8*0.95 + (Q_D_1V8_nmos*(W_LSS+W_HSS)+Q_D_1V8_pmos*W_HSS1V8)*f_sw*1.8*0.05
 
     COND = (2*np.sqrt(2)/3)*((VIN**2)/np.sqrt(RS**3*L*f_sw))*(RL + R_LSS/W_LSS + R_HSS/W_HSS*VIN/VOUT*0.95 + R_HH1V8/W_HSS1V8*(VIN/1.8)*0.05)
-    print(DYN, COND, LEAK)
+
     AREA = (W_LSS + W_HSS + W_HSS1V8)*1e-11
+    print(DYN, COND, LEAK)
     return LEAK + DYN + COND 
 
 
@@ -50,5 +59,6 @@ print(res.x)
 L, f_sw, W_LSS, W_HSS, W_HSS1V8 = res.x
 
 print("D = ", np.sqrt(2*L*f_sw/RS))
+print(LOSS(res.x))
 LOSS_PRINT(res.x)
 print("Area = ", (W_LSS + W_HSS + W_HSS1V8))

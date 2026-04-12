@@ -21,11 +21,12 @@
 + sky130_fd_pr__pfet_01v8__ajunction_mult = 9.9626e-1
 + sky130_fd_pr__pfet_01v8__pjunction_mult = 1.0009e+0
 
+.param Rout = (0.64*4*5)/(TEG**2)
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
-VDD      VDD  0 dc 40m
-R1       OUT1    0 10k
+VDD      VDD  0 dc {TEG}
+R1       OUT1    0 {Rout}
 R2       OUT2   0 450k
 *-----------------------------------------------------------------
 * DUT
@@ -46,6 +47,11 @@ R2       OUT2   0 450k
 .save v(xdut.x1.VX)
 .save v(xdut.x1.HSS1_1V8)
 .save v(xdut.x1.HSS2_1V8)
+.save v(xdut.x1.HSS1U_1V8)
+.save v(xdut.x1.HSS2U_1V8)
+.save v(xdut.x1.HSS1U_0V8)
+.save v(xdut.x1.HSS2U_0V8)
+.save v(xdut.x1.LSSU_0V8)
 .save v(xdut.x1.LSS_1V8)
 .save v(xdut.x1.EN_0V8)
 .save v(xdut.x1.EN_1V8)

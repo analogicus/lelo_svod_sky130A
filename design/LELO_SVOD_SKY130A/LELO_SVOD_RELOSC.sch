@@ -117,8 +117,6 @@ N -1080 -360 -780 -360 {lab=VSS}
 N -1040 -720 -940 -720 {lab=#net13}
 N -940 -580 -940 -360 {lab=VSS}
 N -940 -720 -940 -640 {lab=#net13}
-C {LELO_SVOD_SKY130A/LELO_NOR.sym} 490 -420 0 0 {name=x1}
-C {LELO_SVOD_SKY130A/LELO_NOR.sym} 490 -110 0 0 {name=x2}
 C {devices/lab_pin.sym} -70 -780 1 0 {name=p1 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 60 120 3 0 {name=p2 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 470 -340 0 0 {name=p6 sig_type=std_logic lab=VSS}
@@ -150,8 +148,8 @@ model=pfet_01v8_lvt
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -650 -720 1 0 {name=p27 sig_type=std_logic lab=bias_ref}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 0 90 0 0 {name=C3 model=cap_mim_m3_1 W=10.4 L=32 MF=2 spiceprefix=X}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 180 90 0 0 {name=C1 model=cap_mim_m3_1 W=10.4 L=36.4 MF=2 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 180 90 0 0 {name=C3 model=cap_mim_m3_1 W=16.2 L=29 MF=2 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 0 90 0 0 {name=C1 model=cap_mim_m3_1 W=16.2 L=38.4 MF=2 spiceprefix=X}
 C {devices/lab_pin.sym} -660 -360 3 0 {name=p23 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -760 -780 1 0 {name=p26 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} -690 -640 1 0 {name=p35 sig_type=std_logic lab=vgm2}
@@ -521,3 +519,5 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/cap_mim_m3_1.sym} -940 -610 0 0 {name=C2 model=cap_mim_m3_1 W=20 L=20 MF=1 spiceprefix=X}
+C {LELO_SVOD_SKY130A/LELO_NOR_RELOSC.sym} 490 -420 0 0 {name=x1}
+C {LELO_SVOD_SKY130A/LELO_NOR_RELOSC.sym} 490 -110 0 0 {name=x2}
