@@ -1,0 +1,21 @@
+f:
+  src:
+    - f
+  typ: 2.6997
+  name: f
+  min: -5%
+  max: 5%
+  scale: 1
+  digits: 3
+  unit: Hz
+
+r:
+  src:
+    - r
+  typ: 5.233
+  name: r
+  min: -5%
+  max: 5%
+  scale: 1
+  digits: 3
+  unit: ohm

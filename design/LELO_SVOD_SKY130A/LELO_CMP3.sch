@@ -106,7 +106,7 @@ model=pfet_01v8_lvt
 spiceprefix=X
 }
 C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -40 60 0 0 {name=x12 }
-C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} -130 -40 0 0 {name=x2[0:3]}
+C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} -130 -40 0 0 {name=x2}
 C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} 60 -230 0 0 {name=x5 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} -50 -230 0 1 {name=x6 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} 420 -250 0 1 {name=x13 }
@@ -125,4 +125,4 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} 140 -40 0 1 {name=x1[0:3]}
+C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} 140 -40 0 1 {name=x1}

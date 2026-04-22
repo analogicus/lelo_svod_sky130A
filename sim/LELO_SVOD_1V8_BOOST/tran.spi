@@ -3,9 +3,9 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/LELO_SVOD_0V8_BOOST_lpe.spi
+.include ../../../work/lpe/LELO_SVOD_1V8_BOOST_lpe.spi
 #else
-.include ../../../work/xsch/LELO_SVOD_0V8_BOOST.spice
+.include ../../../work/xsch/LELO_SVOD_1V8_BOOST.spice
 #endif
 .include ../../../design/1812PS.lib
 .include ../../../design/XGL6030.lib
@@ -21,13 +21,13 @@
 + sky130_fd_pr__pfet_01v8__ajunction_mult = 9.9626e-1
 + sky130_fd_pr__pfet_01v8__pjunction_mult = 1.0009e+0
 
-.param Rout = (0.64*4*5)/(TEG**2)
+.param Rout = (1.8*1.8*4*5)/(TEG**2)
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
 VDD      VDD  0 dc {TEG}
-R1       OUT1    0 {Rout}
-R2       OUT2   0 450k
+R1       OUT1    0 100k
+R2       OUT2   0 {Rout}
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
@@ -62,16 +62,21 @@ R2       OUT2   0 450k
 .save v(xdut.x1.x8.VREF)
 .save v(xdut.x1.x8.VMEAS_0V8)
 .save v(xdut.x1.x8.VMEAS_1V8)
-.save v(xdut.x1.x1.VC)
-.save v(xdut.x1.x1.SN)
-.save v(xdut.x1.x1.SP)
-.save v(xdut.x1.x1.VX_SAMPL)
-.save v(xdut.x1.x1.VOUT_SAMPL)
+.save v(xdut.x1.x6.VC)
+.save v(xdut.x1.x6.NHSS2_1v8)
+.save v(xdut.x1.x6.SN)
+.save v(xdut.x1.x6.SP)
+.save v(xdut.x1.x6.UP)
+.save v(xdut.x1.x6.DN)
+.save v(xdut.x1.x6.net6)
+.save v(xdut.x1.x6.CURRENT_ON_P)
+.save v(xdut.x1.x6.CURRENT_ON_N)
+.save v(xdut.x1.x6.VX_SAMPL)
+.save v(xdut.x1.x6.VOUT_SAMPL)
 .save v(xdut.x1.x5.bias_ref)
 .save v(xdut.x1.x5.vgm2)
 .save v(vss)
 .save v(vdd)
-.save i(vdd)
 .save v(xdut.vdd_1v8)
 .save v(xdut.vdd_0v8)
 
@@ -88,7 +93,7 @@ R2       OUT2   0 450k
 .ic v(xdut.VOUT_0V8) = 0.8
 .ic v(xdut.VOUT_1V8) = 1.7
 .ic v(xdut.x1.x1.vc) = 0.15
-.ic v(xdut.x1.x6.vc) = 0.13
+.ic v(xdut.x1.x6.vc) = 0.7
 .ic v(xdut.x1.x1.x1.net2) = 0.8
 .ic v(xdut.x1.HSS1U_1V8) = 0
 .ic v(xdut.x1.HSS1U_0V8) = 0
@@ -127,7 +132,7 @@ set color1=black
 unset askquit
 
 
-tran 1u 4200u
+tran 1u 4000u
 write
 quit
 

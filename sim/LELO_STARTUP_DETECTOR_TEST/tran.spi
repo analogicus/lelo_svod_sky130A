@@ -27,7 +27,7 @@
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD  VSS dc 25m
+VDD  VDD  VSS dc 30m
 
 *-----------------------------------------------------------------
 * DUT
@@ -37,13 +37,16 @@ VDD  VDD  VSS dc 25m
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
-.save all
-
+.save v(xdut.VDD_0V8)
+.save v(xdut.out)
+.save v(xdut.teg)
+.save v(xdut.vref)
+.save v(xdut.osc)
 
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
-.measure tran ts WHEN V(xdut.VDD_0V8)=0.8 RISE=1 
+.measure tran ts WHEN V(xdut.VDD_0V8)=0.5 RISE=1 
 .control
 set num_threads=8
 set color0=white
@@ -53,7 +56,7 @@ unset askquit
 
 
 
-tran 100n 5000u
+tran 100n 50000u
 write
 quit
 

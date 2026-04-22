@@ -35,7 +35,7 @@ C {devices/opin.sym} -500 200 0 0 {name=p14 lab=PULSEN}
 C {LELO_SVOD_SKY130A/LELO_NOR.sym} -170 0 0 0 {name=x12}
 C {devices/capa.sym} 0 0 1 0 {name=C6
 m=1
-value=200f
+value=300f
 footprint=1206
 device="ceramic capacitor"}
 C {LELO_SVOD_SKY130A/LELO_INV.sym} 150 0 0 0 {name=x13}

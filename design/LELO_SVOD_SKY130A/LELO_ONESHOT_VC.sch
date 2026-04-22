@@ -30,7 +30,7 @@ C {devices/lab_pin.sym} 550 -70 0 1 {name=p57 sig_type=std_logic lab=OUT}
 C {LELO_SVOD_SKY130A/LELO_NOR.sym} 120 -70 0 0 {name=x2}
 C {devices/capa.sym} 290 -70 1 0 {name=C5
 m=1
-value=20f
+value=40f
 footprint=1206
 device="ceramic capacitor"}
 C {LELO_SVOD_SKY130A/LELO_INV.sym} 440 -70 0 0 {name=x3}

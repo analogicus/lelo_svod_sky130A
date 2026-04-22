@@ -6,12 +6,12 @@ S {}
 E {}
 N -240 -50 -240 -10 {lab=#net1}
 N -240 -20 -140 -20 {lab=#net1}
-C {LELO_SVOD_SKY130A/LELO_CMP_HYST.sym} 10 -10 0 0 {name=x1}
+C {LELO_SVOD_SKY130A/LELO_CMP_HYST.sym} 10 0 0 0 {name=x1}
 C {devices/ipin.sym} -310 -240 0 0 {name=p1 lab=VDD}
 C {devices/lab_pin.sym} -310 -240 0 1 {name=p2 sig_type=std_logic lab=VDD}
 C {devices/ipin.sym} -310 -210 0 0 {name=p3 lab=VSS}
 C {devices/lab_pin.sym} -310 -210 0 1 {name=p4 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} -140 20 0 0 {name=p5 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -140 40 0 0 {name=p5 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -140 -40 0 0 {name=p6 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 160 -40 0 1 {name=p7 sig_type=std_logic lab=OUT}
 C {LELO_SVOD_SKY130A/LELO_SVOD_VTREF.sym} -490 -30 0 0 {name=x2}

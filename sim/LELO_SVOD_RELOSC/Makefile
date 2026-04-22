@@ -4,7 +4,7 @@ all: typical etc mc summary
 
 
 
-TB=tran
+TB=noise
 VIEW=Sch
 #VIEW=Lay
 CELL=LELO_SVOD_RELOSC

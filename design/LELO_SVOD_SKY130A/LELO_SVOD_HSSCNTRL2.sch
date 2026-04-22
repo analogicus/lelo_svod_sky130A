@@ -54,11 +54,6 @@ C {devices/lab_pin.sym} -50 -140 0 0 {name=p38 sig_type=std_logic lab=VX_SAMPL}
 C {devices/lab_pin.sym} 250 -140 0 1 {name=p53 sig_type=std_logic lab=SP}
 C {devices/lab_pin.sym} 250 -160 0 1 {name=p69 sig_type=std_logic lab=SN}
 C {devices/lab_pin.sym} -50 -120 0 0 {name=p1 sig_type=std_logic lab=VOUT_SAMPL}
-C {devices/capa.sym} 1180 -60 0 0 {name=C4
-m=1
-value=1p
-footprint=1206
-device="ceramic capacitor"}
 C {devices/lab_pin.sym} 1180 -150 0 1 {name=p47 sig_type=std_logic lab=VC}
 C {sky130_fd_pr/nfet_01v8.sym} 1060 -80 0 0 {name=M9
 W=0.42
@@ -97,7 +92,7 @@ spiceprefix=X
 C {devices/lab_pin.sym} 1040 140 2 1 {name=p62 sig_type=std_logic lab=CURRENT_ON_N}
 C {devices/lab_pin.sym} 970 -410 2 1 {name=p64 sig_type=std_logic lab=CURRENT_ON_P}
 C {devices/lab_pin.sym} 760 -200 0 1 {name=p72 sig_type=std_logic lab=UP}
-C {devices/lab_pin.sym} 460 -200 0 0 {name=p75 sig_type=std_logic lab=SP}
+C {devices/lab_pin.sym} 460 -20 0 0 {name=p75 sig_type=std_logic lab=SP}
 C {LELO_SVOD_SKY130A/LELO_INV.sym} 520 -20 0 0 {name=x11}
 C {devices/lab_pin.sym} 760 -20 0 1 {name=p79 sig_type=std_logic lab=DN}
 C {LELO_SVOD_SKY130A/LELO_INV.sym} 710 -20 0 0 {name=x14}
@@ -105,7 +100,7 @@ C {devices/lab_pin.sym} 1040 -80 0 0 {name=p74 sig_type=std_logic lab=DN}
 C {LELO_SVOD_SKY130A/LELO_INV.sym} 710 -200 0 0 {name=x17}
 C {devices/lab_pin.sym} 610 -200 3 1 {name=p91 sig_type=std_logic lab=NUP}
 C {devices/lab_pin.sym} 1040 -210 2 1 {name=p73 sig_type=std_logic lab=NUP}
-C {devices/lab_pin.sym} 460 -20 0 0 {name=p54 sig_type=std_logic lab=SN}
+C {devices/lab_pin.sym} 460 -200 0 0 {name=p54 sig_type=std_logic lab=SN}
 C {devices/lab_pin.sym} 1090 320 0 1 {name=p22 sig_type=std_logic lab=CURRENT_ON_P}
 C {devices/lab_pin.sym} 1090 340 0 1 {name=p25 sig_type=std_logic lab=CURRENT_ON_N}
 C {LELO_SVOD_SKY130A/LELO_NOR.sym} 610 340 0 0 {name=x2}
@@ -145,8 +140,8 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 1750 -200 0 1 {name=p57 sig_type=std_logic lab=HSSU}
-C {devices/lab_pin.sym} 1450 -140 0 0 {name=p31 sig_type=std_logic lab=VC}
+C {devices/lab_pin.sym} 1750 -190 0 1 {name=p57 sig_type=std_logic lab=HSSU}
+C {devices/lab_pin.sym} 1450 -150 0 0 {name=p31 sig_type=std_logic lab=VC}
 C {LELO_SVOD_SKY130A/LELO_ONESHOT_VC2.sym} 1600 -160 0 0 {name=x1}
 C {devices/ipin.sym} -850 -380 0 0 {name=p2 lab=VREF}
 C {devices/opin.sym} -570 -380 0 0 {name=p3 lab=NHSSU}
@@ -160,7 +155,7 @@ C {devices/lab_pin.sym} -50 -60 0 0 {name=p26 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 500 30 0 0 {name=p27 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 690 30 0 0 {name=p28 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 590 420 0 0 {name=p29 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 1450 -120 0 0 {name=p30 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 1450 -130 0 0 {name=p30 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 790 360 0 0 {name=p32 sig_type=std_logic lab=VSS}
 C {devices/ipin.sym} -850 -110 0 0 {name=p34 lab=VSS}
 C {devices/lab_pin.sym} -850 -110 0 1 {name=p35 sig_type=std_logic lab=VSS}
@@ -182,7 +177,7 @@ C {devices/lab_pin.sym} 690 -250 0 0 {name=p11 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} 1080 -480 0 0 {name=p13 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} 590 270 0 0 {name=p14 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} 790 320 0 0 {name=p15 sig_type=std_logic lab=VDD_0V8}
-C {devices/lab_pin.sym} 1450 -200 0 0 {name=p51 sig_type=std_logic lab=VDD_0V8}
+C {devices/lab_pin.sym} 1450 -190 0 0 {name=p51 sig_type=std_logic lab=VDD_0V8}
 C {LELO_SVOD_SKY130A/LELO_INV.sym} 1510 30 0 0 {name=x7}
 C {LELO_SVOD_SKY130A/LELO_INV.sym} 1700 30 0 0 {name=x8}
 C {devices/lab_pin.sym} 1490 80 0 0 {name=p63 sig_type=std_logic lab=VSS}
@@ -192,12 +187,8 @@ C {devices/lab_pin.sym} 1680 -20 0 0 {name=p67 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} 1450 30 0 0 {name=p59 sig_type=std_logic lab=HSSU}
 C {devices/lab_pin.sym} 1570 30 3 1 {name=p60 sig_type=std_logic lab=NHSSU}
 C {devices/lab_pin.sym} 1750 30 0 1 {name=p61 sig_type=std_logic lab=HSSUL}
-C {devices/lab_pin.sym} -50 -80 0 0 {name=p19 sig_type=std_logic lab=HSSUL}
-C {devices/ipin.sym} -850 -280 0 0 {name=p68 lab=HSS1_1V8}
-C {devices/lab_pin.sym} -850 -280 0 1 {name=p70 sig_type=std_logic lab=HSS1_1V8}
-C {devices/lab_pin.sym} -640 -120 1 1 {name=p71 sig_type=std_logic lab=HSS1_1V8}
-C {devices/lab_pin.sym} -650 120 1 1 {name=p76 sig_type=std_logic lab=HSS1_1V8}
-C {devices/lab_pin.sym} 1450 -160 0 0 {name=p77 sig_type=std_logic lab=EN_HSS}
+C {devices/ipin.sym} -850 -280 0 0 {name=p68 lab=HSS2_1V8}
+C {devices/lab_pin.sym} -850 -280 0 1 {name=p70 sig_type=std_logic lab=HSS2_1V8}
 C {sky130_fd_pr/pfet_01v8.sym} -650 100 1 1 {name=M1
 W=1
 L=0.15
@@ -228,11 +219,20 @@ spiceprefix=X
 }
 C {LELO_SVOD_SKY130A/LELO_CMP2.sym} 100 -110 0 0 {name=x4}
 C {devices/lab_pin.sym} -50 -160 0 0 {name=p6 sig_type=std_logic lab=VREF}
-C {devices/lab_pin.sym} -50 -100 2 1 {name=p10 sig_type=std_logic lab=HSS1_1V8}
 C {devices/lab_pin.sym} 1480 -360 2 1 {name=p23 sig_type=std_logic lab=LSSU}
 C {devices/lab_pin.sym} 1480 -400 0 0 {name=p55 sig_type=std_logic lab=EN_HSS}
 C {devices/lab_pin.sym} 1650 -380 2 0 {name=p52 sig_type=std_logic lab=HSS_START}
 C {LELO_SVOD_SKY130A/LELO_NAND.sym} 1560 -380 0 0 {name=x6}
 C {devices/lab_pin.sym} 1540 -300 0 0 {name=p83 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 1540 -460 0 0 {name=p84 sig_type=std_logic lab=VDD_0V8}
-C {devices/lab_pin.sym} 1450 -180 2 1 {name=p33 sig_type=std_logic lab=HSS_START}
+C {devices/lab_pin.sym} 1450 -170 2 1 {name=p33 sig_type=std_logic lab=HSS_START}
+C {LELO_SVOD_SKY130A/LELO_INV.sym} 20 -360 0 0 {name=x5}
+C {devices/lab_pin.sym} 0 -310 0 0 {name=p19 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -40 -360 0 0 {name=p10 sig_type=std_logic lab=HSS2_1V8}
+C {devices/lab_pin.sym} 70 -360 0 1 {name=p16 sig_type=std_logic lab=NHSS2_1V8}
+C {devices/lab_pin.sym} -50 -80 0 0 {name=p50 sig_type=std_logic lab=NHSS2_1V8}
+C {devices/lab_pin.sym} -50 -100 0 0 {name=p49 sig_type=std_logic lab=HSS2_1V8}
+C {devices/lab_pin.sym} 0 -410 0 0 {name=p20 sig_type=std_logic lab=VREF}
+C {devices/lab_pin.sym} -640 -120 1 1 {name=p71 sig_type=std_logic lab=HSS2_1V8}
+C {devices/lab_pin.sym} -650 120 1 1 {name=p76 sig_type=std_logic lab=HSS2_1V8}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1180 -60 0 0 {name=C1 model=cap_mim_m3_1 W=10 L=10 MF=10 spiceprefix=X}

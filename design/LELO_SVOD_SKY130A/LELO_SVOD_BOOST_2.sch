@@ -515,7 +515,7 @@ value=100n
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -150 -690 1 0 {name=p45 sig_type=std_logic lab=VOUT_1V8}
-C {LELO_SVOD_SKY130A/LELO_SVOD_HSSCNTRL2.sym} -580 430 0 0 {name=x6}
+C {LELO_SVOD_SKY130A/LELO_SVOD_HSSCNTRL2.sym} -580 420 0 0 {name=x6}
 C {devices/lab_pin.sym} -730 400 2 1 {name=p48 sig_type=std_logic lab=VX}
 C {devices/lab_pin.sym} -730 360 0 0 {name=p50 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} -730 380 0 0 {name=p53 sig_type=std_logic lab=VOUT_1V8}
@@ -647,7 +647,7 @@ C {LELO_SVOD_SKY130A/LELO_SVOD_REGULATOR.sym} -1120 160 0 0 {name=x8}
 C {devices/lab_pin.sym} -970 110 0 1 {name=p18 sig_type=std_logic lab=EN_0V8}
 C {devices/lab_pin.sym} -740 220 0 0 {name=p55 sig_type=std_logic lab=EN_0V8}
 C {devices/lab_pin.sym} -970 130 0 1 {name=p69 sig_type=std_logic lab=EN_1V8}
-C {devices/lab_pin.sym} -730 480 0 0 {name=p70 sig_type=std_logic lab=EN_1V8}
+C {devices/lab_pin.sym} -730 460 0 0 {name=p70 sig_type=std_logic lab=EN_1V8}
 C {devices/lab_pin.sym} -1270 150 0 0 {name=p71 sig_type=std_logic lab=VOUT_0V8}
 C {devices/lab_pin.sym} -1270 130 0 0 {name=p72 sig_type=std_logic lab=VOUT_1V8}
 C {devices/lab_pin.sym} -1270 110 0 0 {name=p46 sig_type=std_logic lab=VDD_0V8}
@@ -670,7 +670,7 @@ C {devices/lab_pin.sym} -760 -110 3 0 {name=p13 sig_type=std_logic lab=VSS}
 C {LELO_SVOD_SKY130A/LELO_INV.sym} -740 -160 0 0 {name=x11}
 C {devices/lab_pin.sym} -1270 210 0 0 {name=p14 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -740 240 0 0 {name=p15 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} -730 500 0 0 {name=p16 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -730 480 0 0 {name=p16 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -210 450 0 0 {name=p19 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -30 180 0 0 {name=p20 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -40 -110 0 0 {name=p24 sig_type=std_logic lab=VSS}

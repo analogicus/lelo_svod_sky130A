@@ -5,5 +5,5 @@ corner:
   Lay: ''
   Sch: ''
 ngspice:
-  library: JNW_EX_SKY130A
-  cell: JNW_EX
+  library: LELO_SVOD_SKY130A
+  cell: LELO_SVOD_1V8_BOOST
