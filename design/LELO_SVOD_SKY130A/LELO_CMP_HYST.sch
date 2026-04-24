@@ -119,34 +119,6 @@ spiceprefix=X
 C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} -210 110 0 1 {name=x9 }
 C {devices/ipin.sym} -250 20 0 0 {name=p14 lab=IBP_3n}
 C {devices/lab_pin.sym} -50 0 1 1 {name=p3 sig_type=std_logic lab=BIAS2}
-C {sky130_fd_pr/pfet_01v8_lvt.sym} 10 -310 0 0 {name=M6
-W=1.92
-L=5
-nf=2
-mult=2
-ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
-pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
-as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
-ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
-nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
-sa=0 sb=0 sd=0
-model=pfet_01v8_lvt
-spiceprefix=X
-}
-C {sky130_fd_pr/pfet_01v8_lvt.sym} 170 -310 0 1 {name=M5
-W=1.92
-L=5
-nf=2
-mult=2
-ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
-pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
-as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
-ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
-nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
-sa=0 sb=0 sd=0
-model=pfet_01v8_lvt
-spiceprefix=X
-}
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 240 -310 0 0 {name=M3
 W=1.92
 L=5
@@ -232,3 +204,31 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -210 110 0 1 {name=p11 sig_type=std_logic lab=BIAS}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} 170 -310 0 1 {name=M5
+W=2
+L=5
+nf=2
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} 10 -310 0 0 {name=M6
+W=2
+L=5
+nf=2
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}

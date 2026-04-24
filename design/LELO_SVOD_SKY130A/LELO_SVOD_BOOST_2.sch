@@ -168,7 +168,7 @@ spiceprefix=X
 C {devices/lab_pin.sym} -630 -940 2 1 {name=p93 sig_type=std_logic lab=TEG}
 C {devices/capa.sym} -140 -910 0 1 {name=C2
 m=1
-value=100n
+value=10n
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -140 -940 1 0 {name=p35 sig_type=std_logic lab=VOUT_0V8}
@@ -511,7 +511,7 @@ spiceprefix=X
 }
 C {devices/capa.sym} -150 -660 0 1 {name=C3
 m=1
-value=100n
+value=10n
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -150 -690 1 0 {name=p45 sig_type=std_logic lab=VOUT_1V8}

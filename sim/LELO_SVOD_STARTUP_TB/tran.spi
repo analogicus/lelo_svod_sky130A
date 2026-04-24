@@ -26,7 +26,7 @@
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD  VSS   dc 30m
+VDD  VDD  VSS   dc 20m
 
 *-----------------------------------------------------------------
 * DUT
@@ -76,7 +76,7 @@ VDD  VDD  VSS   dc 30m
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
-.ic v(xdut.TEG) = 0.03
+
 .measure tran ts WHEN V(xdut.VOUT_1V8)=1.8 RISE=1   
 .control
 set num_threads=8
@@ -87,7 +87,7 @@ unset askquit
 
 
 
-tran 100n 25000u
+tran 100n 50m
 write
 quit
 
