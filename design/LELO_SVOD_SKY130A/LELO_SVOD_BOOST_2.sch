@@ -168,7 +168,7 @@ spiceprefix=X
 C {devices/lab_pin.sym} -630 -940 2 1 {name=p93 sig_type=std_logic lab=TEG}
 C {devices/capa.sym} -140 -910 0 1 {name=C2
 m=1
-value=10n
+value=100n
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -140 -940 1 0 {name=p35 sig_type=std_logic lab=VOUT_0V8}
@@ -491,7 +491,6 @@ C {devices/lab_pin.sym} 1170 180 2 0 {name=p39 sig_type=std_logic lab=HSS1_1V8}
 C {devices/ipin.sym} -790 -740 0 0 {name=p40 lab=VSS}
 C {devices/lab_pin.sym} -790 -740 2 0 {name=p41 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -740 180 0 0 {name=p25 sig_type=std_logic lab=LSSU_0V8}
-C {devices/lab_pin.sym} -740 160 0 0 {name=p49 sig_type=std_logic lab=HSS1_1V8}
 C {devices/lab_pin.sym} -760 -210 1 0 {name=p51 sig_type=std_logic lab=VDD_0V8}
 C {LELO_SVOD_SKY130A/XGL6030-183_sat.sym} -510 -940 1 0 {name=x4}
 C {LELO_SVOD_SKY130A/LELO_SVOD_RELOSC.sym} -1300 -190 0 0 {name=x5}
@@ -511,7 +510,7 @@ spiceprefix=X
 }
 C {devices/capa.sym} -150 -660 0 1 {name=C3
 m=1
-value=10n
+value=100n
 footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -150 -690 1 0 {name=p45 sig_type=std_logic lab=VOUT_1V8}
@@ -771,3 +770,5 @@ spiceprefix=X
 C {devices/lab_pin.sym} 650 80 0 0 {name=p107 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_pin.sym} 650 260 0 0 {name=p108 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 610 180 0 0 {name=p33 sig_type=std_logic lab=NHSS1U_1V8}
+C {devices/lab_pin.sym} 960 180 1 0 {name=p42 sig_type=std_logic lab=HSS1_1V8A}
+C {devices/lab_pin.sym} -740 160 0 0 {name=p106 sig_type=std_logic lab=HSS1_1V8A}

@@ -1,9 +1,9 @@
-,f,d,name,type,time,OK
-0,41575.3,0.5332711,tran_SchGtKffTlVh,Sch,Tue Mar  3 14:11:55 2026,True
-1,41144.09,0.5304769,tran_SchGtKssTlVh,Sch,Tue Mar  3 14:11:28 2026,True
-2,42599.51,0.5345407,tran_SchGtKffThVh,Sch,Tue Mar  3 14:11:00 2026,True
-3,40944.71,0.5330297,tran_SchGtKssThVh,Sch,Tue Mar  3 14:10:35 2026,True
-4,41718.19,0.5319937,tran_SchGtKffTlVl,Sch,Tue Mar  3 14:10:06 2026,True
-5,41020.09,0.5291792,tran_SchGtKssTlVl,Sch,Tue Mar  3 14:09:35 2026,True
-6,41853.21,0.534535,tran_SchGtKffThVl,Sch,Tue Mar  3 14:09:04 2026,True
-7,41160.89,0.5315801,tran_SchGtKssThVl,Sch,Tue Mar  3 14:08:41 2026,True
+,f,r,name,type,time,OK
+0,27281.85,5.262466,tran_SchGtKffTlVh,Sch,Sun Apr 26 13:12:02 2026,False
+1,29518.69,5.694756,tran_SchGtKssTlVh,Sch,Sun Apr 26 13:11:32 2026,False
+2,27143.12,5.182218,tran_SchGtKffThVh,Sch,Sun Apr 26 13:10:52 2026,False
+3,28624.82,5.52721,tran_SchGtKssThVh,Sch,Sun Apr 26 13:10:13 2026,False
+4,31541.74,4.374021,tran_SchGtKffTlVl,Sch,Sun Apr 26 13:09:27 2026,False
+5,33216.05,6.393774,tran_SchGtKssTlVl,Sch,Sun Apr 26 13:09:03 2026,False
+6,27177.64,5.202431,tran_SchGtKffThVl,Sch,Sun Apr 26 13:08:29 2026,False
+7,31094.8,6.012376,tran_SchGtKssThVl,Sch,Sun Apr 26 13:08:29 2026,False

@@ -182,7 +182,7 @@ C {devices/lab_pin.sym} 1880 -200 0 0 {name=p51 sig_type=std_logic lab=VDD_0V8}
 C {devices/ipin.sym} -850 -280 0 0 {name=p68 lab=HSS1_1V8}
 C {devices/lab_pin.sym} -850 -280 0 1 {name=p70 sig_type=std_logic lab=HSS1_1V8}
 C {sky130_fd_pr/nfet_01v8.sym} -650 60 3 1 {name=M1
-W=1
+W=5
 L=0.15
 nf=1 
 mult=1
@@ -196,7 +196,7 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -640 -180 3 1 {name=M2
-W=1
+W=5
 L=0.15
 nf=1 
 mult=1

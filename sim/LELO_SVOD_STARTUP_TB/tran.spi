@@ -36,12 +36,11 @@ VDD  VDD  VSS   dc 20m
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
-.save @m.xdut.x1.xm3.msky130_fd_pr__nfet_01v8_lvt[id]
-.save @m.xdut.x1.xm5.msky130_fd_pr__nfet_01v8_lvt[id]
+
 .save v(xdut.TEG)
 .save v(xdut.VOUT_0V8)
 .save v(xdut.VOUT_1V8)
-.save v(xdut.VDDCS)
+
 .save v(xdut.VDD_NEG)
 .save v(xdut.EN_START)
 .save v(xdut.NVT_CONTROL)
@@ -49,27 +48,17 @@ VDD  VDD  VSS   dc 20m
 .save v(xdut.x1.HSS1_1V8)
 .save v(xdut.x1.HSS2_1V8)
 .save v(xdut.x1.LSS_1V8)
-.save v(xdut.x1.HSS1U_0V8)
-.save v(xdut.x1.HSS2U_0V8)
+
 .save v(xdut.OSC)
-.save v(xdut.x1.LSSU_0V8)
+
 .save v(xdut.x1.EN_0V8)
 .save v(xdut.x1.EN_1V8)
 .save v(xdut.x1.EN_LSS)
 .save v(xdut.x1.CLK)
 .save v(xdut.x1.x8.VREF)
-.save v(xdut.x1.x8.VMEAS_0V8)
-.save v(xdut.x1.x8.VMEAS_1V8)
-.save v(xdut.x1.x1.VC)
-.save v(xdut.x1.x1.SN)
-.save v(xdut.x1.x1.SP)
-.save v(xdut.x1.x1.VX_SAMPL)
-.save v(xdut.x1.x1.VOUT_SAMPL)
-.save v(xdut.vdd_0v8)
-.save v(xdut.vdd_1v8)
 
 .save v(xdut.x2.VG1)
-.save v(xdut.x2.VG2)
+
 
 
 
@@ -87,7 +76,7 @@ unset askquit
 
 
 
-tran 100n 50m
+tran 100n 500m
 write
 quit
 

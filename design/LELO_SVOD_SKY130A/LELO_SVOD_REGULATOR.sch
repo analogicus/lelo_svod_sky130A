@@ -20,7 +20,6 @@ N -360 -740 -360 -710 {lab=VOUT_0V8}
 N -240 -30 -240 60 {lab=VSS}
 N -360 60 -240 60 {lab=VSS}
 N -170 -90 -50 -90 {lab=VMEAS_1V8}
-N -170 -580 -50 -580 {lab=VMEAS_0V8}
 N -240 -520 -240 -430 {lab=VSS}
 N -360 -430 -240 -430 {lab=VSS}
 N -240 -770 -240 -640 {lab=VOUT_0V8}
@@ -29,6 +28,7 @@ N -360 -510 -360 -490 {lab=#net3}
 N -240 -260 -240 -150 {lab=VOUT_1V8}
 N -360 -260 -240 -260 {lab=VOUT_1V8}
 N -580 -570 -530 -570 {lab=VREF}
+N -580 -510 -530 -510 {lab=VSS}
 C {devices/ipin.sym} -650 -270 0 0 {name=p1 lab=VOUT_0V8}
 C {devices/lab_pin.sym} -650 -270 0 1 {name=p2 sig_type=std_logic lab=VOUT_0V8}
 C {devices/ipin.sym} -650 -170 0 0 {name=p5 lab=VSS}
@@ -225,3 +225,6 @@ sa=0 sb=0 sd=0
 model=pfet_01v8
 spiceprefix=X
 }
+C {devices/vsource.sym} -580 -540 0 0 {name=V1 value=0.467 savecurrent=false}
+C {devices/lab_pin.sym} -50 -580 0 0 {name=p67 sig_type=std_logic lab=VSS
+value=0.4}
