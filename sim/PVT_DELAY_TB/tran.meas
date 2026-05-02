@@ -1,0 +1,11 @@
+* Measure PVT_DELAY_TB
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+MEAS TRAN tcmpclk trig V(xdut.OSC) VAL=0.4 FALL=LAST TARG V(xdut.nCMP_CLK) VAL=0.4 FALL=LAST
+
+echo "MEAS_END"
+.endc

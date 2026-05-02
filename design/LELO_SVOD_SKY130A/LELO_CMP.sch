@@ -17,17 +17,16 @@ N 100 -260 100 -230 {lab=VDD}
 N -90 -260 -90 -230 {lab=VDD}
 N -90 -200 -90 -70 {lab=#net2}
 N 100 -200 100 -70 {lab=#net3}
-N 0 340 0 370 {lab=VSS}
-N 0 370 40 370 {lab=VSS}
+N 0 130 0 160 {lab=#net4}
 N 380 -280 380 -250 {lab=VDD}
 N 380 -310 380 -280 {lab=VDD}
 N 380 -310 600 -310 {lab=VDD}
 N 600 -310 600 -280 {lab=VDD}
 N 600 -280 600 -250 {lab=VDD}
-N 380 -220 380 -90 {lab=#net4}
-N 380 -90 380 -60 {lab=#net4}
-N 600 -220 600 -90 {lab=#net5}
-N 600 -90 600 -60 {lab=#net5}
+N 380 -220 380 -90 {lab=#net5}
+N 380 -90 380 -60 {lab=#net5}
+N 600 -220 600 -90 {lab=#net6}
+N 600 -90 600 -60 {lab=#net6}
 N 380 -30 380 60 {lab=SN}
 N 350 60 380 60 {lab=SN}
 N 350 60 350 100 {lab=SN}
@@ -63,20 +62,23 @@ N 250 -110 250 -60 {lab=#net3}
 N 250 -60 340 -60 {lab=#net3}
 N 750 -410 750 -60 {lab=#net2}
 N 640 -60 750 -60 {lab=#net2}
-N 0 310 40 310 {lab=VSS}
-N 40 310 40 370 {lab=VSS}
-N 0 60 40 60 {lab=VSS}
-N 40 60 40 310 {lab=VSS}
-N 0 230 40 230 {lab=VSS}
-N 0 140 40 140 {lab=VSS}
-N -0 90 0 110 {lab=#net6}
-N -0 170 0 200 {lab=#net7}
-N 0 260 -0 280 {lab=#net8}
-N -40 230 -40 310 {lab=CLK}
-N -40 140 -40 230 {lab=CLK}
-N -40 60 -40 140 {lab=CLK}
-N 0 20 0 30 {lab=#net1}
-C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -40 310 0 0 {name=x1 }
+N 0 100 40 100 {lab=VSS}
+N 40 100 40 160 {lab=VSS}
+N -0 20 -0 70 {lab=#net1}
+N 0 190 40 190 {lab=VSS}
+N 40 160 40 190 {lab=VSS}
+N -40 100 -40 190 {lab=CLK}
+N 0 220 0 250 {lab=#net7}
+N 40 190 40 250 {lab=VSS}
+N 0 280 40 280 {lab=VSS}
+N 40 250 40 280 {lab=VSS}
+N -40 190 -40 280 {lab=CLK}
+N 0 310 0 340 {lab=#net8}
+N 40 280 40 340 {lab=VSS}
+N 0 370 0 400 {lab=VSS}
+N 0 370 40 370 {lab=VSS}
+N 40 340 40 370 {lab=VSS}
+N -40 280 -40 370 {lab=CLK}
 C {devices/ipin.sym} -410 70 0 0 {name=p1 lab=VIP}
 C {devices/ipin.sym} -410 110 2 1 {name=p2 lab=VIN}
 C {devices/ipin.sym} -410 140 0 0 {name=p3 lab=CLK}
@@ -96,12 +98,12 @@ C {devices/lab_pin.sym} -130 -40 0 0 {name=p12 sig_type=std_logic lab=VIP}
 C {devices/lab_pin.sym} -410 110 2 0 {name=p13 sig_type=std_logic lab=VIN}
 C {devices/lab_pin.sym} 140 -40 2 0 {name=p14 sig_type=std_logic lab=VIN}
 C {devices/lab_pin.sym} -410 140 2 0 {name=p15 sig_type=std_logic lab=CLK}
-C {devices/lab_pin.sym} -40 310 0 0 {name=p16 sig_type=std_logic lab=CLK}
+C {devices/lab_pin.sym} -40 100 0 0 {name=p16 sig_type=std_logic lab=CLK}
 C {devices/lab_pin.sym} -410 180 2 0 {name=p17 sig_type=std_logic lab=CLKN}
 C {devices/lab_pin.sym} 310 130 2 1 {name=p18 sig_type=std_logic lab=CLKN}
 C {devices/lab_pin.sym} 690 130 2 0 {name=p19 sig_type=std_logic lab=CLKN}
 C {devices/lab_pin.sym} -410 220 2 0 {name=p20 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 0 370 3 0 {name=p21 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 0 400 3 0 {name=p21 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 500 200 3 0 {name=p22 sig_type=std_logic lab=VSS}
 C {devices/opin.sym} 600 20 0 0 {name=p23 lab=SP}
 C {devices/lab_pin.sym} 10 -230 3 0 {name=p24 sig_type=std_logic lab=CLK}
@@ -119,11 +121,6 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -40 230 0 0 {name=x4 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -40 140 0 0 {name=x11 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -40 60 0 0 {name=x12 }
-C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} -130 -40 0 0 {name=x2 }
-C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_4C1F2.sym} 140 -40 0 1 {name=x3 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} 60 -230 0 0 {name=x5 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} -50 -230 0 1 {name=x6 }
 C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} 420 -250 0 1 {name=x13 }
@@ -140,5 +137,37 @@ ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
 nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
 sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C5F0.sym} -40 100 0 0 {name=x1 }
+C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C5F0.sym} -40 190 0 0 {name=x4 }
+C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C5F0.sym} -40 280 0 0 {name=x11 }
+C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C5F0.sym} -40 370 0 0 {name=x12 }
+C {sky130_fd_pr/nfet_01v8_lvt.sym} -110 -40 0 0 {name=M3
+W=6.4
+L=0.44
+nf=1
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8_lvt.sym} 120 -40 0 1 {name=M4
+W=6.4
+L=0.44
+nf=1
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8_lvt
 spiceprefix=X
 }

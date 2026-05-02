@@ -330,8 +330,7 @@ spiceprefix=X
 C {devices/lab_pin.sym} -220 -90 0 1 {name=p10 sig_type=std_logic lab=LSSU_0V8}
 C {LELO_SVOD_SKY130A/LELO_SVOD_HSSCNTRL.sym} -590 170 0 0 {name=x1}
 C {devices/lab_pin.sym} -370 100 3 0 {name=p22 sig_type=std_logic lab=HSS1U_0V8}
-C {devices/lab_pin.sym} -740 140 2 1 {name=p26 sig_type=std_logic lab=VX}
-C {devices/lab_pin.sym} -740 120 0 0 {name=p27 sig_type=std_logic lab=VOUT_0V8}
+C {devices/lab_pin.sym} -740 160 2 1 {name=p26 sig_type=std_logic lab=VX}
 C {LELO_SVOD_SKY130A/LELO_SVOD_LEVELSHIFT.sym} 120 150 0 0 {name=x2}
 C {LELO_SVOD_SKY130A/LELO_SVOD_LEVELSHIFT.sym} 110 -140 0 0 {name=x3}
 C {devices/lab_pin.sym} 310 120 2 0 {name=p8 sig_type=std_logic lab=NHSS1U_1V8}
@@ -490,7 +489,7 @@ C {devices/lab_pin.sym} 610 -110 0 0 {name=p38 sig_type=std_logic lab=LSSU_1V8}
 C {devices/lab_pin.sym} 1170 180 2 0 {name=p39 sig_type=std_logic lab=HSS1_1V8}
 C {devices/ipin.sym} -790 -740 0 0 {name=p40 lab=VSS}
 C {devices/lab_pin.sym} -790 -740 2 0 {name=p41 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} -740 180 0 0 {name=p25 sig_type=std_logic lab=LSSU_0V8}
+C {devices/lab_pin.sym} -740 200 0 0 {name=p25 sig_type=std_logic lab=LSSU_0V8}
 C {devices/lab_pin.sym} -760 -210 1 0 {name=p51 sig_type=std_logic lab=VDD_0V8}
 C {LELO_SVOD_SKY130A/XGL6030-183_sat.sym} -510 -940 1 0 {name=x4}
 C {LELO_SVOD_SKY130A/LELO_SVOD_RELOSC.sym} -1300 -190 0 0 {name=x5}
@@ -690,7 +689,7 @@ C {devices/opin.sym} -150 -690 0 0 {name=p79 lab=VOUT_1V8}
 C {LELO_SVOD_SKY130A/LELO_NAND.sym} -910 -160 0 0 {name=x13}
 C {devices/lab_pin.sym} -930 -240 0 0 {name=p80 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} -930 -80 3 0 {name=p89 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} -1150 -180 0 1 {name=p90 sig_type=std_logic lab=OSC}
+C {devices/lab_pin.sym} -1150 -200 0 1 {name=p90 sig_type=std_logic lab=OSC}
 C {devices/lab_pin.sym} -970 170 0 1 {name=p92 sig_type=std_logic lab=EN_START}
 C {devices/opin.sym} -990 50 0 0 {name=p94 lab=EN_START}
 C {devices/lab_pin.sym} -990 50 0 0 {name=p95 sig_type=std_logic lab=EN_START}
@@ -728,9 +727,8 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
-C {devices/lab_pin.sym} -1150 -200 0 1 {name=p109 sig_type=std_logic lab=IBP_3n}
+C {devices/lab_pin.sym} -1150 -180 0 1 {name=p109 sig_type=std_logic lab=BIAS_REF}
 C {devices/lab_pin.sym} -990 -180 0 0 {name=p110 sig_type=std_logic lab=OSC}
-C {devices/lab_pin.sym} -1270 190 0 0 {name=p111 sig_type=std_logic lab=IBP_3n}
 C {devices/lab_pin.sym} -990 -140 0 0 {name=p87 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} 340 -80 2 0 {name=p88 sig_type=std_logic lab=NVT_CONTROL}
 C {devices/lab_pin.sym} 350 210 2 0 {name=p91 sig_type=std_logic lab=NVT_CONTROL}
@@ -771,4 +769,6 @@ C {devices/lab_pin.sym} 650 80 0 0 {name=p107 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_pin.sym} 650 260 0 0 {name=p108 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 610 180 0 0 {name=p33 sig_type=std_logic lab=NHSS1U_1V8}
 C {devices/lab_pin.sym} 960 180 1 0 {name=p42 sig_type=std_logic lab=HSS1_1V8A}
-C {devices/lab_pin.sym} -740 160 0 0 {name=p106 sig_type=std_logic lab=HSS1_1V8A}
+C {devices/lab_pin.sym} -740 180 0 0 {name=p106 sig_type=std_logic lab=HSS1_1V8A}
+C {devices/lab_pin.sym} -1270 190 0 0 {name=p27 sig_type=std_logic lab=BIAS_REF}
+C {devices/lab_pin.sym} -740 140 0 0 {name=p49 sig_type=std_logic lab=BIAS_REF}

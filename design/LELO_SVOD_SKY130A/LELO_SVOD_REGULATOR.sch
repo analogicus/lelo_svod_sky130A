@@ -144,14 +144,13 @@ C {devices/lab_pin.sym} -360 -90 2 1 {name=p66 sig_type=std_logic lab=VMEAS_1V8}
 C {LELO_SVOD_SKY130A/LELO_CMP_HYST.sym} 120 250 0 0 {name=x9}
 C {devices/lab_pin.sym} -30 290 0 0 {name=p68 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 270 210 0 1 {name=p69 sig_type=std_logic lab=EN_START}
-C {devices/lab_pin.sym} -30 250 0 0 {name=p70 sig_type=std_logic lab=VREF}
+C {devices/lab_pin.sym} -30 270 0 0 {name=p70 sig_type=std_logic lab=VREF}
 C {devices/lab_pin.sym} -30 210 0 0 {name=p72 sig_type=std_logic lab=VDD_0V8}
-C {devices/lab_pin.sym} -30 230 0 0 {name=p73 sig_type=std_logic lab=VDD_0V8}
+C {devices/lab_pin.sym} -30 250 0 0 {name=p73 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} 810 -310 0 0 {name=p74 sig_type=std_logic lab=EN_START}
 C {devices/opin.sym} 810 -310 0 0 {name=p75 lab=EN_START}
-C {devices/ipin.sym} -650 -200 0 0 {name=p76 lab=IBP_3n}
-C {devices/lab_pin.sym} -650 -200 0 1 {name=p77 sig_type=std_logic lab=IBP_3n}
-C {devices/lab_pin.sym} -30 270 0 0 {name=p78 sig_type=std_logic lab=IBP_3n}
+C {devices/ipin.sym} -650 -200 0 0 {name=p76 lab=BIAS_REF}
+C {devices/lab_pin.sym} -650 -200 0 1 {name=p77 sig_type=std_logic lab=BIAS_REF}
 C {devices/capa.sym} -240 -610 0 0 {name=C2
 m=1
 value=137f
@@ -228,3 +227,4 @@ spiceprefix=X
 C {devices/vsource.sym} -580 -540 0 0 {name=V1 value=0.467 savecurrent=false}
 C {devices/lab_pin.sym} -50 -580 0 0 {name=p67 sig_type=std_logic lab=VSS
 value=0.4}
+C {devices/lab_pin.sym} -30 230 0 0 {name=p71 sig_type=std_logic lab=BIAS_REF}

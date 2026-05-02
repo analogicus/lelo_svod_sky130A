@@ -65,8 +65,14 @@ R2       OUT2   0 450k
 .save v(xdut.x1.x1.VC)
 .save v(xdut.x1.x1.SN)
 .save v(xdut.x1.x1.SP)
+.save v(xdut.x1.x1.CMP_CLK)
+.save v(xdut.x1.x1.nCMP_CLK)
+.save v(xdut.x1.x1.net8)
+.save v(xdut.x1.x1.net10)
+.save v(xdut.x1.x1.x4.net2)
+.save v(xdut.x1.x1.x4.net3)
 .save v(xdut.x1.x1.VX_SAMPL)
-.save v(xdut.x1.x1.VOUT_SAMPL)
+.save v(xdut.x1.x1.SAMPL_CLK)
 .save v(xdut.x1.x5.bias_ref)
 .save v(xdut.x1.x5.vgm2)
 .save v(vss)
@@ -127,7 +133,7 @@ set color1=black
 unset askquit
 
 
-tran 1u 4200u
+tran 1u 1500u
 write
 quit
 

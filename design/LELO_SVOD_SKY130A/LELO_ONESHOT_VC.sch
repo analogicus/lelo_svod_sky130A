@@ -11,7 +11,6 @@ N 320 -70 380 -70 {lab=#net1}
 N 210 -70 260 -70 {lab=#net2}
 N -40 60 520 60 {lab=OUT}
 N -40 -50 60 -50 {lab=OUT}
-N 330 -240 330 -70 {lab=#net1}
 N 330 -300 330 -270 {lab=VDD}
 N -40 -50 -40 60 {lab=OUT}
 N 520 -70 520 60 {lab=OUT}
@@ -25,6 +24,12 @@ N 220 -170 330 -170 {lab=#net1}
 N -210 -140 100 -140 {lab=VDD}
 N -20 -300 100 -300 {lab=VDD}
 N -20 -300 -20 -140 {lab=VDD}
+N 330 -180 330 -170 {lab=#net1}
+N 290 -270 290 -210 {lab=VC}
+N 330 -210 340 -210 {lab=VDD}
+N 340 -270 340 -210 {lab=VDD}
+N 330 -270 340 -270 {lab=VDD}
+N 330 -170 330 -70 {lab=#net1}
 C {devices/lab_pin.sym} -710 110 0 1 {name=p23 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 550 -70 0 1 {name=p57 sig_type=std_logic lab=OUT}
 C {LELO_SVOD_SKY130A/LELO_NOR.sym} 120 -70 0 0 {name=x2}
@@ -36,8 +41,8 @@ device="ceramic capacitor"}
 C {LELO_SVOD_SKY130A/LELO_INV.sym} 440 -70 0 0 {name=x3}
 C {devices/lab_pin.sym} 290 -270 0 0 {name=p31 sig_type=std_logic lab=VC}
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 310 -270 0 0 {name=M4
-W=0.42
-L=10
+W=1
+L=20
 nf=1
 mult=1
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
@@ -64,8 +69,8 @@ C {devices/opin.sym} -500 200 0 0 {name=p14 lab=OUT}
 C {devices/lab_pin.sym} -500 200 0 0 {name=p15 sig_type=std_logic lab=OUT}
 C {devices/lab_pin.sym} 180 -270 3 0 {name=p16 sig_type=std_logic lab=VSS}
 C {sky130_fd_pr/pfet_01v8.sym} 200 -270 0 0 {name=M1
-W=0.42
-L=1
+W=5
+L=10
 nf=1
 mult=1
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
@@ -75,5 +80,19 @@ ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
 nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
 sa=0 sb=0 sd=0
 model=pfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} 310 -210 0 0 {name=M2
+W=1
+L=20
+nf=1
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
 spiceprefix=X
 }
