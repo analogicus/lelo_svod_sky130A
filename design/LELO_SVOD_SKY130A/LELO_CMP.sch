@@ -68,17 +68,10 @@ N -0 20 -0 70 {lab=#net1}
 N 0 190 40 190 {lab=VSS}
 N 40 160 40 190 {lab=VSS}
 N -40 100 -40 190 {lab=CLK}
-N 0 220 0 250 {lab=#net7}
+N 0 220 0 250 {lab=VSS}
 N 40 190 40 250 {lab=VSS}
-N 0 280 40 280 {lab=VSS}
-N 40 250 40 280 {lab=VSS}
-N -40 190 -40 280 {lab=CLK}
-N 0 310 0 340 {lab=#net8}
-N 40 280 40 340 {lab=VSS}
-N 0 370 0 400 {lab=VSS}
-N 0 370 40 370 {lab=VSS}
-N 40 340 40 370 {lab=VSS}
-N -40 280 -40 370 {lab=CLK}
+N 0 250 0 280 {lab=VSS}
+N 0 250 40 250 {lab=VSS}
 C {devices/ipin.sym} -410 70 0 0 {name=p1 lab=VIP}
 C {devices/ipin.sym} -410 110 2 1 {name=p2 lab=VIN}
 C {devices/ipin.sym} -410 140 0 0 {name=p3 lab=CLK}
@@ -103,7 +96,7 @@ C {devices/lab_pin.sym} -410 180 2 0 {name=p17 sig_type=std_logic lab=CLKN}
 C {devices/lab_pin.sym} 310 130 2 1 {name=p18 sig_type=std_logic lab=CLKN}
 C {devices/lab_pin.sym} 690 130 2 0 {name=p19 sig_type=std_logic lab=CLKN}
 C {devices/lab_pin.sym} -410 220 2 0 {name=p20 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 0 400 3 0 {name=p21 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 0 280 3 0 {name=p21 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 500 200 3 0 {name=p22 sig_type=std_logic lab=VSS}
 C {devices/opin.sym} 600 20 0 0 {name=p23 lab=SP}
 C {devices/lab_pin.sym} 10 -230 3 0 {name=p24 sig_type=std_logic lab=CLK}
@@ -139,10 +132,6 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C5F0.sym} -40 100 0 0 {name=x1 }
-C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C5F0.sym} -40 190 0 0 {name=x4 }
-C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C5F0.sym} -40 280 0 0 {name=x11 }
-C {LELO_SVOD_SKY130A/Transistors/SVOD_NCH_2C5F0.sym} -40 370 0 0 {name=x12 }
 C {sky130_fd_pr/nfet_01v8_lvt.sym} -110 -40 0 0 {name=M3
 W=6.4
 L=0.44
@@ -171,3 +160,5 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
+C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -40 100 0 0 {name=x1 }
+C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -40 190 0 0 {name=x2 }

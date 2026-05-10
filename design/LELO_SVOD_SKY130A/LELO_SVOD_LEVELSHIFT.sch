@@ -32,7 +32,7 @@ N 250 60 410 60 {lab=VSS}
 N 410 50 410 60 {lab=VSS}
 N 130 60 130 80 {lab=VSS}
 C {sky130_fd_pr/nfet_01v8_lvt.sym} -20 0 0 0 {name=M1
-W=2
+W=4
 L=0.15
 nf=1
 mult=1
@@ -46,7 +46,7 @@ model=nfet_01v8_lvt
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8_lvt.sym} 270 0 0 1 {name=M2
-W=2
+W=4
 L=0.15
 nf=1
 mult=1

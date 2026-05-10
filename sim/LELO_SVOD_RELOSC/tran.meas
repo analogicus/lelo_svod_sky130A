@@ -7,8 +7,8 @@ echo "MEAS_START"
 MEAS TRAN T TRIG v(OSC) VAL=0.4 FALL=48 TARG v(OSC) VAL=0.4 FALL=49
 MEAS TRAN td TRIG v(OSC) VAL=0.4 RISE=LAST TARG v(OSC) VAL=0.4 FALL=LAST
 MEAS TRAN I AVG i(VDD) from =-100u
-MEAS TRAN Iref AVG i(@b.xdut.xr1.brpwres[i]) from =0.005
-MEAS TRAN tcmpclk trig V(xdut.CLK_TEST) VAL=0.4 FALL=LAST TARG V(xdut.ncmp_clk) VAL=0.4 FALL=LAST
+MEAS TRAN Iref AVG i(@b.xdut.xr1.brpwres[i]) from =1m
+
 
 let f = 1/T
 print f

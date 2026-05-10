@@ -66,6 +66,8 @@ R2       OUT2   0 {Rout}
 .save v(xdut.x1.x6.NHSS2_1v8)
 .save v(xdut.x1.x6.SN)
 .save v(xdut.x1.x6.SP)
+.save v(xdut.x1.x6.x4.net2)
+.save v(xdut.x1.x6.x4.net3)
 .save v(xdut.x1.x6.UP)
 .save v(xdut.x1.x6.DN)
 .save v(xdut.x1.x6.net6)
@@ -93,13 +95,12 @@ R2       OUT2   0 {Rout}
 .ic v(xdut.VOUT_0V8) = 0.8
 .ic v(xdut.VOUT_1V8) = 1.7
 .ic v(xdut.x1.x1.vc) = 0.15
-.ic v(xdut.x1.x6.vc) = 0.7
+.ic v(xdut.x1.x6.vc) = 0.4
 .ic v(xdut.x1.x1.x1.net2) = 0.8
 .ic v(xdut.x1.HSS1U_1V8) = 0
 .ic v(xdut.x1.HSS1U_0V8) = 0
 .ic v(xdut.x1.HSS1_1V8) = 0
-.ic v(xdut.x1.x1.x1.net1) = 1.8
-.ic v(xdut.x1.x1.x1.net2) = 0.8
+.ic v(xdut.x1.x1.x1.net1) = 0
 .ic v(xdut.x1.x8.vref) = 0.6
 .ic v(xdut.x1.x8.x8.v2) = 0.5
 .ic v(xdut.x1.x8.x8.net21) = 0.55

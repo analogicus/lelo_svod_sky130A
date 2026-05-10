@@ -19,7 +19,6 @@ N -360 -770 -360 -740 {lab=VOUT_0V8}
 N -360 -740 -360 -710 {lab=VOUT_0V8}
 N -240 -30 -240 60 {lab=VSS}
 N -360 60 -240 60 {lab=VSS}
-N -170 -90 -50 -90 {lab=VMEAS_1V8}
 N -240 -520 -240 -430 {lab=VSS}
 N -360 -430 -240 -430 {lab=VSS}
 N -240 -770 -240 -640 {lab=VOUT_0V8}
@@ -29,6 +28,7 @@ N -240 -260 -240 -150 {lab=VOUT_1V8}
 N -360 -260 -240 -260 {lab=VOUT_1V8}
 N -580 -570 -530 -570 {lab=VREF}
 N -580 -510 -530 -510 {lab=VSS}
+N -170 -580 -50 -580 {lab=VMEAS_0V8}
 C {devices/ipin.sym} -650 -270 0 0 {name=p1 lab=VOUT_0V8}
 C {devices/lab_pin.sym} -650 -270 0 1 {name=p2 sig_type=std_logic lab=VOUT_0V8}
 C {devices/ipin.sym} -650 -170 0 0 {name=p5 lab=VSS}
@@ -44,12 +44,12 @@ C {devices/lab_pin.sym} -50 -50 0 0 {name=p18 sig_type=std_logic lab=CLKN}
 C {devices/lab_pin.sym} -50 -30 0 0 {name=p19 sig_type=std_logic lab=CLK}
 C {devices/lab_pin.sym} -50 -520 0 0 {name=p20 sig_type=std_logic lab=CLK}
 C {devices/res.sym} -360 -630 0 0 {name=R1
-value=85k
+value=95k
 footprint=1206
 device=resistor
 m=1}
 C {devices/res.sym} -360 -540 0 0 {name=R2
-value=135k
+value=125k
 footprint=1206
 device=resistor
 m=1}
@@ -153,12 +153,12 @@ C {devices/ipin.sym} -650 -200 0 0 {name=p76 lab=BIAS_REF}
 C {devices/lab_pin.sym} -650 -200 0 1 {name=p77 sig_type=std_logic lab=BIAS_REF}
 C {devices/capa.sym} -240 -610 0 0 {name=C2
 m=1
-value=137f
+value=125f
 footprint=1206
 device="ceramic capacitor"}
 C {devices/capa.sym} -240 -550 0 0 {name=C3
 m=1
-value=83f
+value=95f
 footprint=1206
 device="ceramic capacitor"}
 C {sky130_fd_pr/nfet_01v8_lvt.sym} -380 -460 0 0 {name=M1
@@ -225,6 +225,5 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {devices/vsource.sym} -580 -540 0 0 {name=V1 value=0.467 savecurrent=false}
-C {devices/lab_pin.sym} -50 -580 0 0 {name=p67 sig_type=std_logic lab=VSS
-value=0.4}
 C {devices/lab_pin.sym} -30 230 0 0 {name=p71 sig_type=std_logic lab=BIAS_REF}
+C {devices/lab_pin.sym} -50 -90 0 0 {name=p78 sig_type=std_logic lab=VSS}

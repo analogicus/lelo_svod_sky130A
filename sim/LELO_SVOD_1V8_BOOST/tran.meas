@@ -8,13 +8,13 @@ Meas tran I_0V8 AVG i(v.xdut.V1) from = 1000u to=2500u
 Meas tran I_1V8 AVG i(v.xdut.V2) from = 1000u to=2500u
 Meas tran VDD   AVG v(vdd)
 
-Meas tran P_AVG1 AVG r1:power from =1000u to=2500u
+Meas tran P_AVG1 AVG r1:power from =1000u 
 
 let P1 = P_AVG1 + I_0V8*0.8 + I_1V8*1.8
 print P1
 
 
-Meas tran P_AVG2 AVG r2:power from =1000u to=2500u
+Meas tran P_AVG2 AVG r2:power from =1000u
 let P2 = P_AVG2 + I_0V8*0.8 + I_1V8*1.8
 print P2
 
