@@ -27,13 +27,13 @@ C {devices/ipin.sym} -640 -390 0 0 {name=p40 lab=0}
 C {devices/lab_pin.sym} -640 -390 2 0 {name=p41 sig_type=std_logic lab=0}
 C {devices/switch_ngspice.sym} 240 -260 3 1 {name=S1 model=SW1
 device_model=".MODEL SW1 SW 
-+ VT=0.8 VH=0.001
++ VT=0.78 VH=0.001
 + RON=0.001 ROFF=10G "}
 C {devices/opin.sym} 300 -130 0 0 {name=p47 lab=OUT2}
 C {devices/opin.sym} 300 -260 0 0 {name=p43 lab=OUT1}
 C {devices/switch_ngspice.sym} 240 -130 3 1 {name=S2 model=SW1
 device_model=".MODEL SW1 SW 
-+ VT=0.8 VH=0.001
++ VT=0.78 VH=0.001
 + RON=0.001 ROFF=10G "}
 C {LELO_SVOD_SKY130A/LELO_SVOD_BOOST_2.sym} -250 -170 0 0 {name=x1}
 C {devices/lab_pin.sym} -400 -170 2 1 {name=p1 sig_type=std_logic lab=TEG}

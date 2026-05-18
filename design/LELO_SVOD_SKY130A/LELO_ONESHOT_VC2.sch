@@ -25,12 +25,11 @@ N 270 -210 400 -210 {lab=VDD}
 N 400 -210 400 -190 {lab=VDD}
 N 350 -290 510 -290 {lab=OUT}
 N 210 -140 210 -60 {lab=#net1}
-N 210 -30 220 -30 {lab=VSS}
-N 120 -30 170 -30 {lab=#net5}
-N 220 -30 220 0 {lab=VSS}
-N 210 0 220 0 {lab=VSS}
 N 210 -60 330 -60 {lab=#net1}
 N 330 -30 330 0 {lab=VSS}
+N 210 0 210 40 {lab=#net5}
+N 190 40 210 40 {lab=#net5}
+N 190 40 190 70 {lab=#net5}
 C {devices/lab_pin.sym} -710 110 0 1 {name=p23 sig_type=std_logic lab=VDD}
 C {devices/ipin.sym} -710 110 0 0 {name=p1 lab=VDD}
 C {devices/ipin.sym} -710 140 0 0 {name=p2 lab=IN}
@@ -58,9 +57,6 @@ C {devices/lab_pin.sym} -360 -120 0 0 {name=p11 sig_type=std_logic lab=IN}
 C {LELO_SVOD_SKY130A/LELO_INV.sym} 40 -140 0 0 {name=x1}
 C {devices/lab_pin.sym} 20 -90 3 0 {name=p16 sig_type=std_logic lab=VSS}
 C {LELO_SVOD_SKY130A/LELO_INV.sym} 420 -140 0 0 {name=x4}
-C {devices/lab_pin.sym} 210 0 3 0 {name=p17 sig_type=std_logic lab=VSS}
-C {devices/vsource.sym} 120 0 0 0 {name=V1 value=0.467 savecurrent=false}
-C {devices/lab_pin.sym} 120 30 3 0 {name=p20 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 290 -30 0 0 {name=p21 sig_type=std_logic lab=VC}
 C {sky130_fd_pr/nfet_05v0_nvt.sym} 310 -30 0 0 {name=M2
 W=1
@@ -77,10 +73,18 @@ model=nfet_05v0_nvt
 spiceprefix=X
 }
 C {devices/lab_pin.sym} 330 0 3 0 {name=p18 sig_type=std_logic lab=VSS}
-C {sky130_fd_pr/nfet_01v8_lvt.sym} 190 -30 0 0 {name=M1
-W=3
-L=20
-nf=1
+C {sky130_fd_pr/res_xhigh_po.sym} 210 70 0 0 {name=R1
+W=0.35
+L=200
+model=res_xhigh_po
+spiceprefix=X
+mult=1}
+C {devices/lab_pin.sym} 210 100 3 0 {name=p17 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 170 -30 0 0 {name=p19 sig_type=std_logic lab=VDD}
+C {sky130_fd_pr/nfet_01v8.sym} 190 -30 0 0 {name=M1
+W=1
+L=0.15
+nf=1 
 mult=1
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
 pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
@@ -88,6 +92,7 @@ as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
 ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
 nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
 sa=0 sb=0 sd=0
-model=nfet_01v8_lvt
+model=nfet_01v8
 spiceprefix=X
 }
+C {devices/lab_pin.sym} 210 -30 2 0 {name=p20 sig_type=std_logic lab=VSS}

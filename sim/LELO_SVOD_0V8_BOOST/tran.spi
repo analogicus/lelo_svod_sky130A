@@ -90,7 +90,7 @@ R2       OUT2   0 450k
 .ic v(xdut.x1.x5.bias_ref)=0.32
 .ic v(xdut.x1.x5.vgm2)=0.24
 .ic v(xdut.x1.x5.net12)=0.11
-.ic v(xdut.TEG) = 0.02
+.ic v(xdut.TEG) = {TEG/2}
 .ic v(xdut.VOUT_0V8) = 0.8
 .ic v(xdut.VOUT_1V8) = 1.7
 .ic v(xdut.x1.x1.vc) = 0.7
@@ -133,7 +133,7 @@ set color1=black
 unset askquit
 
 
-tran 1u 8000u
+tran 1u 4000u
 write
 quit
 

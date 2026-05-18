@@ -31,6 +31,9 @@ tfs: netlist
 etc: netlist
 	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vl,Vh"
 
+test: netlist
+	cicsim run --name ${VIEW}_test ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Th,Tl" "Vt"
+
 mc: netlist
 	cicsim run --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"
 
