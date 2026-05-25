@@ -12,7 +12,7 @@
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
-.option TNOM=27 GMIN=1e-15 reltol=1e-3
+.option TNOM=27 GMIN=1e-15 reltol=1e-5
 
 *-----------------------------------------------------------------
 * PARAMETERS
@@ -53,7 +53,7 @@ R2       OUT2   0 {Rout}
 .save v(xdut.x1.HSS2U_0V8)
 .save v(xdut.x1.LSSU_0V8)
 .save v(xdut.x1.LSS_1V8)
-.save v(xdut.x1.EN_0V8)
+.save v(xdut.x1.NEN_0V8)
 .save v(xdut.x1.EN_1V8)
 .save v(xdut.x1.EN_LSS)
 .save v(xdut.x1.CLK)
@@ -62,6 +62,7 @@ R2       OUT2   0 {Rout}
 .save v(xdut.x1.x8.VREF)
 .save v(xdut.x1.x8.VMEAS_0V8)
 .save v(xdut.x1.x8.VMEAS_1V8)
+.save v(xdut.x1.x8.1V8_L)
 .save v(xdut.x1.x6.VC)
 .save v(xdut.x1.x6.NHSS2_1v8)
 .save v(xdut.x1.x6.SN)
@@ -133,7 +134,7 @@ set color1=black
 unset askquit
 
 
-tran 1u 4000u
+tran 1u 2000u
 write
 quit
 

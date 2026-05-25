@@ -53,3 +53,15 @@ C {devices/lab_pin.sym} 260 -300 1 0 {name=p8 sig_type=std_logic lab=0}
 C {devices/lab_pin.sym} 260 -170 1 0 {name=p9 sig_type=std_logic lab=0}
 C {devices/vsource.sym} 110 -230 0 0 {name=V3 value=1 savecurrent=false}
 C {devices/lab_pin.sym} 110 -200 2 0 {name=p17 sig_type=std_logic lab=0}
+C {devices/capa.sym} 120 -100 0 1 {name=C2
+m=1
+value=100n
+footprint=1206
+device="ceramic capacitor"}
+C {devices/lab_pin.sym} 120 -70 3 0 {name=p18 sig_type=std_logic lab=0}
+C {devices/capa.sym} 180 -230 0 1 {name=C1
+m=1
+value=100n
+footprint=1206
+device="ceramic capacitor"}
+C {devices/lab_pin.sym} 180 -200 3 0 {name=p21 sig_type=std_logic lab=0}

@@ -1,2 +1,2 @@
 *Automatic generated instance fron ../../tech/scripts/genxdut TRANSISTOR_TEST
-XDUT VS VG  TRANSISTOR_TEST
+XDUT VDD1 VDD2 0 VDD4 VDD3 0  TRANSISTOR_TEST

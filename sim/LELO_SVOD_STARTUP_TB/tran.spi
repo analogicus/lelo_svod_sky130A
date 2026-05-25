@@ -48,7 +48,7 @@ VDD  VDD  VSS   dc 20m
 .save v(xdut.x1.HSS1_1V8)
 .save v(xdut.x1.HSS2_1V8)
 .save v(xdut.x1.LSS_1V8)
-
+.save v(xdut.vddcs)
 .save v(xdut.OSC)
 
 .save v(xdut.x1.EN_0V8)
@@ -58,9 +58,9 @@ VDD  VDD  VSS   dc 20m
 .save v(xdut.x1.x8.VREF)
 
 .save v(xdut.x2.VG1)
+.save i(v.xdut.v1)
 
-
-
+.ic v(xdut.TEG) =20m
 
 *----------------------------------------------------------------
 * NGSPICE control
@@ -76,7 +76,7 @@ unset askquit
 
 
 
-tran 100n 500m
+tran 1u 20m
 write
 quit
 

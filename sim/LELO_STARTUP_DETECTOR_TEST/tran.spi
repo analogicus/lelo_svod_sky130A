@@ -27,7 +27,7 @@
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD  VSS dc 20m
+VDD  VDD_0V8  VSS pwl 0 0 15m 0.7
 
 *-----------------------------------------------------------------
 * DUT
@@ -42,7 +42,7 @@ VDD  VDD  VSS dc 20m
 .save v(xdut.teg)
 .save v(xdut.vref)
 .save v(xdut.osc)
-
+.save all
 .OPTIONS savecurrents
 *----------------------------------------------------------------
 * NGSPICE control
@@ -57,7 +57,7 @@ unset askquit
 
 
 
-tran 100n 5m
+tran 100n 15m
 write
 quit
 

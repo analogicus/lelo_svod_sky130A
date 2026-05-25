@@ -18,6 +18,7 @@ N -580 -400 -580 -340 {lab=VDD_NEG}
 N -610 -400 -580 -400 {lab=VDD_NEG}
 N -640 -400 -610 -400 {lab=VDD_NEG}
 N 140 -140 220 -140 {lab=VDDCS}
+N 30 -280 30 -260 {lab=VDDCS}
 C {LELO_SVOD_SKY130A/LELO_SVOD_BOOST_2.sym} 10 0 0 0 {name=x1}
 C {devices/ipin.sym} -320 -160 0 1 {name=p2 lab=VDD}
 C {devices/res.sym} -320 -130 0 1 {name=R1
@@ -116,11 +117,6 @@ C {devices/lab_pin.sym} -250 -350 2 0 {name=p22 sig_type=std_logic lab=NVT_CONTR
 C {devices/lab_pin.sym} 60 -300 2 1 {name=p23 sig_type=std_logic lab=NVT_CONTROL}
 C {devices/lab_pin.sym} 60 -450 2 1 {name=p24 sig_type=std_logic lab=NVT_CONTROL}
 C {devices/lab_pin.sym} -160 -120 2 1 {name=p25 sig_type=std_logic lab=NVT_CONTROL}
-C {devices/capa.sym} 220 -110 2 0 {name=C2
-m=1
-value=1n
-footprint=1206
-device="ceramic capacitor"}
 C {devices/lab_pin.sym} 220 -80 2 1 {name=p26 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -140 -40 0 0 {name=p10 sig_type=std_logic lab=VOUT_1V8}
 C {devices/lab_pin.sym} 160 -20 0 1 {name=p13 sig_type=std_logic lab=VOUT_1V8}
@@ -131,3 +127,26 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -580 -280 2 1 {name=p27 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -140 20 2 1 {name=p28 sig_type=std_logic lab=NVT_CONTROL}
+C {devices/lab_pin.sym} 90 -200 2 1 {name=p29 sig_type=std_logic lab=VSS}
+C {devices/capa.sym} 90 -380 2 0 {name=C5
+m=1
+value=2n
+footprint=1206
+device="ceramic capacitor"}
+C {devices/lab_pin.sym} 90 -350 2 1 {name=p30 sig_type=std_logic lab=VSS}
+C {devices/capa.sym} 90 -230 2 0 {name=C2
+m=1
+value=2n
+footprint=1206
+device="ceramic capacitor"}
+C {devices/capa.sym} 220 -110 2 0 {name=C4
+m=1
+value=2n
+footprint=1206
+device="ceramic capacitor"}
+C {devices/capa.sym} -320 -70 2 0 {name=C6
+m=1
+value=1u
+footprint=1206
+device="ceramic capacitor"}
+C {devices/lab_pin.sym} -320 -40 0 0 {name=p31 sig_type=std_logic lab=VSS}

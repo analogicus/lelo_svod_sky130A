@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+x=np.array([0.8,0.72,0.64,0.56,0.48,0.4,0.32,0.24,0.16,0.08])
+t_pw=np.array([51,62,78,100,132,184,273,421,558,602])
+
+plt.plot(x,t_pw,marker='o')
+
+plt.xlabel('Control Voltage [V]')
+plt.ylabel('t_pw,1V8 [ns]')
+
+
+plt.grid()
+plt.savefig('t_pw1V8.png', dpi=300)
