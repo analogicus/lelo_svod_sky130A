@@ -1,0 +1,79 @@
+
+
+all: typical etc mc summary
+
+
+
+TB=tran
+VIEW=Sch
+#VIEW=Lay
+CELL=LELO_SVOD_RELOSC
+LIB =LELO_SVOD_SKY130A
+OPT=
+
+include ../../tech/make/sim.make
+
+test:
+	${MAKE} typical OPT="Debug"
+
+typical: netlist
+	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Ktt Tt Vt
+
+slow: netlist
+	cicsim run --name ${VIEW}_slow ${TB} ${OPT} ${VIEW} Gt Kss "Th,Tl" Vl
+
+fast: netlist
+	cicsim run --name ${VIEW}_fast ${TB} ${OPT} ${VIEW} Gt Kff "Th,Tl" Vh
+
+tfs: netlist
+	cicsim run --name ${VIEW}_tfs ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt,Th,Tl" "Vt,Vl,Vh"
+
+etc: netlist
+	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff" "Th,Tl" "Vl,Vh"
+
+skew: netlist
+	cicsim run --name ${VIEW}_skew ${TB} ${OPT} ${VIEW} Gt "Ksf,Kfs" "Tt" "Vt"
+
+mc: netlist
+	cicsim run --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"
+
+ntc: netlist
+	cicsim run --name ${VIEW}_ntc ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt" Vt
+
+temp: netlist
+	cicsim run --name ${VIEW}_temp ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tt,Th,Tl" Vt
+
+tempss: netlist
+	cicsim run --name ${VIEW}_tempss ${TB} ${OPT} ${VIEW} Gt "Kss" "Tt,Th,Tl" Vt
+
+tempff: netlist
+	cicsim run --name ${VIEW}_tempff ${TB} ${OPT} ${VIEW} Gt "Kff" "Tt,Th,Tl" Vt
+
+tempsf: netlist
+	cicsim run --name ${VIEW}_tempsf ${TB} ${OPT} ${VIEW} Gt "Ksf" "Tt,Th,Tl" Vt
+
+tempfs: netlist
+	cicsim run --name ${VIEW}_tempfs ${TB} ${OPT} ${VIEW} Gt "Kfs" "Tt,Th,Tl" Vt
+
+tl: netlist
+	cicsim run --name ${VIEW}_tl ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tl" Vt
+
+voltage: netlist
+	cicsim run --name ${VIEW}_voltage ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tt" "Vl,Vt,Vh"
+
+lr: netlist
+	cicsim run --name ${VIEW}_lr ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tt" "Vt,Vl,Vel,Vsl"
+
+summary:
+	cicsim summary --output "README.md"
+
+slide:
+	pandoc -s  -t slidy README.md -o README.html
+
+
+clean:
+	-rm -rf output_*
+	-rm -rf __pycache__
+	-rm *.run
+	-rm *.pdf
+	-rm *.csv

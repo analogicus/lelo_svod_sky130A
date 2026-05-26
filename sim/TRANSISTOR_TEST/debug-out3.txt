@@ -1,0 +1,8 @@
+**************** uncommented deck **************
+
+     1       1  * measure transistor_test
+
+****************** complete deck ***************
+
+     1       1  * measure transistor_test
+     0       2  *global gnd

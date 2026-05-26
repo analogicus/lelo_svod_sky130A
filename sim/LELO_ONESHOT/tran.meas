@@ -1,0 +1,9 @@
+* Measure LELO_ONESHOT
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+MEAS TRAN tdiffmax TRIG v(PULSEN) VAL=0.5 RISE=LAST TARG v(PULSEN) VAL=0.5 FALL=LAST
+echo "MEAS_END"
+.endc

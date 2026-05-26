@@ -1,0 +1,7 @@
+* Measure LELO_SVOD_RELOSC
+.control
+
+load {cicname}.raw
+
+echo "MEAS_END"
+.endc

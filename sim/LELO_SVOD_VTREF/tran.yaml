@@ -1,0 +1,32 @@
+vref:
+  src:
+    - vref
+  typ: 0.59569
+  name: vref
+  min: -5%
+  max: 5%
+  scale: 1
+  digits: 3
+  unit: V
+
+v1:
+  src:
+    - v1
+  typ: 0.3
+  name: v1
+  min: 0.2
+  max: 0.4
+  scale: 1
+  digits: 3
+  unit: V
+
+v2:
+  src:
+    - v2
+  typ: 0.3
+  name: v2
+  min: 0.2
+  max: 0.4
+  scale: 1
+  digits: 3
+  unit: V

@@ -39,7 +39,7 @@ R1       OUT    0 100k
 .save v(xdut.V1)
 .save v(xdut.VHSS1)
 .save v(xdut.VLSS)
-.save v(xdut.vc)
+.save v(xdut.vc) 
 .save v(xdut.x6.net3)
 .save v(xdut.OFF)
 .save v(xdut.net23)      
@@ -47,7 +47,7 @@ R1       OUT    0 100k
 * NGSPICE control
 *----------------------------------------------------------------
 .nodeset v(xdut.teg) = 0.01
-.nodeset v(xdut.vddc) = 1.8
+.nodeset v(xdut.vddc) = 1
 .nodeset v(xdut.vc) = 0.3
 
 .control
@@ -57,7 +57,7 @@ set color1=black
 unset askquit
 
 
-tran 100n 2000u
+tran 100n 100u
 
 
 write

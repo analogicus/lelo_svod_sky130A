@@ -1,0 +1,10 @@
+* Measure VCO_TEST
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+MEAS TRAN tdiff TRIG v(xdut.vo) VAL=0.5 FALL=2 TARG v(xdut.vo) VAL=0.5 FALL=3
+MEAS TRAN I avg i(vdd) from = 50u
+echo "MEAS_END"
+.endc

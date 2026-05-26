@@ -4,6 +4,9 @@
 load {cicname}.raw
 
 echo "MEAS_START"
-wrdata output.txt (xdut.x1.vg1) (xdut.net1) ;
+Meas tran P_AVG1 AVG r1:power from =2.5m
+Meas tran P_AVG2 AVG r2:power from =2.5m
+let P = P_AVG1 + P_AVG2
+print P
 echo "MEAS_END"
 .endc

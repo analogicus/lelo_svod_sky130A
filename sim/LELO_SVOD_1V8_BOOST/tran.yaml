@@ -1,0 +1,10 @@
+eff:
+  src:
+    - eff
+  typ: 0.78
+  name: eff
+  min: 0.76
+  max: 0.79
+  scale: 1
+  digits: 4
+  unit: Unit

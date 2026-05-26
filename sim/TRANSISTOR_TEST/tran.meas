@@ -1,0 +1,14 @@
+* Measure TRANSISTOR_TEST
+.control
+
+load tran_SchGtKttTtVt.raw
+
+echo "MEAS_START"
+
+meas tran ip AVG i(vdd1) from = 200u
+meas tran in AVG i(vdd2) from = 200u
+meas tran ip_leak AVG i(vdd3) from = 200u
+meas tran in_leak AVG i(vdd4) from = 200u
+
+echo "MEAS_END"
+.endc

@@ -1,0 +1,86 @@
+*TB_SUN_TR_SKY130NM/TB_NCM
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+#ifdef Lay
+.include ../../../work/lpe/LELO_SVOD_STARTUP_TB_lpe.spi
+#else
+.include ../../../work/xsch/LELO_SVOD_STARTUP_TB.spice
+#endif
+.include ../../../design/1812PS.lib
+.include ../../../design/XGL6030.lib
+*-----------------------------------------------------------------
+* OPTIONS
+*-----------------------------------------------------------------
+.option TNOM=27 GMIN=1e-15 reltol=1e-5 autostop
+
+*-----------------------------------------------------------------
+* PARAMETERS
+*-----------------------------------------------------------------
+.param TRF = 10p
++ sky130_fd_pr__pfet_01v8__ajunction_mult = 9.9626e-1
++ sky130_fd_pr__pfet_01v8__pjunction_mult = 1.0009e+0
+
+
+*-----------------------------------------------------------------
+* FORCE
+*-----------------------------------------------------------------
+VSS  VSS  0     dc 0
+VDD  VDD  VSS   dc 25m
+
+*-----------------------------------------------------------------
+* DUT
+*-----------------------------------------------------------------
+.include ../xdut.spi
+
+*----------------------------------------------------------------
+* PROBE
+*----------------------------------------------------------------
+
+.save v(xdut.TEG)
+.save v(xdut.VOUT_0V8)
+.save v(xdut.VOUT_1V8)
+
+.save v(xdut.VDD_NEG)
+.save v(xdut.EN_START)
+.save v(xdut.NVT_CONTROL)
+.save v(xdut.x1.VX)
+.save v(xdut.x1.HSS1_1V8)
+.save v(xdut.x1.HSS2_1V8)
+.save v(xdut.x1.LSS_1V8)
+.save v(xdut.vddcs)
+.save v(xdut.OSC)
+
+.save v(xdut.x1.EN_0V8)
+.save v(xdut.x1.EN_1V8)
+.save v(xdut.x1.EN_LSS)
+.save v(xdut.x1.CLK)
+.save v(xdut.x1.x8.VREF)
+
+.save v(xdut.x2.VG1)
+.save i(v.xdut.v1)
+
+.ic v(xdut.TEG) =21m
+
+*----------------------------------------------------------------
+* NGSPICE control
+*----------------------------------------------------------------
+
+.measure tran ts WHEN V(xdut.VOUT_1V8)=1.8 RISE=1   
+.control
+set num_threads=8
+set color0=white
+set color1=black
+unset askquit
+
+
+
+
+tran 1u 20m
+write
+quit
+
+
+.endc
+
+.end
