@@ -7,8 +7,6 @@ E {}
 N -90 -10 -90 20 {lab=#net1}
 N -90 20 100 20 {lab=#net1}
 N 100 -10 100 20 {lab=#net1}
-N 100 -40 100 -10 {lab=#net1}
-N -90 -40 -90 -10 {lab=#net1}
 N -50 -230 60 -230 {lab=CLK}
 N -90 -310 -90 -260 {lab=VDD}
 N -90 -310 100 -310 {lab=VDD}
@@ -24,9 +22,7 @@ N 380 -310 600 -310 {lab=VDD}
 N 600 -310 600 -280 {lab=VDD}
 N 600 -280 600 -250 {lab=VDD}
 N 380 -220 380 -90 {lab=#net5}
-N 380 -90 380 -60 {lab=#net5}
 N 600 -220 600 -90 {lab=#net6}
-N 600 -90 600 -60 {lab=#net6}
 N 380 -30 380 60 {lab=SN}
 N 350 60 380 60 {lab=SN}
 N 350 60 350 100 {lab=SN}
@@ -292,3 +288,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
+C {devices/lab_pin.sym} -90 -40 2 0 {name=p25 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 100 -40 2 1 {name=p26 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 380 -60 2 0 {name=p27 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} 600 -60 2 1 {name=p28 sig_type=std_logic lab=VDD}
