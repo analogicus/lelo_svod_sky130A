@@ -70,9 +70,9 @@ N 0 180 40 180 {lab=VSS}
 N 0 130 0 150 {lab=#net7}
 N 0 210 0 240 {lab=#net8}
 N 0 300 0 320 {lab=#net9}
-N -40 270 -40 350 {lab=#net10}
-N -40 180 -40 270 {lab=#net10}
-N -40 100 -40 180 {lab=#net10}
+N -40 270 -40 350 {lab=CLK}
+N -40 180 -40 270 {lab=CLK}
+N -40 100 -40 180 {lab=CLK}
 N -90 20 100 20 {lab=#net1}
 N 0 20 0 70 {lab=#net1}
 N 0 550 0 580 {lab=VSS}
@@ -81,11 +81,10 @@ N 40 520 40 580 {lab=VSS}
 N 40 270 40 520 {lab=VSS}
 N 0 440 40 440 {lab=VSS}
 N 0 380 0 410 {lab=#net4}
-N 0 470 0 490 {lab=#net11}
-N -40 440 -40 520 {lab=#net10}
-N -40 350 -40 440 {lab=#net10}
+N 0 470 0 490 {lab=#net10}
+N -40 440 -40 520 {lab=CLK}
+N -40 350 -40 440 {lab=CLK}
 N -0 580 40 580 {lab=VSS}
-C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -40 350 0 0 {name=x1 }
 C {devices/ipin.sym} -410 70 0 0 {name=p1 lab=VIP}
 C {devices/ipin.sym} -410 110 2 1 {name=p2 lab=VIN}
 C {devices/ipin.sym} -410 140 0 0 {name=p3 lab=CLK}
@@ -93,10 +92,6 @@ C {devices/ipin.sym} -410 180 0 0 {name=p4 lab=CLKN}
 C {devices/ipin.sym} -410 40 0 0 {name=p5 lab=VDD}
 C {devices/ipin.sym} -410 220 0 0 {name=p6 lab=VSS}
 C {devices/opin.sym} 380 20 0 1 {name=p7 lab=SN}
-C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} 310 130 0 0 {name=x7 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} 440 130 0 1 {name=x8 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} 530 130 0 0 {name=x9 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} 690 130 0 1 {name=x10 }
 C {devices/lab_pin.sym} -410 40 2 0 {name=p8 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 10 -310 1 0 {name=p9 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 500 -310 1 0 {name=p10 sig_type=std_logic lab=VDD}
@@ -128,13 +123,6 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -40 270 0 0 {name=x4 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -40 180 0 0 {name=x11 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -40 100 0 0 {name=x12 }
-C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} 60 -230 0 0 {name=x5 }
-C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} -50 -230 0 1 {name=x6 }
-C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} 420 -250 0 1 {name=x13 }
-C {LELO_SVOD_SKY130A/Transistors/SVOD_PCH_2C5F0.sym} 560 -250 0 0 {name=x14 }
 C {sky130_fd_pr/pfet_01v8_lvt.sym} 620 -60 0 1 {name=M1
 W=1.92
 L=0.44
@@ -149,7 +137,227 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} -130 -40 0 0 {name=x2 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_4C5F0.sym} 140 -40 0 1 {name=x3 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -40 520 0 0 {name=x15 }
-C {JNW_ATR_SKY130A/JNWATR_NCH_2C5F0.sym} -40 440 0 0 {name=x16 }
+C {sky130_fd_pr/nfet_01v8.sym} -20 100 0 0 {name=M3
+W=1.92
+L=0.94
+nf=2
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} -20 180 0 0 {name=M4
+W=1.92
+L=0.94
+nf=2
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} -20 270 0 0 {name=M5
+W=1.92
+L=0.94
+nf=2
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} -20 350 0 0 {name=M6
+W=1.92
+L=0.94
+nf=2
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} -20 440 0 0 {name=M7
+W=1.92
+L=0.94
+nf=2
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} -20 520 0 0 {name=M8
+W=1.92
+L=0.94
+nf=2
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} 330 130 0 0 {name=M9
+W=1.92
+L=0.94
+nf=2
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} 550 130 0 0 {name=M10
+W=1.92
+L=0.94
+nf=2
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} 420 130 0 1 {name=M11
+W=1.92
+L=0.94
+nf=2
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} 670 130 0 1 {name=M12
+W=1.92
+L=0.94
+nf=2
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} -110 -40 0 0 {name=M13
+W=3.2
+L=0.94
+nf=2
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/nfet_01v8.sym} 120 -40 0 1 {name=M14
+W=3.2
+L=0.94
+nf=2
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=nfet_01v8
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} -70 -230 0 1 {name=M15
+W=1.92
+L=0.94
+nf=2
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} 80 -230 0 0 {name=M16
+W=1.92
+L=0.94
+nf=2
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} 400 -250 0 1 {name=M17
+W=1.92
+L=0.94
+nf=2
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} 580 -250 0 0 {name=M18
+W=1.92
+L=0.94
+nf=2
+mult=1
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}
