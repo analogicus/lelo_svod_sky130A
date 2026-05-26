@@ -7,11 +7,7 @@ E {}
 N 210 -300 210 -260 {lab=VOUT_0V8}
 N 210 -300 240 -300 {lab=VOUT_0V8}
 N 270 -260 300 -260 {lab=OUT1}
-N 210 -170 210 -130 {lab=VOUT_1V8}
-N 210 -170 240 -170 {lab=VOUT_1V8}
-N 270 -130 300 -130 {lab=OUT2}
 N 110 -260 210 -260 {lab=VOUT_0V8}
-N 120 -130 210 -130 {lab=VOUT_1V8}
 C {devices/ipin.sym} -510 -390 0 1 {name=p2 lab=VDD}
 C {devices/res.sym} -510 -360 0 1 {name=R1
 value=5
@@ -29,19 +25,12 @@ C {devices/switch_ngspice.sym} 240 -260 3 1 {name=S1 model=SW1
 device_model=".MODEL SW1 SW 
 + VT=0.78 VH=0.001
 + RON=0.001 ROFF=10G "}
-C {devices/opin.sym} 300 -130 0 0 {name=p47 lab=OUT2}
 C {devices/opin.sym} 300 -260 0 0 {name=p43 lab=OUT1}
-C {devices/switch_ngspice.sym} 240 -130 3 1 {name=S2 model=SW1
-device_model=".MODEL SW1 SW 
-+ VT=0.78 VH=0.001
-+ RON=0.001 ROFF=10G "}
 C {LELO_SVOD_SKY130A/LELO_SVOD_BOOST_2.sym} -250 -170 0 0 {name=x1}
 C {devices/lab_pin.sym} -400 -200 2 1 {name=p1 sig_type=std_logic lab=TEG}
 C {devices/lab_pin.sym} -400 -220 0 0 {name=p6 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} -400 -240 0 0 {name=p7 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_pin.sym} -100 -240 2 0 {name=p10 sig_type=std_logic lab=VOUT_0V8}
-C {devices/lab_pin.sym} -100 -220 2 0 {name=p11 sig_type=std_logic lab=VOUT_1V8}
-C {devices/lab_pin.sym} 120 -130 2 1 {name=p12 sig_type=std_logic lab=VOUT_1V8}
 C {devices/lab_pin.sym} 110 -260 2 1 {name=p13 sig_type=std_logic lab=VOUT_0V8}
 C {devices/lab_pin.sym} -100 -200 2 0 {name=p19 sig_type=std_logic lab=EN_START}
 C {devices/lab_pin.sym} -100 -180 2 0 {name=p20 sig_type=std_logic lab=OSC}
@@ -49,20 +38,14 @@ C {devices/lab_pin.sym} -640 -120 2 0 {name=p3 sig_type=std_logic lab=0}
 C {devices/lab_pin.sym} -570 -120 2 0 {name=p4 sig_type=std_logic lab=0}
 C {devices/lab_pin.sym} -400 -100 0 0 {name=p5 sig_type=std_logic lab=0}
 C {devices/lab_pin.sym} 260 -300 1 0 {name=p8 sig_type=std_logic lab=0}
-C {devices/lab_pin.sym} 260 -170 1 0 {name=p9 sig_type=std_logic lab=0}
-C {devices/capa.sym} 120 -100 0 1 {name=C2
-m=1
-value=100n
-footprint=1206
-device="ceramic capacitor"}
 C {devices/capa.sym} 110 -230 0 1 {name=C1
 m=1
 value=100n
 footprint=1206
 device="ceramic capacitor"}
-C {devices/lab_pin.sym} 120 -70 3 0 {name=p17 sig_type=std_logic lab=0}
 C {devices/lab_pin.sym} 110 -200 3 0 {name=p18 sig_type=std_logic lab=0}
 C {devices/lab_pin.sym} -400 -140 0 0 {name=p14 sig_type=std_logic lab=0}
 C {devices/lab_pin.sym} -400 -180 0 0 {name=p21 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} -400 -160 0 0 {name=p22 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} -400 -120 0 0 {name=p23 sig_type=std_logic lab=0}
+C {devices/lab_pin.sym} -100 -220 2 0 {name=p9 sig_type=std_logic lab=VDD_1V8}
