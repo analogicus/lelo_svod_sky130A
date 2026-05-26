@@ -38,6 +38,7 @@ R2       OUT2   0 {Rout}
 *----------------------------------------------------------------
 .PROBE p(R1)
 .PROBE p(R2)
+
 .save i(v.xdut.v1) i(v.xdut.v2)
 .save @m.xdut.x1.xm3.msky130_fd_pr__nfet_01v8_lvt[id]
 .save @m.xdut.x1.xm5.msky130_fd_pr__nfet_01v8_lvt[id]
@@ -67,6 +68,9 @@ R2       OUT2   0 {Rout}
 .save v(xdut.x1.x6.NHSS2_1v8)
 .save v(xdut.x1.x6.SN)
 .save v(xdut.x1.x6.SP)
+.save v(xdut.x1.x6.net2)
+.save v(xdut.x1.x6.x3.net2)
+.save v(xdut.x1.x6.x3.net1)
 .save v(xdut.x1.x6.x4.net2)
 .save v(xdut.x1.x6.x4.net3)
 .save v(xdut.x1.x6.UP)
@@ -74,6 +78,8 @@ R2       OUT2   0 {Rout}
 .save v(xdut.x1.x6.net6)
 .save v(xdut.x1.x6.CURRENT_ON_P)
 .save v(xdut.x1.x6.CURRENT_ON_N)
+.save v(xdut.x1.x6.BIASN)
+.save v(xdut.x1.x6.BIASP)
 .save v(xdut.x1.x6.VX_SAMPL)
 .save v(xdut.x1.x6.VOUT_SAMPL)
 .save v(xdut.x1.x5.bias_ref)
@@ -125,6 +131,8 @@ R2       OUT2   0 {Rout}
 .ic v(xdut.x1.x8.x8.net18) = 0.8
 .ic v(xdut.x1.x8.x8.net19) = 0.8
 .ic v(xdut.x1.x8.x8.net20) = 0.8
+.ic v(xdut.x6.x3.net1) = 0.8
+.ic v(xdut.x1.x3.net1) = 0.8
 
 
 .control
@@ -134,7 +142,7 @@ set color1=black
 unset askquit
 
 
-tran 1u 2000u
+tran 1u 4000u
 write
 quit
 
