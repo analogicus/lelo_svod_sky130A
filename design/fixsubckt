@@ -1,0 +1,60 @@
+#!/usr/bin/perl
+#
+# Xschem adds ** infront of subckts for some reason (probably to emulate test bench top)
+# I'm not a fan. I want subckt on top, so I can make a DUT in my TB, as such, fix       
+
+my $replacePlus = 0;
+while(<>){
+
+  #- Remove the bus notation
+  s/,/ /ig;
+
+  if(m/\*\*.subckt/ig){
+    s/\*\*//ig;
+    $replacePlus = 1;
+    print $_;
+    next;
+  }
+
+  if($replacePlus && m/^\s*\*\+/ig){
+    s/^\s*\*\+/\+/ig;
+    print $_;
+    next;
+  }
+  $replacePlus = 0;
+
+  s/\*\*\.ends/\.ends/ig;
+
+  # Remove expr() wrappers while preserving content and nested parentheses
+  while(m/expr\s*\(/i){
+    my $start = index($_, 'expr');
+    my $paren_start = index($_, '(', $start);
+    
+    # Find matching closing parenthesis
+    my $depth = 0;
+    my $paren_end = -1;
+    for(my $i = $paren_start; $i < length($_); $i++){
+      my $char = substr($_, $i, 1);
+      if($char eq '('){
+        $depth++;
+      } elsif($char eq ')'){
+        $depth--;
+        if($depth == 0){
+          $paren_end = $i;
+          last;
+        }
+      }
+    }
+    
+    if($paren_end != -1){
+      # Extract the content between parentheses
+      my $content = substr($_, $paren_start + 1, $paren_end - $paren_start - 1);
+      # Replace expr(...) with just the content
+      substr($_, $start, $paren_end - $start + 1) = $content;
+    } else {
+      last;
+    }
+  }
+
+  print $_;
+}

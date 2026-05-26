@@ -156,5 +156,3 @@ C {devices/lab_pin.sym} 150 60 2 0 {name=p34 sig_type=std_logic lab=NEN_0V8}
 C {devices/lab_pin.sym} -150 60 2 1 {name=p35 sig_type=std_logic lab=NEN_0V8}
 C {devices/lab_pin.sym} 150 80 2 0 {name=p36 sig_type=std_logic lab=EN_1V8}
 C {devices/lab_pin.sym} -150 80 2 1 {name=p37 sig_type=std_logic lab=EN_1V8}
-C {sky130_fd_pr/cap_var_lvt.sym} -860 0 3 0 {name=C7 model=cap_var_lvt W=0.5 L=0.5 VM=1 spiceprefix=X}
-C {sky130_fd_pr/cap_var_lvt.sym} -770 0 1 1 {name=C8 model=cap_var_lvt W=0.5 L=0.5 VM=1 spiceprefix=X}

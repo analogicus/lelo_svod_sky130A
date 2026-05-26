@@ -222,13 +222,13 @@ C {devices/lab_pin.sym} 460 -540 0 0 {name=p80 sig_type=std_logic lab=EN_0V8}
 C {devices/lab_pin.sym} 570 -540 0 1 {name=p81 sig_type=std_logic lab=NEN_0V8}
 C {devices/lab_pin.sym} -180 190 0 0 {name=p73 sig_type=std_logic lab=VOUT_0V8}
 C {devices/res.sym} -180 220 0 0 {name=R5
-value=4Meg
+value=8Meg
 footprint=1206
 device=resistor
 m=1}
 C {devices/lab_pin.sym} -180 340 0 0 {name=p82 sig_type=std_logic lab=VSS}
 C {devices/res.sym} -180 310 0 0 {name=R6
-value=20Meg
+value=16Meg
 footprint=1206
 device=resistor
 m=1}

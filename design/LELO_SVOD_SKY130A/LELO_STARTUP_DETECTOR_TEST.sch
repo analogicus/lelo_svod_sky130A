@@ -33,13 +33,13 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/lab_pin.sym} -500 20 0 0 {name=p2 sig_type=std_logic lab=VSS}
 C {devices/res.sym} -150 -120 0 0 {name=R1
-value=2Meg
+value=4Meg
 footprint=1206
 device=resistor
 m=1}
 C {devices/lab_pin.sym} -150 0 0 0 {name=p12 sig_type=std_logic lab=VSS}
 C {devices/res.sym} -150 -30 0 0 {name=R2
-value=10Meg
+value=8Meg
 footprint=1206
 device=resistor
 m=1}
