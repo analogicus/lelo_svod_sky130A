@@ -156,8 +156,8 @@ C {devices/lab_pin.sym} 1330 -330 2 1 {name=p64 sig_type=std_logic lab=CURRENT_O
 C {devices/lab_pin.sym} 1330 -80 0 0 {name=p74 sig_type=std_logic lab=DN}
 C {devices/lab_pin.sym} 1370 -600 0 0 {name=p13 sig_type=std_logic lab=VDD_0V8}
 C {sky130_fd_pr/pfet_01v8.sym} 1350 -530 0 0 {name=M2
-W=2
-L=0.15
+W=1
+L=2
 nf=1
 mult=1
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
@@ -170,7 +170,7 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 1350 -430 0 0 {name=M3
-W=2
+W=1
 L=0.15
 nf=1
 mult=1
@@ -200,7 +200,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 1350 20 0 0 {name=M35
 W=1
-L=0.15
+L=2
 nf=1 
 mult=1
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
@@ -214,7 +214,7 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 1370 50 0 0 {name=p41 sig_type=std_logic lab=0}
 C {sky130_fd_pr/pfet_01v8.sym} 1350 -330 0 0 {name=M5
-W=2
+W=1
 L=0.15
 nf=1
 mult=1
@@ -248,7 +248,7 @@ device=resistor
 m=1}
 C {sky130_fd_pr/nfet_01v8.sym} 820 -80 0 1 {name=M7
 W=10
-L=0.15
+L=2
 nf=1 
 mult=1
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
@@ -265,7 +265,7 @@ C {devices/lab_pin.sym} 890 -80 1 0 {name=p76 sig_type=std_logic lab=BIASN}
 C {devices/lab_pin.sym} 1330 20 2 1 {name=p33 sig_type=std_logic lab=BIASN}
 C {sky130_fd_pr/nfet_01v8.sym} 950 -80 0 0 {name=M8
 W=1
-L=0.15
+L=2
 nf=1 
 mult=1
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
@@ -293,8 +293,8 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 880 10 3 0 {name=p80 sig_type=std_logic lab=CURRENT_ON_N}
 C {sky130_fd_pr/pfet_01v8.sym} 990 -230 0 1 {name=M11
-W=2
-L=0.15
+W=1
+L=2
 nf=1
 mult=1
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
@@ -327,7 +327,7 @@ spiceprefix=X
 C {devices/lab_pin.sym} 1160 -350 0 0 {name=p55 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} 1120 -300 0 0 {name=p56 sig_type=std_logic lab=EN_START}
 C {sky130_fd_pr/pfet_01v8.sym} 820 -310 0 1 {name=M4
-W=2
+W=1
 L=0.15
 nf=1
 mult=1
@@ -342,7 +342,7 @@ spiceprefix=X
 }
 C {devices/lab_pin.sym} 890 -310 1 0 {name=p89 sig_type=std_logic lab=CURRENT_ON_P}
 C {sky130_fd_pr/pfet_01v8.sym} 950 -310 0 0 {name=M13
-W=2
+W=1
 L=0.15
 nf=1
 mult=1

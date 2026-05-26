@@ -93,7 +93,7 @@ C {devices/lab_pin.sym} 610 -70 0 1 {name=p20 sig_type=std_logic lab=OUT}
 C {LELO_SVOD_SKY130A/LELO_NAND_OS_VC.sym} 150 -70 0 0 {name=x2}
 C {devices/lab_pin.sym} 320 140 0 0 {name=p17 sig_type=std_logic lab=VDD}
 C {sky130_fd_pr/nfet_01v8_lvt.sym} 560 -10 0 0 {name=M3
-W=1
+W=4
 L=0.15
 nf=1
 mult=1
@@ -107,7 +107,7 @@ model=nfet_01v8_lvt
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 560 -120 0 0 {name=M4
-W=1
+W=4
 L=0.15
 nf=1
 mult=1
