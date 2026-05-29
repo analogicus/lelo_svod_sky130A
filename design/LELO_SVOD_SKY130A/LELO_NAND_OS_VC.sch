@@ -1,4 +1,4 @@
-v {xschem version=3.4.8RC file_version=1.2}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -28,7 +28,7 @@ C {devices/ipin.sym} -320 20 0 0 {name=p9 lab=B}
 C {devices/lab_pin.sym} -320 -30 0 1 {name=p10 sig_type=std_logic lab=A}
 C {devices/lab_pin.sym} -320 20 0 1 {name=p11 sig_type=std_logic lab=B}
 C {sky130_fd_pr/nfet_01v8_lvt.sym} -20 160 0 0 {name=M1
-W=1
+W=2
 L=0.15
 nf=1
 mult=1
@@ -42,7 +42,7 @@ model=nfet_01v8_lvt
 spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8_lvt.sym} -20 50 0 0 {name=M2
-W=1
+W=2
 L=0.15
 nf=1
 mult=1

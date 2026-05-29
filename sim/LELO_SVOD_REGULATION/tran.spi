@@ -3,16 +3,16 @@
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/LELO_SVOD_STARTUP_TB_lpe.spi
+.include ../../../work/lpe/LELO_SVOD_REGULATION_lpe.spi
 #else
-.include ../../../work/xsch/LELO_SVOD_STARTUP_TB.spice
+.include ../../../work/xsch/LELO_SVOD_REGULATION.spice
 #endif
 .include ../../../design/1812PS.lib
 .include ../../../design/XGL6030.lib
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
-.option TNOM=27 GMIN=1e-15 reltol=1e-4
+.option TNOM=27 GMIN=1e-15 reltol=1e-5
 
 *-----------------------------------------------------------------
 * PARAMETERS
@@ -21,13 +21,18 @@
 + sky130_fd_pr__pfet_01v8__ajunction_mult = 9.9626e-1
 + sky130_fd_pr__pfet_01v8__pjunction_mult = 1.0009e+0
 
-
+.param AVDD = {vdda}
+.param Rout1 = (0.8*0.8*4*5)/((TEG**2)*0.95*0.85*0.8)
+.param Rout2 = (1.8*1.8*4*5)/((TEG**2)*0.05*0.85*0.8)
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
-VSS  VSS  0     dc 0
-VDD  VDD  VSS   dc 20m
-
+VTEG    VTEG   0    dc    40m
+VDD1    VDD1   0    dc   0.8
+VDD2    VDD2   0    dc   1.8
+VCTRL   VCTRL  0    pwl  0 0.9 1000u 0.9 1100u 0 
+R1      OUT1   0    {Rout1}
+R2      OUT2   0    {Rout2}
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
@@ -36,36 +41,35 @@ VDD  VDD  VSS   dc 20m
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
-
-.save v(xdut.TEG)
-.save v(xdut.VOUT_0V8)
-.save v(xdut.VOUT_1V8)
-
-.save v(xdut.VDD_NEG)
-.save v(xdut.EN_START)
-.save v(xdut.NVT_CONTROL)
-.save v(xdut.x1.VX)
+.PROBE p(R1)
+.PROBE p(R2)
+.save v(VCTRL)
+.save v(VDD1)
+.save v(VDD2)
+.save v(VTEG)
+.save v(xdut.vout_0v8)
+.save v(xdut.vout_1v8)
+.save v(xdut.x1.vx)
+.save v(xdut.teg)
+.save v(xdut.vc1)
+.save v(xdut.vc2)
 .save v(xdut.x1.HSS1_1V8)
 .save v(xdut.x1.HSS2_1V8)
+.save v(xdut.x1.HSS1U_1V8)
+.save v(xdut.x1.HSS2U_1V8)
+.save v(xdut.x1.HSS1U_0V8)
+.save v(xdut.x1.HSS2U_0V8)
+.save v(xdut.x1.LSSU_0V8)
 .save v(xdut.x1.LSS_1V8)
-.save v(xdut.vddcs)
-.save v(xdut.OSC)
-
-.save v(xdut.x1.EN_0V8)
-.save v(xdut.x1.EN_1V8)
-.save v(xdut.x1.EN_LSS)
-.save v(xdut.x1.CLK)
+.save v(xdut.EN_LSS)
+.save v(xdut.NEN_0V8)
+.save v(xdut.EN_1V8)
 .save v(xdut.x1.x8.VREF)
-
-.save v(xdut.x2.VG1)
-.save i(v.xdut.v1)
-
-.ic v(xdut.TEG) =20m
-
+.save v(xdut.x1.x8.VMEAS_0V8)
+.save v(xdut.x1.x8.VMEAS_1V8)
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
-  
 .control
 set num_threads=8
 set color0=white
@@ -74,8 +78,7 @@ unset askquit
 
 
 
-
-tran 1u 24m
+tran 1u 10000u
 write
 quit
 

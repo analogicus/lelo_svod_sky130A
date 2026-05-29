@@ -7,7 +7,7 @@ all: typical etc mc summary
 TB=tran
 VIEW=Sch
 #VIEW=Lay
-CELL=LELO_ONESHOT_VC2
+CELL=LELO_SVOD_REGULATION
 LIB =LELO_SVOD_SKY130A
 OPT=
 
@@ -17,22 +17,19 @@ test:
 	${MAKE} typical OPT="Debug"
 
 typical: netlist
-	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Ktt Tt Vt
+	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Ktt Tt Vt Teg40
 
 slow: netlist
-	cicsim run --name ${VIEW}_slow ${TB} ${OPT} ${VIEW} Gt Kss "Tl" "Vl,Vt"
+	cicsim run --name ${VIEW}_slow ${TB} ${OPT} ${VIEW} Gt Kss "Th,Tl" Vl
 
 fast: netlist
-	cicsim run --name ${VIEW}_fast ${TB} ${OPT} ${VIEW} Gt "Kff,Kfs" "Th" "Vl,Vt"
+	cicsim run --name ${VIEW}_fast ${TB} ${OPT} ${VIEW} Gt Kff "Th,Tl" Vh
 
 tfs: netlist
 	cicsim run --name ${VIEW}_tfs ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt,Th,Tl" "Vt,Vl,Vh"
 
 etc: netlist
-	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vl,Vt"
-
-test: netlist
-	cicsim run --name ${VIEW}_test ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Th,Tl" "Vt"
+	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vl,Vh"
 
 mc: netlist
 	cicsim run --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"

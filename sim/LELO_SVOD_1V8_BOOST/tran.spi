@@ -25,8 +25,10 @@
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
-VDD      VDD  0 dc {TEG}
-R1       OUT1    0 100k
+VDD2  VDD2 0 dc {vdda}
+VDD1  VDD1 0 dc {vdd}
+VTEG  VTEG  0 dc {TEG}
+VCTRL VCTRL 0 pwl 0 2 50u 2 100u 0 
 R2       OUT2   0 {Rout}
 *-----------------------------------------------------------------
 * DUT
@@ -38,8 +40,10 @@ R2       OUT2   0 {Rout}
 *----------------------------------------------------------------
 .PROBE p(R1)
 .PROBE p(R2)
-
-.save i(v.xdut.v1) i(v.xdut.v2)
+.save v(VCTRL)
+.save i(VDD1) i(VDD2)
+.save v(VDD1) v(VDD2)
+.save v(VTEG) i(VTEG)
 .save @m.xdut.x1.xm3.msky130_fd_pr__nfet_01v8_lvt[id]
 .save @m.xdut.x1.xm5.msky130_fd_pr__nfet_01v8_lvt[id]
 .save v(xdut.TEG)
@@ -64,7 +68,8 @@ R2       OUT2   0 {Rout}
 .save v(xdut.x1.x8.VMEAS_0V8)
 .save v(xdut.x1.x8.VMEAS_1V8)
 .save v(xdut.x1.x8.1V8_L)
-.save v(xdut.x1.x6.VC)
+.save v(xdut.vc2)
+.save v(xdut.vc1)
 .save v(xdut.x1.x6.NHSS2_1v8)
 .save v(xdut.x1.x6.SN)
 .save v(xdut.x1.x6.SP)
@@ -100,9 +105,9 @@ R2       OUT2   0 {Rout}
 .ic v(xdut.x1.x5.net12)=0.11
 .ic v(xdut.TEG) = 0.02
 .ic v(xdut.VOUT_0V8) = 0.8
-.ic v(xdut.VOUT_1V8) = 1.7
-.ic v(xdut.x1.x1.vc) = 0.4
-.ic v(xdut.x1.x6.vc) = 0.25
+.ic v(xdut.VOUT_1V8) = 1.8
+.ic v(xdut.vc1) = 0.4
+.ic v(xdut.vc2) = 0.4
 .ic v(xdut.x1.x1.x1.net2) = 0.8
 .ic v(xdut.x1.HSS1U_1V8) = 0
 .ic v(xdut.x1.HSS1U_0V8) = 0
@@ -142,7 +147,7 @@ set color1=black
 unset askquit
 
 
-tran 1u 2000u
+tran 1u 4000u
 write
 quit
 

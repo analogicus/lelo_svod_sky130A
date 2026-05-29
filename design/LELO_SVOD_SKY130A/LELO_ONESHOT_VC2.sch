@@ -1,11 +1,10 @@
-v {xschem version=3.4.8RC file_version=1.2}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
 S {}
 E {}
 N -360 -120 -280 -120 {lab=IN}
-N 500 -140 560 -140 {lab=OUT}
 N 170 -140 230 -140 {lab=#net1}
 N -280 -120 -190 -120 {lab=IN}
 N -220 -160 -190 -160 {lab=OUT}
@@ -14,7 +13,6 @@ N -220 -290 350 -290 {lab=OUT}
 N 510 -290 510 -140 {lab=OUT}
 N 270 -210 270 -190 {lab=VDD}
 N 340 -140 360 -140 {lab=#net2}
-N 470 -140 500 -140 {lab=OUT}
 N 270 -90 400 -90 {lab=VSS}
 N 270 -210 400 -210 {lab=VDD}
 N 400 -210 400 -190 {lab=VDD}
@@ -30,6 +28,7 @@ N 60 -230 60 -200 {lab=VDD}
 N 20 -200 20 -90 {lab=#net5}
 N -40 -140 20 -140 {lab=#net5}
 N 60 -140 110 -140 {lab=#net4}
+N 470 -140 560 -140 {lab=OUT}
 C {devices/lab_pin.sym} -710 110 0 1 {name=p23 sig_type=std_logic lab=VDD}
 C {devices/ipin.sym} -710 110 0 0 {name=p1 lab=VDD}
 C {devices/ipin.sym} -710 140 0 0 {name=p2 lab=IN}
@@ -42,7 +41,6 @@ C {devices/opin.sym} -500 200 0 0 {name=p14 lab=OUT}
 C {devices/lab_pin.sym} -500 200 0 0 {name=p15 sig_type=std_logic lab=OUT}
 C {devices/ipin.sym} -710 170 0 0 {name=p6 lab=EN}
 C {devices/lab_pin.sym} -710 170 0 1 {name=p10 sig_type=std_logic lab=EN}
-C {devices/lab_pin.sym} 560 -140 0 1 {name=p57 sig_type=std_logic lab=OUT}
 C {LELO_SVOD_SKY130A/LELO_NOR.sym} -130 -140 0 0 {name=x2}
 C {devices/capa.sym} 140 -140 1 0 {name=C5
 m=1
@@ -125,3 +123,4 @@ spiceprefix=X
 C {devices/lab_pin.sym} 60 -230 1 0 {name=p20 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 270 -210 1 0 {name=p22 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 190 -30 0 0 {name=p24 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 560 -140 0 1 {name=p25 sig_type=std_logic lab=OUT}

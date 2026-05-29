@@ -20,16 +20,16 @@ typical: netlist
 	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Ktt Tt Vt
 
 slow: netlist
-	cicsim run --name ${VIEW}_slow ${TB} ${OPT} ${VIEW} Gt "Kss,Ksf" "Tl" "Vl,Vt"
+	cicsim run --name ${VIEW}_slow ${TB} ${OPT} ${VIEW} Gt "Kss" "Tl" "Vl"
 
 fast: netlist
-	cicsim run --name ${VIEW}_fast ${TB} ${OPT} ${VIEW} Gt "Kff,Kfs" "Th" "Vl,Vt"
+	cicsim run --name ${VIEW}_fast ${TB} ${OPT} ${VIEW} Gt "Kfs" "Th" "Vl"
 
 tfs: netlist
 	cicsim run --name ${VIEW}_tfs ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt,Th,Tl" "Vt,Vl,Vh"
 
 etc: netlist
-	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vt"
+	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vl,Vt"
 
 test: netlist
 	cicsim run --name ${VIEW}_test ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Th,Tl" "Vt"

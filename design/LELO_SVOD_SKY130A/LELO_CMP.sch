@@ -1,4 +1,4 @@
-v {xschem version=3.4.8RC file_version=1.2}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -58,16 +58,10 @@ N 250 -110 250 -60 {lab=#net3}
 N 250 -60 340 -60 {lab=#net3}
 N 750 -410 750 -60 {lab=#net2}
 N 640 -60 750 -60 {lab=#net2}
-N 0 100 40 100 {lab=VSS}
-N 40 100 40 160 {lab=VSS}
+N 0 100 40 100 {lab=#net4}
+N 40 100 40 160 {lab=#net4}
 N -0 20 -0 70 {lab=#net1}
-N 0 190 40 190 {lab=VSS}
-N 40 160 40 190 {lab=VSS}
-N -40 100 -40 190 {lab=CLK}
-N 0 220 0 250 {lab=VSS}
-N 40 190 40 250 {lab=VSS}
-N 0 250 0 280 {lab=VSS}
-N 0 250 40 250 {lab=VSS}
+N 0 160 40 160 {lab=#net4}
 C {devices/ipin.sym} -410 70 0 0 {name=p1 lab=VIP}
 C {devices/ipin.sym} -410 110 2 1 {name=p2 lab=VIN}
 C {devices/ipin.sym} -410 140 0 0 {name=p3 lab=CLK}
@@ -88,7 +82,7 @@ C {devices/lab_pin.sym} -410 180 2 0 {name=p17 sig_type=std_logic lab=CLKN}
 C {devices/lab_pin.sym} 310 130 2 1 {name=p18 sig_type=std_logic lab=CLKN}
 C {devices/lab_pin.sym} 690 130 2 0 {name=p19 sig_type=std_logic lab=CLKN}
 C {devices/lab_pin.sym} -410 220 2 0 {name=p20 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 0 280 3 0 {name=p21 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 0 160 3 0 {name=p21 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 500 200 3 0 {name=p22 sig_type=std_logic lab=VSS}
 C {devices/opin.sym} 600 20 0 0 {name=p23 lab=SP}
 C {devices/lab_pin.sym} 10 -230 3 0 {name=p24 sig_type=std_logic lab=CLK}
@@ -122,8 +116,8 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8_lvt.sym} -110 -40 0 0 {name=M3
 W=6.4
-L=0.44
-nf=1
+L=1
+nf=2
 mult=1
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
 pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
@@ -136,8 +130,8 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8_lvt.sym} 120 -40 0 1 {name=M4
 W=6.4
-L=0.44
-nf=1
+L=1
+nf=2
 mult=1
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
 pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
@@ -206,21 +200,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} -20 100 0 0 {name=M9
 W=1.92
-L=0.94
-nf=2
-mult=1
-ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
-pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
-as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
-ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
-nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
-sa=0 sb=0 sd=0
-model=nfet_01v8
-spiceprefix=X
-}
-C {sky130_fd_pr/nfet_01v8.sym} -20 190 0 0 {name=M10
-W=1.92
-L=0.94
+L=2
 nf=2
 mult=1
 ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"

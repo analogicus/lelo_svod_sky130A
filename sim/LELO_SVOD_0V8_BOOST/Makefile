@@ -43,16 +43,16 @@ ss: netlist
 	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Kss Tt Vt	"Teg70,Teg80,Teg90"
 
 slow: netlist
-	cicsim run --name ${VIEW}_slow ${TB} ${OPT} ${VIEW} Gt "Kss, Ksf" "Tl" Teg40
+	cicsim run --name ${VIEW}_slow ${TB} ${OPT} ${VIEW} Gt "Kss" "Tl" "Vl" Teg30
 
 fast: netlist
-	cicsim run --name ${VIEW}_fast ${TB} ${OPT} ${VIEW} Gt Kff "Th" Teg20
+	cicsim run --name ${VIEW}_fast ${TB} ${OPT} ${VIEW} Gt Kff "Th" Vt Teg30
 
 tfs: netlist
 	cicsim run --name ${VIEW}_tfs ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt,Th,Tl" "Vt,Vl,Vh"
 
 etc: netlist
-	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Teg40"
+	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vl,Vh"  "Teg30"
 
 mc: netlist
 	cicsim run --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt" "Teg40"

@@ -22,6 +22,9 @@ typical: netlist
 teg: netlist
 	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Ktt Tt Vt "Teg20,Teg30,Teg40,Teg50,Teg60,Teg70,Teg80,Teg90"
 
+etcteg: netlist
+	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt "Kss,Ktt,Kff" Tt Vt "Teg20,Teg30,Teg40,Teg50,Teg60,Teg70,Teg80,Teg90"
+
 teg90: netlist
 	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Ktt Tt Vt "Teg90"
 
@@ -38,16 +41,16 @@ ss: netlist
 	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Kss Tt Vt	Teg40
 
 slow: netlist
-	cicsim run --name ${VIEW}_slow ${TB} ${OPT} ${VIEW} Gt Kss "Th,Tl" Vl
+	cicsim run --name ${VIEW}_slow ${TB} ${OPT} ${VIEW} Gt Kss "Tl" Vl Teg30
 
 fast: netlist
-	cicsim run --name ${VIEW}_fast ${TB} ${OPT} ${VIEW} Gt Kff "Th,Tl" Vh
+	cicsim run --name ${VIEW}_fast ${TB} ${OPT} ${VIEW} Gt Kff "Th" Vh Teg30
 
 tfs: netlist
 	cicsim run --name ${VIEW}_tfs ${TB} ${OPT} ${VIEW} Gt "Kfs" "Th" "Teg40"
 
 etc: netlist
-	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" Teg40
+	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vl,Vh" Teg30
 
 mc: netlist
 	cicsim run --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt" Teg40
