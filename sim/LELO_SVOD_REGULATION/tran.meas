@@ -4,6 +4,6 @@
 load {cicname}.raw
 
 echo "MEAS_START"
-
+wrdata 85load_data.txt (xdut.vout_1v8) (xdut.vout_0v8);
 echo "MEAS_END"
 .endc
