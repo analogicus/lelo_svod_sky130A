@@ -32,7 +32,6 @@ N -180 250 -30 250 {lab=#net5}
 N -180 250 -180 280 {lab=#net5}
 N -170 -580 -50 -580 {lab=VMEAS_0V8}
 N -170 -90 -50 -90 {lab=VMEAS_1V8}
-N -650 -570 -610 -570 {lab=VREF}
 C {devices/ipin.sym} -650 -300 0 0 {name=p1 lab=VOUT_0V8}
 C {devices/lab_pin.sym} -650 -300 0 1 {name=p2 sig_type=std_logic lab=VOUT_0V8}
 C {devices/ipin.sym} -650 -170 0 0 {name=p5 lab=VSS}

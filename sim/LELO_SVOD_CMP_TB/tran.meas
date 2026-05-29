@@ -1,0 +1,12 @@
+* Measure LELO_SVOD_CMP_TB
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+meas tran vip FIND v(vip) WHEN v(sp)=0.4 RISE=1
+let voff = vip-0.467
+print voff
+
+echo "MEAS_END"
+.endc

@@ -1,0 +1,10 @@
+voffset:
+  src:
+    - voff
+  typ: 0
+  name: offset
+  min: -20
+  max: 20
+  scale: 1000
+  digits: 3
+  unit: mV

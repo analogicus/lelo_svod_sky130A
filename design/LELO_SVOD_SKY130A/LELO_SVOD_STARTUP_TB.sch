@@ -21,8 +21,8 @@ N 140 -140 220 -140 {lab=VDDCS}
 N -340 -310 -340 -280 {lab=VDD_NEG}
 N -380 -420 -380 -310 {lab=EN_START}
 N -340 -390 -340 -340 {lab=NVT_CONTROL}
-N -340 -470 -340 -450 {lab=VOUT_0V8}
-N -340 -450 -340 -420 {lab=VOUT_0V8}
+N -340 -470 -340 -450 {lab=VDDCS}
+N -340 -450 -340 -420 {lab=VDDCS}
 C {LELO_SVOD_SKY130A/LELO_SVOD_BOOST_2.sym} 0 30 0 0 {name=x1}
 C {devices/ipin.sym} -320 -160 0 1 {name=p2 lab=VDD}
 C {devices/res.sym} -320 -130 0 1 {name=R1
@@ -110,7 +110,6 @@ model=nfet_01v8_lvt
 spiceprefix=X
 }
 C {devices/lab_pin.sym} -580 -400 2 0 {name=p16 sig_type=std_logic lab=VDD_NEG}
-C {devices/lab_pin.sym} -340 -470 0 0 {name=p14 sig_type=std_logic lab=VOUT_0V8}
 C {devices/lab_pin.sym} -340 -280 2 1 {name=p17 sig_type=std_logic lab=VDD_NEG}
 C {devices/lab_pin.sym} 150 -10 2 0 {name=p18 sig_type=std_logic lab=OSC}
 C {devices/lab_pin.sym} -930 -400 2 1 {name=p19 sig_type=std_logic lab=OSC}
@@ -173,9 +172,11 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet_01v8.sym} -360 -420 0 0 {name=M6
-W=1
-L=20
+C {devices/lab_pin.sym} -150 110 2 1 {name=p38 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -340 -470 0 0 {name=p14 sig_type=std_logic lab=VDDCS}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} -360 -420 0 0 {name=M6
+W=0.42
+L=1
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -184,7 +185,6 @@ as="'int((nf+2)/2) * W/nf * 0.29'"
 ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
 nrd="'0.29 / W'" nrs="'0.29 / W'"
 sa=0 sb=0 sd=0
-model=pfet_01v8
+model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {devices/lab_pin.sym} -150 110 2 1 {name=p38 sig_type=std_logic lab=VSS}
