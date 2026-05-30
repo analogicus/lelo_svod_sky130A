@@ -33,7 +33,7 @@ VTEG    VTEG   0    dc    40m
 VDD1    VDD1   0    dc   0.8
 VDD2    VDD2   0    dc   1.8
 VCTRL   VCTRL  0    pwl  0 0.9 1000u 0.9 1100u 0
-VCTRL2  VCTRL2 0    pwl  0 0   13m 0 13.1m 0.9 
+VCTRL2  VCTRL2 0    pwl  0 0 10m 0 10.1m 0.9 14m 0.9 14.1m 0 
 R1      OUT1   0    {Rout1}
 R2      OUT2   0    {Rout2}
 R3      OUT3   0    {Rout3}
@@ -86,7 +86,7 @@ unset askquit
 
 
 
-tran 1u 15m
+tran 1u 18m
 write
 quit
 

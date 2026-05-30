@@ -1,9 +1,9 @@
 ,eff,name,type,time,OK
-0,0.851853,tran_SchGtKfsTlTeg40,Sch,Sat May 23 11:14:07 2026,True
-1,0.8491083,tran_SchGtKsfTlTeg40,Sch,Sat May 23 11:14:06 2026,True
-2,0.8689409,tran_SchGtKffTlTeg40,Sch,Sat May 23 11:14:04 2026,True
-3,0.854141,tran_SchGtKssTlTeg40,Sch,Sat May 23 11:14:03 2026,True
-4,0.780949,tran_SchGtKfsThTeg40,Sch,Sat May 23 11:14:00 2026,False
-5,0.8649263,tran_SchGtKsfThTeg40,Sch,Sat May 23 11:13:56 2026,True
-6,0.8313389,tran_SchGtKffThTeg40,Sch,Sat May 23 11:13:54 2026,True
-7,0.8558254,tran_SchGtKssThTeg40,Sch,Sat May 23 11:13:52 2026,True
+0,81.58166,tran_SchGtKffTlVhTeg30,Sch,Sat May 30 07:54:09 2026,False
+1,83.08733000000001,tran_SchGtKssTlVhTeg30,Sch,Sat May 30 07:54:08 2026,False
+2,59.34811,tran_SchGtKffThVhTeg30,Sch,Sat May 30 07:54:08 2026,False
+3,82.30785,tran_SchGtKssThVhTeg30,Sch,Sat May 30 07:54:08 2026,False
+4,82.64692,tran_SchGtKffTlVlTeg30,Sch,Sat May 30 07:54:08 2026,False
+5,80.06278999999999,tran_SchGtKssTlVlTeg30,Sch,Sat May 30 07:54:08 2026,False
+6,67.16162,tran_SchGtKffThVlTeg30,Sch,Sat May 30 07:54:08 2026,False
+7,82.10571,tran_SchGtKssThVlTeg30,Sch,Sat May 30 07:54:07 2026,False
