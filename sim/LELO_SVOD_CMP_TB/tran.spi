@@ -24,7 +24,7 @@
 * FORCE
 *-----------------------------------------------------------------
 VDD   VDD   0    dc    {vdd}
-VIP   VIP   0    pwl 0 0.3 2000u 0.6
+VIP   VIP   0    pwl 0 0.4 1000u 0.5
 VCLK  VCLK  0    pulse(0 {vdd} 0 2n 2n 10u 20u)
 
 
@@ -49,7 +49,7 @@ set color1=black
 unset askquit
 
 
-tran 1u 2000u
+tran 1u 1000u
 write
 quit
 
