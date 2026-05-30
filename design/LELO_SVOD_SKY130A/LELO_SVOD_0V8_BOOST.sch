@@ -64,13 +64,13 @@ C {devices/lab_pin.sym} -400 -210 2 1 {name=p12 sig_type=std_logic lab=VDD1}
 C {devices/lab_pin.sym} -400 -190 2 1 {name=p15 sig_type=std_logic lab=VDD1}
 C {devices/lab_pin.sym} -100 -250 2 0 {name=p9 sig_type=std_logic lab=VDD2}
 C {devices/lab_pin.sym} -540 -120 0 1 {name=p17 sig_type=std_logic lab=VC1}
-C {devices/vsource.sym} -640 -90 0 0 {name=V1 value=0.6 savecurrent=false}
+C {devices/vsource.sym} -640 -90 0 0 {name=V1 value=0.3 savecurrent=false}
 C {devices/lab_pin.sym} -640 -60 0 0 {name=p21 sig_type=std_logic lab=0}
 C {devices/lab_pin.sym} -680 -240 2 0 {name=p24 sig_type=std_logic lab=VCTRL}
 C {devices/ipin.sym} -680 -240 2 1 {name=p25 lab=VCTRL}
 C {devices/lab_pin.sym} -570 -160 1 0 {name=p26 sig_type=std_logic lab=VCTRL}
 C {devices/lab_pin.sym} -530 20 0 1 {name=p27 sig_type=std_logic lab=VC2}
-C {devices/vsource.sym} -630 50 0 0 {name=V2 value=0.6 savecurrent=false}
+C {devices/vsource.sym} -630 50 0 0 {name=V2 value=0.3 savecurrent=false}
 C {devices/lab_pin.sym} -630 80 0 0 {name=p28 sig_type=std_logic lab=0}
 C {devices/lab_pin.sym} -560 -20 1 0 {name=p30 sig_type=std_logic lab=VCTRL}
 C {devices/lab_pin.sym} -400 -110 0 0 {name=p31 sig_type=std_logic lab=VC2}

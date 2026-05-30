@@ -1,8 +1,8 @@
-### Summary tran_Sch_etc
+### Summary tran_Sch_fast
 
-For details see <a href='tran_Sch_etc.html'>tran_Sch_etc.html</a>
+For details see <a href='tran_Sch_fast.html'>tran_Sch_fast.html</a>
 
 |**Name**|**Parameter**|**View**|**Min** | **Typ** | **Max**|
 |:---|:---|:---:|:---:|:---:|:---:|
 |offset|voff | Spec | -20.000 mV |  | 20.000 mV |
-| | | ('Sch',)|-4.999 mV | 1.001 mV | 4.006 mV |
+| | | ('Sch',)|-1.999 mV | -0.499 mV | 1.006 mV |
