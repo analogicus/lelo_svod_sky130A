@@ -8,6 +8,8 @@ Meas tran I_0V8 AVG i(vdd1) from = 1000u
 Meas tran I_1V8 AVG i(vdd2) from = 1000u
 Meas tran TEG   AVG v(VTEG)
 
+M
+
 let power=v(xdut.teg)*i(VTEG)
 MEAS tran PIN AVG power from = 1000u
 
