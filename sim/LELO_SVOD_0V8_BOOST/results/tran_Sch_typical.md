@@ -5,4 +5,4 @@ For details see <a href='tran_Sch_typical.html'>tran_Sch_typical.html</a>
 |**Name**|**Parameter**|**View**|**Min** | **Typ** | **Max**|
 |:---|:---|:---:|:---:|:---:|:---:|
 |eff|eff | Spec | 0.8170 None | 0.8600 None | 0.9030 None |
-| | | ('Sch',)|63.8063 None | 87.6069 None | 89.0947 None |
+| | | ('Sch',)|63.8063 None | 87.3429 None | 88.2782 None |

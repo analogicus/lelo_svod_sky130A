@@ -96,40 +96,40 @@ N 650 520 1040 520 {lab=VSS}
 N -810 -150 -730 -150 {lab=NLSSU_0V8}
 N -1220 -220 -1200 -220 {lab=NCLK}
 N -630 -940 -580 -940 {lab=TEG}
-N 260 -170 300 -170 {lab=LSSU_1V8}
-N 300 -80 300 -50 {lab=VSS}
-N 300 -170 300 -110 {lab=LSSU_1V8}
+N 320 -100 360 -100 {lab=LSSU_1V8}
+N 360 -10 360 20 {lab=VSS}
+N 360 -100 360 -40 {lab=LSSU_1V8}
 N 360 240 360 270 {lab=VSS}
 N 360 150 360 210 {lab=HSS1U_1V8}
-N 340 360 340 390 {lab=VDD_1V8}
-N -1340 -350 -1330 -350 {lab=VDD_0V8}
-N -1330 -350 -1330 -300 {lab=VDD_0V8}
-N -1330 -300 -1160 -300 {lab=VDD_0V8}
-N -1160 -300 -1160 -270 {lab=VDD_0V8}
-N -1160 -270 -920 -270 {lab=VDD_0V8}
-N -920 -270 -920 -230 {lab=VDD_0V8}
-N -920 -230 -690 -230 {lab=VDD_0V8}
-N -690 -230 -690 -200 {lab=VDD_0V8}
+N 370 380 370 410 {lab=VDD_1V8}
+N -1340 -350 -1330 -350 {lab=#net9}
+N -1330 -350 -1330 -300 {lab=#net9}
+N -1330 -300 -1160 -300 {lab=#net9}
+N -1160 -300 -1160 -270 {lab=#net9}
+N -1160 -270 -920 -270 {lab=#net9}
+N -920 -270 -920 -230 {lab=#net9}
+N -920 -230 -690 -230 {lab=#net9}
+N -690 -230 -690 -200 {lab=#net9}
 N 650 230 650 260 {lab=VSS}
 N 1040 140 1040 200 {lab=HSS1_1V8A}
 N 1040 230 1040 260 {lab=VSS}
-N 1000 110 1000 230 {lab=#net9}
-N 650 180 740 180 {lab=#net10}
-N 1170 140 1170 200 {lab=#net11}
+N 1000 110 1000 230 {lab=#net10}
+N 650 180 740 180 {lab=#net11}
+N 1170 140 1170 200 {lab=#net12}
 N 1170 230 1170 260 {lab=VSS}
 N 1130 110 1130 230 {lab=HSS1_1V8A}
 N 1040 180 1130 180 {lab=HSS1_1V8A}
 N 1300 130 1300 200 {lab=HSS1_1V8}
 N 1300 230 1300 260 {lab=VSS}
-N 1260 100 1260 230 {lab=#net11}
-N 1170 180 1260 180 {lab=#net11}
+N 1260 100 1260 230 {lab=#net12}
+N 1170 180 1260 180 {lab=#net12}
 N 650 40 1230 40 {lab=VDD_1V8}
 N 1040 40 1040 80 {lab=VDD_1V8}
 N 1170 40 1170 80 {lab=VDD_1V8}
 N 1300 40 1300 70 {lab=VDD_1V8}
 N 650 40 650 80 {lab=VDD_1V8}
-N 650 140 650 180 {lab=#net10}
-N 650 180 650 200 {lab=#net10}
+N 650 140 650 180 {lab=#net11}
+N 650 180 650 200 {lab=#net11}
 N 610 110 610 180 {lab=HSS1U_1V8}
 N 610 180 610 230 {lab=HSS1U_1V8}
 N 650 80 650 110 {lab=VDD_1V8}
@@ -137,40 +137,47 @@ N 1040 80 1040 110 {lab=VDD_1V8}
 N 1170 80 1170 110 {lab=VDD_1V8}
 N 1300 70 1300 100 {lab=VDD_1V8}
 N 780 230 780 260 {lab=VSS}
-N 780 180 870 180 {lab=#net12}
+N 780 180 870 180 {lab=#net13}
 N 780 40 780 80 {lab=VDD_1V8}
-N 780 140 780 180 {lab=#net12}
-N 780 180 780 200 {lab=#net12}
-N 740 110 740 180 {lab=#net10}
-N 740 180 740 230 {lab=#net10}
+N 780 140 780 180 {lab=#net13}
+N 780 180 780 200 {lab=#net13}
+N 740 110 740 180 {lab=#net11}
+N 740 180 740 230 {lab=#net11}
 N 780 80 780 110 {lab=VDD_1V8}
 N 910 230 910 260 {lab=VSS}
-N 910 180 1000 180 {lab=#net9}
+N 910 180 1000 180 {lab=#net10}
 N 910 40 910 80 {lab=VDD_1V8}
-N 910 140 910 180 {lab=#net9}
-N 910 180 910 200 {lab=#net9}
-N 870 110 870 180 {lab=#net12}
-N 870 180 870 230 {lab=#net12}
+N 910 140 910 180 {lab=#net10}
+N 910 180 910 200 {lab=#net10}
+N 870 110 870 180 {lab=#net13}
+N 870 180 870 230 {lab=#net13}
 N 910 80 910 110 {lab=VDD_1V8}
 N 1230 40 1300 40 {lab=VDD_1V8}
 N 650 260 1300 260 {lab=VSS}
-N -490 -150 -460 -150 {lab=#net13}
-N -420 -170 -420 -120 {lab=#net14}
+N -490 -150 -460 -150 {lab=#net14}
+N -420 -170 -420 -120 {lab=#net15}
 N -420 -90 -420 -60 {lab=VSS}
-N -420 -230 -420 -200 {lab=VDD}
-N -460 -200 -460 -90 {lab=#net13}
+N -420 -230 -420 -200 {lab=#net9}
+N -460 -200 -460 -90 {lab=#net14}
 N -420 -60 -420 -30 {lab=VSS}
-N -420 -260 -420 -230 {lab=VDD}
-N -420 -150 -390 -150 {lab=#net14}
-N -390 -150 -360 -150 {lab=#net14}
+N -420 -260 -420 -230 {lab=#net9}
+N -420 -150 -390 -150 {lab=#net15}
+N -390 -150 -360 -150 {lab=#net15}
 N -320 -170 -320 -120 {lab=LSSU_0V8}
 N -320 -90 -320 -60 {lab=VSS}
-N -320 -230 -320 -200 {lab=VDD}
-N -360 -200 -360 -90 {lab=#net14}
+N -320 -230 -320 -200 {lab=#net9}
+N -360 -200 -360 -90 {lab=#net15}
 N -320 -60 -320 -30 {lab=VSS}
-N -320 -260 -320 -230 {lab=VDD}
+N -320 -260 -320 -230 {lab=#net9}
 N -320 -150 -290 -150 {lab=LSSU_0V8}
-N -620 -150 -490 -150 {lab=#net13}
+N -620 -150 -490 -150 {lab=#net14}
+N -60 -100 20 -100 {lab=#net16}
+N -60 -100 -60 150 {lab=#net16}
+N -60 150 60 150 {lab=#net16}
+N -60 150 -60 440 {lab=#net16}
+N -60 440 70 440 {lab=#net16}
+N -690 -230 -420 -230 {lab=#net9}
+N -420 -230 -320 -230 {lab=#net9}
 C {devices/lab_pin.sym} -480 -940 3 1 {name=p3 sig_type=std_logic lab=VX}
 C {devices/lab_pin.sym} 1300 -120 0 1 {name=p30 sig_type=std_logic lab=LSS_1V8}
 C {devices/capa.sym} -580 -910 0 1 {name=C1
@@ -256,16 +263,14 @@ C {LELO_SVOD_SKY130A/LELO_SVOD_HSSCNTRL.sym} -590 170 0 0 {name=x1}
 C {devices/lab_pin.sym} -440 100 2 0 {name=p22 sig_type=std_logic lab=HSS1U_0V8}
 C {devices/lab_pin.sym} -740 120 2 1 {name=p26 sig_type=std_logic lab=VX}
 C {LELO_SVOD_SKY130A/LELO_SVOD_LEVELSHIFT.sym} 210 180 0 0 {name=x2}
-C {LELO_SVOD_SKY130A/LELO_SVOD_LEVELSHIFT.sym} 110 -140 0 0 {name=x3}
-C {devices/lab_pin.sym} 300 -170 0 1 {name=p23 sig_type=std_logic lab=LSSU_1V8}
+C {LELO_SVOD_SKY130A/LELO_SVOD_LEVELSHIFT.sym} 170 -70 0 0 {name=x3}
+C {devices/lab_pin.sym} 360 -100 0 1 {name=p23 sig_type=std_logic lab=LSSU_1V8}
 C {devices/lab_pin.sym} -1850 -260 0 0 {name=p17 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} -740 100 0 0 {name=p21 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} 60 170 0 0 {name=p28 sig_type=std_logic lab=VDD_0V8}
-C {devices/lab_pin.sym} -40 -150 0 0 {name=p29 sig_type=std_logic lab=VDD_0V8}
-C {devices/lab_pin.sym} 60 150 0 0 {name=p31 sig_type=std_logic lab=VDD_1V8}
-C {devices/lab_pin.sym} -40 -170 0 0 {name=p32 sig_type=std_logic lab=VDD_1V8}
+C {devices/lab_pin.sym} 20 -80 0 0 {name=p29 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} -520 -610 0 0 {name=p36 sig_type=std_logic lab=LSS_1V8}
-C {devices/lab_pin.sym} -40 -130 0 0 {name=p37 sig_type=std_logic lab=LSSU_0V8}
+C {devices/lab_pin.sym} 20 -60 0 0 {name=p37 sig_type=std_logic lab=LSSU_0V8}
 C {devices/lab_pin.sym} 610 -110 0 0 {name=p38 sig_type=std_logic lab=LSSU_1V8}
 C {devices/lab_pin.sym} 1300 170 2 0 {name=p39 sig_type=std_logic lab=HSS1_1V8}
 C {devices/ipin.sym} -790 -560 0 0 {name=p40 lab=VSS}
@@ -293,11 +298,11 @@ C {devices/lab_pin.sym} -730 340 0 0 {name=p50 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} -730 360 0 0 {name=p53 sig_type=std_logic lab=VOUT_1V8}
 C {devices/lab_pin.sym} -730 420 0 0 {name=p54 sig_type=std_logic lab=LSSU_0V8}
 C {devices/lab_pin.sym} -430 340 2 0 {name=p57 sig_type=std_logic lab=HSS2U_0V8}
-C {LELO_SVOD_SKY130A/LELO_SVOD_LEVELSHIFT.sym} 190 450 0 0 {name=x7}
-C {devices/lab_pin.sym} 340 420 2 0 {name=p58 sig_type=std_logic lab=HSS2U_1V8}
-C {devices/lab_pin.sym} 40 440 0 0 {name=p61 sig_type=std_logic lab=VDD_0V8}
-C {devices/lab_pin.sym} 40 420 0 0 {name=p62 sig_type=std_logic lab=VDD_1V8}
-C {devices/lab_pin.sym} 40 460 2 1 {name=p60 sig_type=std_logic lab=HSS2U_0V8}
+C {LELO_SVOD_SKY130A/LELO_SVOD_LEVELSHIFT.sym} 220 470 0 0 {name=x7}
+C {devices/lab_pin.sym} 370 440 2 0 {name=p58 sig_type=std_logic lab=HSS2U_1V8}
+C {devices/lab_pin.sym} 70 460 0 0 {name=p61 sig_type=std_logic lab=VDD_0V8}
+C {devices/lab_pin.sym} -60 -100 0 0 {name=p62 sig_type=std_logic lab=VDD_1V8}
+C {devices/lab_pin.sym} 70 480 2 1 {name=p60 sig_type=std_logic lab=HSS2U_0V8}
 C {sky130_fd_pr/nfet_01v8.sym} 630 480 0 0 {name=M23
 W=1
 L=0.15
@@ -362,7 +367,6 @@ C {devices/lab_pin.sym} -260 -650 1 1 {name=p68 sig_type=std_logic lab=HSS2_1V8}
 C {LELO_SVOD_SKY130A/LELO_SVOD_REGULATOR.sym} -1300 260 0 0 {name=x8}
 C {devices/lab_pin.sym} -1450 240 0 0 {name=p71 sig_type=std_logic lab=VOUT_0V8}
 C {devices/lab_pin.sym} -1450 220 0 0 {name=p72 sig_type=std_logic lab=VOUT_1V8}
-C {devices/lab_pin.sym} -1450 200 0 0 {name=p46 sig_type=std_logic lab=VDD_0V8}
 C {devices/lab_pin.sym} -1210 -220 3 1 {name=p76 sig_type=std_logic lab=NCLK}
 C {LELO_SVOD_SKY130A/LELO_NAND.sym} -900 -150 0 0 {name=x9}
 C {LELO_SVOD_SKY130A/LELO_INV.sym} -670 -150 0 0 {name=x10}
@@ -377,9 +381,9 @@ C {LELO_SVOD_SKY130A/LELO_INV.sym} -1140 -220 0 0 {name=x11}
 C {devices/lab_pin.sym} -1450 320 0 0 {name=p14 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -740 240 0 0 {name=p15 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -730 500 0 0 {name=p16 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 40 480 0 0 {name=p19 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 70 500 0 0 {name=p19 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 60 210 0 0 {name=p20 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} -40 -110 0 0 {name=p24 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 20 -40 0 0 {name=p24 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 650 520 0 0 {name=p43 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 650 -30 0 0 {name=p44 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} -1850 -240 0 0 {name=p47 sig_type=std_logic lab=VSS}
@@ -402,8 +406,8 @@ C {devices/opin.sym} -1600 -160 0 0 {name=p94 lab=EN_STARTO}
 C {devices/lab_pin.sym} -1600 -160 0 0 {name=p95 sig_type=std_logic lab=EN_STARTO}
 C {devices/opin.sym} -1600 -130 0 0 {name=p96 lab=OSC}
 C {devices/lab_pin.sym} -1600 -130 0 0 {name=p97 sig_type=std_logic lab=OSC}
-C {devices/lab_pin.sym} 300 -50 0 0 {name=p98 sig_type=std_logic lab=VSS}
-C {sky130_fd_pr/nfet_01v8_lvt.sym} 320 -80 0 1 {name=M14
+C {devices/lab_pin.sym} 360 20 0 0 {name=p98 sig_type=std_logic lab=VSS}
+C {sky130_fd_pr/nfet_01v8_lvt.sym} 380 -10 0 1 {name=M14
 W=1
 L=0.15
 nf=1
@@ -483,7 +487,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet_01v8_lvt.sym} 360 390 0 1 {name=M38
+C {sky130_fd_pr/pfet_01v8_lvt.sym} 390 410 0 1 {name=M38
 W=1
 L=0.35
 nf=1
@@ -497,14 +501,14 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {devices/lab_pin.sym} 340 360 0 0 {name=p49 sig_type=std_logic lab=VDD_1V8}
-C {devices/lab_pin.sym} 380 390 0 1 {name=p91 sig_type=std_logic lab=EN_START}
+C {devices/lab_pin.sym} 370 380 0 0 {name=p49 sig_type=std_logic lab=VDD_1V8}
+C {devices/lab_pin.sym} 410 410 0 1 {name=p91 sig_type=std_logic lab=EN_START}
 C {devices/lab_pin.sym} 650 -250 0 0 {name=p51 sig_type=std_logic lab=VDD_1V8}
-C {LELO_SVOD_SKY130A/LELO_INV.sym} 60 -300 0 0 {name=x12}
-C {devices/lab_pin.sym} 40 -250 3 0 {name=p34 sig_type=std_logic lab=VSS}
-C {devices/lab_pin.sym} 40 -350 0 0 {name=p81 sig_type=std_logic lab=VDD_0V8}
-C {devices/lab_pin.sym} 110 -300 0 1 {name=p82 sig_type=std_logic lab=NENSTART}
-C {devices/lab_pin.sym} 340 -80 0 1 {name=p87 sig_type=std_logic lab=NENSTART}
+C {LELO_SVOD_SKY130A/LELO_INV.sym} -180 -390 0 0 {name=x12}
+C {devices/lab_pin.sym} -200 -340 3 0 {name=p34 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -200 -440 0 0 {name=p81 sig_type=std_logic lab=VDD_0V8}
+C {devices/lab_pin.sym} -130 -390 0 1 {name=p82 sig_type=std_logic lab=NENSTART}
+C {devices/lab_pin.sym} 400 -10 0 1 {name=p87 sig_type=std_logic lab=NENSTART}
 C {devices/lab_pin.sym} 400 240 0 1 {name=p88 sig_type=std_logic lab=NENSTART}
 C {devices/opin.sym} -1600 -100 0 0 {name=p103 lab=EN_LSSO}
 C {devices/lab_pin.sym} -1600 -100 0 0 {name=p107 sig_type=std_logic lab=EN_LSSO}
@@ -519,7 +523,7 @@ C {devices/lab_pin.sym} -1150 260 0 1 {name=p85 sig_type=std_logic lab=EN_STARTO
 C {devices/ipin.sym} -790 -820 0 0 {name=p92 lab=EN_STARTI}
 C {devices/lab_pin.sym} -790 -820 2 0 {name=p99 sig_type=std_logic lab=EN_STARTI}
 C {devices/lab_pin.sym} -1390 -200 2 1 {name=p100 sig_type=std_logic lab=EN_STARTI}
-C {devices/lab_pin.sym} 0 -300 2 1 {name=p9 sig_type=std_logic lab=EN_STARTI}
+C {devices/lab_pin.sym} -240 -390 2 1 {name=p9 sig_type=std_logic lab=EN_STARTI}
 C {devices/lab_pin.sym} -740 200 2 1 {name=p102 sig_type=std_logic lab=EN_STARTI}
 C {devices/lab_pin.sym} -730 460 2 1 {name=p114 sig_type=std_logic lab=EN_STARTI}
 C {devices/ipin.sym} -790 -780 0 0 {name=p115 lab=EN_LSSI}
@@ -905,8 +909,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {devices/lab_pin.sym} -420 -260 0 0 {name=p127 sig_type=std_logic lab=VDD_0V8}
-C {devices/lab_pin.sym} -320 -260 0 0 {name=p130 sig_type=std_logic lab=VDD_0V8}
 C {devices/ipin.sym} -790 -600 0 0 {name=p131 lab=VCTL}
 C {devices/lab_pin.sym} -790 -600 2 0 {name=p132 sig_type=std_logic lab=VCTL}
 C {devices/lab_pin.sym} -1450 300 2 1 {name=p133 sig_type=std_logic lab=VCTL}
+C {devices/lab_pin.sym} -1450 200 0 0 {name=p31 sig_type=std_logic lab=VDD_0V8}
