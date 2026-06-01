@@ -8,7 +8,12 @@ Meas tran I_0V8 AVG i(vdd1) from = 1000u
 Meas tran I_1V8 AVG i(vdd2) from = 1000u
 Meas tran TEG   AVG v(VTEG)
 
-M
+Meas tran I_osc avg i(v.xdut.x1.v1) from =1000u
+Meas tran I_logic avg i(v.xdut.x1.v2) from =1000u
+Meas tran I_reg avg i(v.xdut.x1.v3) from =1000u
+Meas tran I_zcs avg i(v.xdut.x1.v4) from =1000u
+Meas tran I_level avg i(v.xdut.x1.v5) from =1000u
+
 
 let power=v(xdut.teg)*i(VTEG)
 MEAS tran PIN AVG power from = 1000u

@@ -1,17 +1,2 @@
 ,eff,name,type,time,OK
-0,88.13498,tran_SchGtKffTtVtTeg90,Sch,Sun May 31 12:00:46 2026,False
-1,87.82994,tran_SchGtKssTtVtTeg90,Sch,Sun May 31 12:00:31 2026,False
-2,88.00534,tran_SchGtKffTtVtTeg80,Sch,Sun May 31 12:00:27 2026,False
-3,88.04178,tran_SchGtKssTtVtTeg80,Sch,Sun May 31 12:00:13 2026,False
-4,87.89125,tran_SchGtKffTtVtTeg70,Sch,Sun May 31 11:59:55 2026,False
-5,88.27819,tran_SchGtKssTtVtTeg70,Sch,Sun May 31 11:59:41 2026,False
-6,87.2991,tran_SchGtKffTtVtTeg60,Sch,Sun May 31 11:59:24 2026,False
-7,88.18726,tran_SchGtKssTtVtTeg60,Sch,Sun May 31 11:59:10 2026,False
-8,86.17269,tran_SchGtKffTtVtTeg50,Sch,Sun May 31 11:58:50 2026,False
-9,87.38672,tran_SchGtKssTtVtTeg50,Sch,Sun May 31 11:58:37 2026,False
-10,83.83264,tran_SchGtKffTtVtTeg40,Sch,Sun May 31 11:58:17 2026,False
-11,86.11995,tran_SchGtKssTtVtTeg40,Sch,Sun May 31 11:58:15 2026,False
-12,78.81199,tran_SchGtKffTtVtTeg30,Sch,Sun May 31 11:57:53 2026,False
-13,82.84926,tran_SchGtKssTtVtTeg30,Sch,Sun May 31 11:57:40 2026,False
-14,63.80629,tran_SchGtKffTtVtTeg20,Sch,Sun May 31 11:57:19 2026,False
-15,73.312,tran_SchGtKssTtVtTeg20,Sch,Sun May 31 11:57:16 2026,False
+0,84.98525000000001,tran_SchGtKttTtVtTeg40,Sch,Mon Jun  1 09:00:12 2026,False

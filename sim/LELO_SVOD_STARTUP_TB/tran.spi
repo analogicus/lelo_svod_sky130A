@@ -66,7 +66,7 @@ VDD  VDD  VSS   dc 20m
 * NGSPICE control
 *----------------------------------------------------------------
 .meas tran ts WHEN v(xdut.VOUT_1V8)=1.8 RISE=1
-.meas tran tn WHEN v(xdut.NVT_CONTTROL=-0.1 FALL=1
+.meas tran tn WHEN v(xdut.NVT_CONTROL)=-0.1 FALL=1
 
 .control
 set num_threads=8
