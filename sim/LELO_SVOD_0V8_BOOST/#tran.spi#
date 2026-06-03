@@ -155,7 +155,7 @@ set color1=black
 unset askquit
 
 
-tran 1u 2001u
+tran 1u 2000u
 write
 quit
 

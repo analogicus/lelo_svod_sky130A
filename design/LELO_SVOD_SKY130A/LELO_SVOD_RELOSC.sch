@@ -1,4 +1,4 @@
-v {xschem version=3.4.8RC file_version=1.2}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -22,9 +22,9 @@ N 0 -660 -0 -620 {lab=#net5}
 N -0 -660 180 -660 {lab=#net5}
 N 180 -660 180 -610 {lab=#net5}
 N 90 -720 90 -660 {lab=#net5}
-N -220 -780 90 -780 {lab=VDD}
-N 90 -780 90 -750 {lab=VDD}
-N -220 -780 -220 -750 {lab=VDD}
+N -220 -780 90 -780 {lab=#net6}
+N 90 -780 90 -750 {lab=#net6}
+N -220 -780 -220 -750 {lab=#net6}
 N -260 -750 -260 -740 {lab=bias_ref}
 N -260 -740 50 -740 {lab=bias_ref}
 N 50 -750 50 -740 {lab=bias_ref}
@@ -52,9 +52,9 @@ N -220 -720 -220 -80 {lab=BIAS}
 N -650 -680 -580 -680 {lab=bias_ref}
 N -650 -720 -650 -680 {lab=bias_ref}
 N -550 -580 -550 -510 {lab=VSS}
-N -580 -550 -580 -520 {lab=#net6}
-N -220 50 -220 60 {lab=#net7}
-N -220 -20 -220 -10 {lab=#net8}
+N -580 -550 -580 -520 {lab=#net7}
+N -220 50 -220 60 {lab=#net8}
+N -220 -20 -220 -10 {lab=#net9}
 N 500 -50 500 0 {lab=OSC}
 N 500 30 500 60 {lab=VSS}
 N 500 -110 500 -80 {lab=VDD}
@@ -66,16 +66,16 @@ N -330 120 -240 120 {lab=VSS}
 N -330 -10 -330 60 {lab=BIAS}
 N -330 -110 -330 -10 {lab=BIAS}
 N -330 -110 -220 -110 {lab=BIAS}
-N -580 -440 -580 -420 {lab=#net9}
+N -580 -440 -580 -420 {lab=#net10}
 N -580 -470 -550 -470 {lab=VSS}
-N -580 -520 -580 -500 {lab=#net6}
+N -580 -520 -580 -500 {lab=#net7}
 N -780 -540 -780 -360 {lab=VSS}
 N -780 -470 -760 -470 {lab=VSS}
-N -760 -550 -760 -500 {lab=#net10}
-N -720 -470 -620 -470 {lab=#net10}
+N -760 -550 -760 -500 {lab=#net11}
+N -720 -470 -620 -470 {lab=#net11}
 N -760 -440 -760 -360 {lab=VSS}
-N -760 -530 -690 -530 {lab=#net10}
-N -690 -530 -690 -470 {lab=#net10}
+N -760 -530 -690 -530 {lab=#net11}
+N -690 -530 -690 -470 {lab=#net11}
 N -780 -360 -760 -360 {lab=VSS}
 N -900 -750 -900 -720 {lab=VDD}
 N -900 -780 -900 -750 {lab=VDD}
@@ -85,16 +85,16 @@ N -1040 -780 -1040 -750 {lab=VDD}
 N -1040 -780 -900 -780 {lab=VDD}
 N -1080 -750 -1080 -360 {lab=VSS}
 N -1080 -360 -780 -360 {lab=VSS}
-N -1040 -720 -940 -720 {lab=#net11}
+N -1040 -720 -940 -720 {lab=#net12}
 N -940 -580 -940 -360 {lab=VSS}
-N -940 -720 -940 -640 {lab=#net11}
-N -240 -10 -240 20 {lab=#net8}
-N -240 -10 -220 -10 {lab=#net8}
-N -240 60 -240 90 {lab=#net7}
-N -240 60 -220 60 {lab=#net7}
+N -940 -720 -940 -640 {lab=#net12}
+N -240 -10 -240 20 {lab=#net9}
+N -240 -10 -220 -10 {lab=#net9}
+N -240 60 -240 90 {lab=#net8}
+N -240 60 -220 60 {lab=#net8}
 N 180 -260 300 -260 {lab=#net3}
 N 0 -240 300 -240 {lab=#net4}
-C {devices/lab_pin.sym} -70 -780 1 0 {name=p1 sig_type=std_logic lab=VDD}
+C {devices/lab_pin.sym} -90 -840 1 0 {name=p1 sig_type=std_logic lab=VDD}
 C {devices/lab_pin.sym} 60 120 3 0 {name=p2 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 350 90 1 0 {name=p12 sig_type=std_logic lab=PHASE1}
 C {devices/lab_pin.sym} 220 -580 2 0 {name=p13 sig_type=std_logic lab=PHASE1}
@@ -104,9 +104,9 @@ C {devices/lab_pin.sym} -130 90 1 0 {name=p16 sig_type=std_logic lab=PHASE2}
 C {devices/lab_pin.sym} -110 -50 1 0 {name=p17 sig_type=std_logic lab=BIAS}
 C {devices/lab_pin.sym} 90 0 1 0 {name=p18 sig_type=std_logic lab=BIAS}
 C {devices/ipin.sym} -360 -990 0 0 {name=p19 lab=VDD}
-C {devices/ipin.sym} -360 -950 0 0 {name=p20 lab=VSS}
+C {devices/ipin.sym} -360 -910 0 0 {name=p20 lab=VSS}
 C {devices/lab_pin.sym} -360 -990 2 0 {name=p21 sig_type=std_logic lab=VDD}
-C {devices/lab_pin.sym} -360 -950 2 0 {name=p22 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} -360 -910 2 0 {name=p22 sig_type=std_logic lab=VSS}
 C {devices/opin.sym} -220 -990 0 0 {name=p24 lab=OSC}
 C {sky130_fd_pr/pfet_01v8_lvt.sym} -600 -720 0 0 {name=M11
 W=1
@@ -419,3 +419,20 @@ C {devices/lab_pin.sym} 530 -30 2 0 {name=p11 sig_type=std_logic lab=OSC}
 C {devices/lab_pin.sym} -220 -990 2 1 {name=p29 sig_type=std_logic lab=OSC}
 C {devices/opin.sym} -220 -950 0 0 {name=p7 lab=BIAS_REF}
 C {devices/lab_pin.sym} -220 -950 2 1 {name=p8 sig_type=std_logic lab=BIAS_REF}
+C {devices/ipin.sym} -360 -950 0 0 {name=p9 lab=EN}
+C {devices/lab_pin.sym} -360 -950 2 0 {name=p10 sig_type=std_logic lab=EN}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} -110 -810 0 0 {name=M2
+W=1
+L=0.35
+nf=2
+mult=3
+ad="expr('int((@nf + 1)/2) * @W / @nf * 0.29')"
+pd="expr('2*int((@nf + 1)/2) * (@W / @nf + 0.29)')"
+as="expr('int((@nf + 2)/2) * @W / @nf * 0.29')"
+ps="expr('2*int((@nf + 2)/2) * (@W / @nf + 0.29)')"
+nrd="expr('0.29 / @W ')" nrs="expr('0.29 / @W ')"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {devices/lab_pin.sym} -130 -810 2 1 {name=p30 sig_type=std_logic lab=EN}
