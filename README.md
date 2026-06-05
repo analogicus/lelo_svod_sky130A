@@ -6,11 +6,10 @@
 [![SIM](../../actions/workflows/sim.yaml/badge.svg)](../../actions/workflows/sim.yaml)
 
 # Who
-svol
+Sverre Poppe Oldervoll
 
 # Why
-
-Ultra low voltage oscilator for startup of energy harvesting
+Dual output boost converter system for energy harvesting
 
 # How
 
@@ -20,18 +19,17 @@ Ultra low voltage oscilator for startup of energy harvesting
 # What
 
 
-| What            |        Cell/Name |
-| :----              |  :----:       |
-| Schematic       | design/LELO_SVOD_SKY130A/LELO_SVOD.sch |
-| Layout          | design/LELO_SVOD_SKY130A/LELO_SVOD.mag |
+| What                 |        Cell/Name |
+| :----                |  :----:       |
+| Boost core           | design/LELO_SVOD_SKY130A/LELO_SVOD_BOOST_2.sch |
+| Full startup system  | design/LELO_SVOD_SKY130A/LELO_SVOD_STARTUP_TB  |
 
 
 # Changelog/Plan
 
 
 | Version | Status | Comment|
-| :---| :---| :---|
-|0.1.0 | :x: | Make something |
+
 
 
 
@@ -39,9 +37,11 @@ Ultra low voltage oscilator for startup of energy harvesting
 
 
 | Signal       | Direction | Domain  | Description                               |
-| :---         | :---:     | :---:   | :---                                      |
 | VTEG         | Input     | V       | Supply from energy harvester              |
-| VSS         | Input     | Ground  |                                           |
+| VSS         | Input     | Ground   |                                           |
+| VOUT_0V8    | Output    | V        | Output voltage at 0.8 V                   |
+| VOUT_1V8    | Output    | V        | Output voltage at 1.8 V                   |
+
 
 
 
@@ -51,4 +51,4 @@ Ultra low voltage oscilator for startup of energy harvesting
 | Parameter           | Min     | Typ           | Max     | Unit  |
 | :---                | :---:     | :---:           | :---:     | :---: |
 | Technology          |         | Skywater 130 nm |         |       |
-| Temperature         | -40     | 27            | 125     | C     |
+| Temperature         | 0     | 27            | 60    | C     |
