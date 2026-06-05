@@ -77,7 +77,7 @@ unset askquit
 
 
 
-tran 1u 30m
+tran 1u 40m
 write
 quit
 
